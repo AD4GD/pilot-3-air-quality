@@ -1,0 +1,338 @@
+SHT31:
+  id: 27
+  name: SHT31
+  manufacturer: Sensirion AG
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 505
+    humidity: 505
+BME280:
+  id: 17
+  name: BME280
+  manufacturer: Bosch
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 10236
+    pressure: 10235
+    humidity: 10220
+    pressure_at_sealevel: 10217
+    interval: 1
+    timestamp: 2
+    brightness: 1
+PMS1003:
+  id: 21
+  name: PMS1003
+  manufacturer: Plantower
+  description: ''
+  uri: ''
+  observed_properties:
+    P0: 12
+    P1: 21
+    P2: 21
+PMS5003:
+  id: 23
+  name: PMS5003
+  manufacturer: Plantower
+  description: ''
+  uri: ''
+  observed_properties:
+    P2: 556
+    P1: 555
+    P0: 160
+    P3: 2
+    temperature: 2
+    humidity: 2
+    pressure: 1
+Radiation SBM-19:
+  id: 35
+  name: Radiation SBM-19
+  manufacturer: EcoCurious
+  description: ''
+  uri: ''
+  observed_properties:
+    counts_per_minute: 10
+    hv_pulses: 4
+    counts: 4
+    sample_time_ms: 4
+SHT11:
+  id: 5
+  name: SHT11
+  manufacturer: Sensirion AG
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 2
+    humidity: 2
+DNMS (Laerm):
+  id: 29
+  name: DNMS (Laerm)
+  manufacturer: Luftdaten.info
+  description: ''
+  uri: ''
+  observed_properties:
+    noise_LAeq: 1079
+    noise_LA_min: 1079
+    noise_LA_max: 1079
+PMS7003:
+  id: 22
+  name: PMS7003
+  manufacturer: Plantower
+  description: ''
+  uri: ''
+  observed_properties:
+    P0: 356
+    P1: 381
+    P2: 379
+    temperature: 4
+    humidity: 4
+    N10: 2
+    N1: 2
+    N25: 2
+    N05: 2
+NextPM:
+  id: 42
+  name: NextPM
+  manufacturer: TERA Sensor
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 5
+    pressure: 5
+    humidity: 5
+    P0: 7
+    P2: 9
+    P4: 5
+    P1: 9
+    N05: 5
+    N1: 5
+PPD42NS:
+  id: 1
+  name: PPD42NS
+  manufacturer: Shinyei
+  description: ''
+  uri: ''
+  observed_properties:
+    durP1: 12
+    ratioP1: 12
+    P1: 12
+    durP2: 12
+    ratioP2: 12
+    P2: 12
+SPS30:
+  id: 37
+  name: SPS30
+  manufacturer: Sensirion AG
+  description: ''
+  uri: ''
+  observed_properties:
+    P0: 759
+    P2: 776
+    P4: 716
+    P1: 775
+    N05: 695
+    N1: 695
+    N25: 460
+    N4: 457
+    N10: 459
+    TS: 454
+    temperature: 28
+    humidity: 28
+    pressure: 3
+Radiation SBM-20:
+  id: 31
+  name: Radiation SBM-20
+  manufacturer: EcoCurious
+  description: ''
+  uri: ''
+  observed_properties:
+    counts_per_minute: 10
+    hv_pulses: 9
+    counts: 9
+    sample_time_ms: 9
+DHT22:
+  id: 9
+  name: DHT22
+  manufacturer: various
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 9473
+    humidity: 9467
+    pressure: 3
+Radiation Si22G:
+  id: 36
+  name: Radiation Si22G
+  manufacturer: EcoCurious
+  description: ''
+  uri: ''
+  observed_properties:
+    counts_per_minute: 144
+    hv_pulses: 125
+    counts: 133
+    sample_time_ms: 133
+    temperature: 2
+    humidity: 2
+    pressure: 2
+SDS011:
+  id: 14
+  name: SDS011
+  manufacturer: Nova Fitness
+  description: ''
+  uri: ''
+  observed_properties:
+    P1: 24092
+    P2: 24083
+    temperature: 111
+    pressure: 74
+    humidity: 97
+    P0: 186
+    P4: 156
+    N05: 156
+    N1: 157
+    N25: 69
+    N4: 68
+    N10: 69
+    TS: 68
+    noise_LAeq: 6
+    noise_LA_min: 6
+    noise_LA_max: 6
+    samples: 1
+    min_micro: 1
+    max_micro: 1
+    interval: 1
+PMS3003:
+  id: 16
+  name: PMS3003
+  manufacturer: Plantower
+  description: ''
+  uri: ''
+  observed_properties:
+    P0: 10
+    P1: 11
+    P2: 11
+SHT30:
+  id: 26
+  name: SHT30
+  manufacturer: Sensirion AG
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 295
+    humidity: 295
+HTU21D:
+  id: 19
+  name: HTU21D
+  manufacturer: Measurement Specialties
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 213
+    humidity: 213
+HPM:
+  id: 25
+  name: HPM
+  manufacturer: Honeywell
+  description: ''
+  uri: ''
+  observed_properties:
+    P1: 10
+    P2: 10
+    temperature: 2
+    humidity: 2
+    pressure: 2
+    pressure_sealevel: 2
+PMS6003:
+  id: 24
+  name: PMS6003
+  manufacturer: Plantower
+  description: ''
+  uri: ''
+  observed_properties:
+    P0: 1
+    P1: 1
+    P2: 1
+SHT35:
+  id: 28
+  name: SHT35
+  manufacturer: Sensirion AG
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 15
+    humidity: 15
+    co2_ppm: 3
+BMP280:
+  id: 20
+  name: BMP280
+  manufacturer: Bosch
+  description: ''
+  uri: ''
+  observed_properties:
+    pressure: 473
+    temperature: 467
+    pressure_at_sealevel: 475
+    humidity: 24
+    P1: 2
+    P2: 2
+SHT85:
+  id: 39
+  name: SHT85
+  manufacturer: Sensirion AG
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 4
+    humidity: 4
+GPS-NEO-6M:
+  id: 15
+  name: GPS-NEO-6M
+  manufacturer: ublox
+  description: ''
+  uri: ''
+  observed_properties:
+    lat: 14
+    lon: 14
+    height: 14
+    timestamp: 14
+SCD30:
+  id: 40
+  name: SCD30
+  manufacturer: Sensirion AG
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 11
+    humidity: 11
+    co2_ppm: 11
+BMP180:
+  id: 8
+  name: BMP180
+  manufacturer: Bosch
+  description: ''
+  uri: ''
+  observed_properties:
+    pressure: 293
+    temperature: 280
+    pressure_at_sealevel: 293
+DS18B20:
+  id: 13
+  name: DS18B20
+  manufacturer: Dallas semiconductor
+  description: ''
+  uri: ''
+  observed_properties:
+    temperature: 82
+    pressure: 3
+    P1: 2
+    P2: 2
+SDS021:
+  id: 18
+  name: SDS021
+  manufacturer: Nova Fitness
+  description: ''
+  uri: ''
+  observed_properties:
+    P1: 7
+    P2: 7
