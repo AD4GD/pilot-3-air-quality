@@ -13,7 +13,11 @@
     },
     "manufacturer": "dct:creator",
     "name": "rdfs:label",
-    "description": "dct:description"
+    "description": "dct:description",
+    "inScheme": {
+      "@id": "skos:inScheme",
+      "@type": "@id"
+    }
   },
   "@graph": [
     {
@@ -22,7 +26,7 @@
       "manufacturer": {
         "@id": "manuf:Sensirion-AG",
         "name": "Sensirion AG",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -30,7 +34,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "SHT31",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -42,7 +46,7 @@
       "manufacturer": {
         "@id": "manuf:Bosch",
         "name": "Bosch",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -50,7 +54,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "BME280",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -62,12 +66,12 @@
       "manufacturer": {
         "@id": "manuf:Plantower",
         "name": "Plantower",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [],
       "key": "PMS1003",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -79,7 +83,7 @@
       "manufacturer": {
         "@id": "manuf:Plantower",
         "name": "Plantower",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -87,7 +91,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "PMS5003",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -99,12 +103,12 @@
       "manufacturer": {
         "@id": "manuf:EcoCurious",
         "name": "EcoCurious",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [],
-      "key": "Radiation SBM-19",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "key": "Radiation-SBM-19",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -116,7 +120,7 @@
       "manufacturer": {
         "@id": "manuf:Sensirion-AG",
         "name": "Sensirion AG",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -124,7 +128,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "SHT11",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -136,12 +140,12 @@
       "manufacturer": {
         "@id": "manuf:Luftdateninfo",
         "name": "Luftdaten.info",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [],
-      "key": "DNMS (Laerm)",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "key": "DNMS-Laerm",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -153,7 +157,7 @@
       "manufacturer": {
         "@id": "manuf:Plantower",
         "name": "Plantower",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -161,7 +165,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "PMS7003",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -173,7 +177,7 @@
       "manufacturer": {
         "@id": "manuf:TERA-Sensor",
         "name": "TERA Sensor",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -181,7 +185,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "NextPM",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -193,12 +197,12 @@
       "manufacturer": {
         "@id": "manuf:Shinyei",
         "name": "Shinyei",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [],
       "key": "PPD42NS",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -210,7 +214,7 @@
       "manufacturer": {
         "@id": "manuf:Sensirion-AG",
         "name": "Sensirion AG",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -218,7 +222,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "SPS30",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -230,12 +234,12 @@
       "manufacturer": {
         "@id": "manuf:EcoCurious",
         "name": "EcoCurious",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [],
-      "key": "Radiation SBM-20",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "key": "Radiation-SBM-20",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -247,7 +251,7 @@
       "manufacturer": {
         "@id": "manuf:various",
         "name": "various",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -255,7 +259,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "DHT22",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -267,15 +271,15 @@
       "manufacturer": {
         "@id": "manuf:EcoCurious",
         "name": "EcoCurious",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
         "http://w3id.org/ad4gd/ev/eav/AirTemperature",
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
-      "key": "Radiation Si22G",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "key": "Radiation-Si22G",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -287,7 +291,7 @@
       "manufacturer": {
         "@id": "manuf:Nova-Fitness",
         "name": "Nova Fitness",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -295,7 +299,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "SDS011",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -307,12 +311,12 @@
       "manufacturer": {
         "@id": "manuf:Plantower",
         "name": "Plantower",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [],
       "key": "PMS3003",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -324,7 +328,7 @@
       "manufacturer": {
         "@id": "manuf:Sensirion-AG",
         "name": "Sensirion AG",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -332,7 +336,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "SHT30",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -344,7 +348,7 @@
       "manufacturer": {
         "@id": "manuf:Measurement-Specialties",
         "name": "Measurement Specialties",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -352,7 +356,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "HTU21D",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -364,7 +368,7 @@
       "manufacturer": {
         "@id": "manuf:Honeywell",
         "name": "Honeywell",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -372,7 +376,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "HPM",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -384,12 +388,12 @@
       "manufacturer": {
         "@id": "manuf:Plantower",
         "name": "Plantower",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [],
       "key": "PMS6003",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -401,7 +405,7 @@
       "manufacturer": {
         "@id": "manuf:Sensirion-AG",
         "name": "Sensirion AG",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -409,7 +413,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "SHT35",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -421,7 +425,7 @@
       "manufacturer": {
         "@id": "manuf:Bosch",
         "name": "Bosch",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -429,7 +433,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "BMP280",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -441,7 +445,7 @@
       "manufacturer": {
         "@id": "manuf:Sensirion-AG",
         "name": "Sensirion AG",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -449,7 +453,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "SHT85",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -461,12 +465,12 @@
       "manufacturer": {
         "@id": "manuf:ublox",
         "name": "ublox",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [],
       "key": "GPS-NEO-6M",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -478,7 +482,7 @@
       "manufacturer": {
         "@id": "manuf:Sensirion-AG",
         "name": "Sensirion AG",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
@@ -486,7 +490,7 @@
         "http://w3id.org/ad4gd/ev/eav/RelativeHumidity"
       ],
       "key": "SCD30",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -498,14 +502,14 @@
       "manufacturer": {
         "@id": "manuf:Bosch",
         "name": "Bosch",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
         "http://w3id.org/ad4gd/ev/eav/AirTemperature"
       ],
       "key": "BMP180",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -517,14 +521,14 @@
       "manufacturer": {
         "@id": "manuf:Dallas-semiconductor",
         "name": "Dallas semiconductor",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [
         "http://w3id.org/ad4gd/ev/eav/AirTemperature"
       ],
       "key": "DS18B20",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
@@ -536,16 +540,34 @@
       "manufacturer": {
         "@id": "manuf:Nova-Fitness",
         "name": "Nova Fitness",
-        "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers",
         "@type": "skos:Concept"
       },
       "observed_properties": [],
       "key": "SDS021",
-      "skos:inScheme": "https://w3id.org/ad4gd/sensors",
+      "inScheme": "https://w3id.org/ad4gd/sensors",
       "@type": [
         "sosa:Sensor",
         "skos:Concept"
       ]
+    },
+    {
+      "@id": "https://w3id.org/ad4gd/sensors",
+      "@type": [
+        "skos:ConceptScheme",
+        "sosa:Sensor",
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "AD4GD sensors"
+    },
+    {
+      "@id": "https://w3id.org/ad4gd/sensors/manufacturers",
+      "@type": [
+        "skos:ConceptScheme",
+        "sosa:Sensor",
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "AD4GD sensor manufacturers"
     }
   ]
 }

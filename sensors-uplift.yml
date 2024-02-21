@@ -12,11 +12,22 @@ transform:
     def to_iri: gsub(" "; "-") | gsub("[^A-Za-z0-9_-]"; "") ;
     [to_entries 
       | .[]
-      | .value + { "key": .key }
-      | .manufacturer |= { "@id": ("manuf:" + to_iri), "name": ., "skos:inScheme": "https://w3id.org/ad4gd/sensors/manufacturers" }
+      | .value + { "key": (.key | to_iri) }
+      | .manufacturer |= { "@id": ("manuf:" + to_iri), "name": ., "inScheme": "https://w3id.org/ad4gd/sensors/manufacturers" }
       | (.observed_properties |= map(properties[.] // empty))
-      | ."skos:inScheme" = "https://w3id.org/ad4gd/sensors"
+      | ."inScheme" = "https://w3id.org/ad4gd/sensors"
       | del(..|select(. == ""))
+    ] + [
+      {
+        "@id": "https://w3id.org/ad4gd/sensors",
+        "@type": "skos:ConceptScheme",
+        "skos:prefLabel": "AD4GD sensors",
+      },
+      {
+        "@id": "https://w3id.org/ad4gd/sensors/manufacturers",
+        "@type": "skos:ConceptScheme",
+        "skos:prefLabel": "AD4GD sensor manufacturers",
+      }
     ]
 
 types:
@@ -41,3 +52,6 @@ context:
     manufacturer: dct:creator
     name: rdfs:label
     description: dct:description
+    inScheme:
+      '@id': skos:inScheme
+      '@type': '@id'
