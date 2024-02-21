@@ -47,6 +47,8 @@ SDS011:
     Note that the SDS011 humidity working range is 0-70%. This is so good, since above 70% humidity, the readings become unreliable.
     
     From: https://aqicn.org/sensor/sds011/
+  references:
+    - https://aqicn.org/sensor/sds011/
 
   uri: ''
   observed_properties:
@@ -115,6 +117,8 @@ PMS1003:
     Response time: ≤10 seconds (s)
 
     https://aqicn.org/sensor/pms1003/
+  references:
+    - https://aqicn.org/sensor/pms1003/
   uri: ''
   observed_properties:
     - P0
@@ -132,6 +136,9 @@ PMS5003:
     Standard Volume: 0.1L
 
     https://www.adafruit.com/product/3686
+  references:
+    - https://aqicn.org/sensor/pms5003-7003/
+
   uri: ''
   observed_properties:
     - P2
@@ -173,6 +180,8 @@ PMS7003:
   name: PMS7003
   manufacturer: Plantower
   description: ''
+  references:
+    - https://aqicn.org/sensor/pms5003-7003/
   uri: ''
   observed_properties:
     - P0
@@ -199,6 +208,8 @@ PPD42NS:
   name: PPD42NS
   manufacturer: Shinyei
   description: ''
+  references:
+    - https://aqicn.org/sensor/shinyei/
   uri: ''
   observed_properties:
     - durP1
@@ -251,6 +262,8 @@ PMS3003:
   name: PMS3003
   manufacturer: Plantower
   description: ''
+  references:
+    - https://aqicn.org/sensor/pms3003/
   uri: ''
   observed_properties:
     - P0
@@ -365,6 +378,8 @@ SDS021:
   name: SDS021
   manufacturer: Nova Fitness
   description: ''
+  references:
+    - https://aqicn.org/sensor/sds021/
   uri: ''
   observed_properties:
     - P1
