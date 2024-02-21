@@ -1,0 +1,293 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix manuf: <https://w3id.org/ad4gd/sensors/manufacturers/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ad4gd/sensors/BME280> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "BME280" ;
+    dct:creator manuf:Bosch ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/BMP180> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "BMP180" ;
+    dct:creator manuf:Bosch ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature> .
+
+<https://w3id.org/ad4gd/sensors/BMP280> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "BMP280" ;
+    dct:creator manuf:Bosch ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/DHT22> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "DHT22" ;
+    dct:creator manuf:various ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/DNMS-Laerm> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "DNMS (Laerm)" ;
+    dct:creator manuf:Luftdateninfo ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> .
+
+<https://w3id.org/ad4gd/sensors/DS18B20> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "DS18B20" ;
+    dct:creator manuf:Dallas-semiconductor ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature> .
+
+<https://w3id.org/ad4gd/sensors/GPS-NEO-6M> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "GPS-NEO-6M" ;
+    dct:creator manuf:ublox ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> .
+
+<https://w3id.org/ad4gd/sensors/HPM> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "HPM" ;
+    dct:creator manuf:Honeywell ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/HTU21D> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "HTU21D" ;
+    dct:creator manuf:Measurement-Specialties ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/NextPM> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "NextPM" ;
+    dct:creator manuf:TERA-Sensor ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/PMS1003> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "PMS1003" ;
+    dct:creator manuf:Plantower ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> .
+
+<https://w3id.org/ad4gd/sensors/PMS3003> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "PMS3003" ;
+    dct:creator manuf:Plantower ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> .
+
+<https://w3id.org/ad4gd/sensors/PMS5003> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "PMS5003" ;
+    dct:creator manuf:Plantower ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/PMS6003> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "PMS6003" ;
+    dct:creator manuf:Plantower ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> .
+
+<https://w3id.org/ad4gd/sensors/PMS7003> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "PMS7003" ;
+    dct:creator manuf:Plantower ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/PPD42NS> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "PPD42NS" ;
+    dct:creator manuf:Shinyei ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> .
+
+<https://w3id.org/ad4gd/sensors/Radiation-SBM-19> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "Radiation SBM-19" ;
+    dct:creator manuf:EcoCurious ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> .
+
+<https://w3id.org/ad4gd/sensors/Radiation-SBM-20> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "Radiation SBM-20" ;
+    dct:creator manuf:EcoCurious ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> .
+
+<https://w3id.org/ad4gd/sensors/Radiation-Si22G> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "Radiation Si22G" ;
+    dct:creator manuf:EcoCurious ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/SCD30> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "SCD30" ;
+    dct:creator manuf:Sensirion-AG ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/SDS011> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "SDS011" ;
+    dct:creator manuf:Nova-Fitness ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/SDS021> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "SDS021" ;
+    dct:creator manuf:Nova-Fitness ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> .
+
+<https://w3id.org/ad4gd/sensors/SHT11> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "SHT11" ;
+    dct:creator manuf:Sensirion-AG ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/SHT30> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "SHT30" ;
+    dct:creator manuf:Sensirion-AG ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/SHT31> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "SHT31" ;
+    dct:creator manuf:Sensirion-AG ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/SHT35> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "SHT35" ;
+    dct:creator manuf:Sensirion-AG ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/SHT85> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "SHT85" ;
+    dct:creator manuf:Sensirion-AG ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+<https://w3id.org/ad4gd/sensors/SPS30> a skos:Concept,
+        sosa:Sensor ;
+    rdfs:label "SPS30" ;
+    dct:creator manuf:Sensirion-AG ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors> ;
+    sosa:observes <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
+        <http://w3id.org/ad4gd/ev/eav/RelativeHumidity> .
+
+manuf:Dallas-semiconductor a skos:Concept ;
+    rdfs:label "Dallas semiconductor" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:Honeywell a skos:Concept ;
+    rdfs:label "Honeywell" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:Luftdateninfo a skos:Concept ;
+    rdfs:label "Luftdaten.info" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:Measurement-Specialties a skos:Concept ;
+    rdfs:label "Measurement Specialties" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:Shinyei a skos:Concept ;
+    rdfs:label "Shinyei" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:TERA-Sensor a skos:Concept ;
+    rdfs:label "TERA Sensor" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:ublox a skos:Concept ;
+    rdfs:label "ublox" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:various a skos:Concept ;
+    rdfs:label "various" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:Nova-Fitness a skos:Concept ;
+    rdfs:label "Nova Fitness" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:Bosch a skos:Concept ;
+    rdfs:label "Bosch" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:EcoCurious a skos:Concept ;
+    rdfs:label "EcoCurious" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:Plantower a skos:Concept ;
+    rdfs:label "Plantower" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+manuf:Sensirion-AG a skos:Concept ;
+    rdfs:label "Sensirion AG" ;
+    skos:inScheme <https://w3id.org/ad4gd/sensors/manufacturers> .
+
+<https://w3id.org/ad4gd/sensors/manufacturers> a skos:Concept,
+        skos:ConceptScheme,
+        sosa:Sensor ;
+    skos:prefLabel "AD4GD sensor manufacturers" .
+
+<https://w3id.org/ad4gd/sensors> a skos:Concept,
+        skos:ConceptScheme,
+        sosa:Sensor ;
+    skos:prefLabel "AD4GD sensors" .
+
+[] a prov:Activity ;
+    prov:endedAtTime "2024-02-21T10:52:30.953286"^^xsd:dateTime ;
+    prov:startedAtTime "2024-02-21T10:52:30.898991"^^xsd:dateTime ;
+    prov:used [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            dct:hasVersion "git:f14517f89502d5f6754997a4969501fc875bf594" ;
+            rdfs:seeAlso <file:///home/avillar/work/Proyectos/ogc/ad4gd-semantics/sensors-uplift.yml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:f14517f89502d5f6754997a4969501fc875bf594" ;
+            rdfs:seeAlso <file:///home/avillar/work/Proyectos/ogc/ad4gd-semantics/sensors.yml> ] ;
+    prov:wasAssociatedWith [ a prov:Agent,
+                schema:SoftwareApplication ;
+            rdfs:label "OGC-NA tools" ;
+            dct:hasVersion "0.3.36.dev0+gb93c2c2.d20240201" ;
+            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
+    prov:wasInformedBy [ dct:identifier "9fd37f20-07bd-4cb4-8524-9c21d4acfec8" ] .
+
