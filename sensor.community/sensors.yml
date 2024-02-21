@@ -1,12 +1,94 @@
-# Format
-# sensor_key:
-#   name: name
-#   manufacturer: Sensirion AG
-#   description: ''
-#   uri: ''
-#   observed_properties:
-#     - temperature
-#     - humidity
+# For reference these are the total number of observations reported by each sensor type in a 5 minute interval from sensor.community
+#    SDS011               24029 49%
+#    BME280               10240 21%
+#    DHT22                9352 19%
+#    DNMS (Laerm)         1082 2%
+#    SPS30                771 2%
+#    PMS5003              533 1%
+#    BMP280               509 1%
+#    SHT31                500 1%
+#    PMS7003              371 1%
+#    BMP180               287 1%
+#    SHT30                283 1%
+#    HTU21D               215 0%
+#    Radiation Si22G      143 0%
+#    DS18B20              89 0%
+#    SHT35                20 0%
+#    PMS1003              20 0%
+#    NextPM               16 0%
+#    GPS-NEO-6M           15 0%
+#    HPM                  12 0%
+#    PMS3003              12 0%
+#    SCD30                10 0%
+#    PPD42NS              9 0%
+#    Radiation SBM-20     8 0%
+#    Radiation SBM-19     7 0%
+#    SDS021               6 0%
+#    SHT85                4 0%
+#    SHT11                2 0%
+#    SHT15                1 0%
+
+
+SDS011:
+  name: SDS011
+  manufacturer: Nova Fitness
+  description: |
+    This is the specification for the SDS011. One should not consider all those values for granted as there is quite often a big difference
+     between what is said to be possible and what is actually possible (and this is why we are setting up all our experiments).
+
+      Output: PM2.5, PM10
+      Measuring Range: 0.0-999.9μg/m3
+      Response Time 1 second
+      Serial Data Output Frequency: 1 time/second
+      Particle Diameter Resolution: ≤0.3μm
+      Relative Error:10%
+      Temperature Range:-20~50°C
+    
+    Note that the SDS011 humidity working range is 0-70%. This is so good, since above 70% humidity, the readings become unreliable.
+    
+    From: https://aqicn.org/sensor/sds011/
+
+  uri: ''
+  observed_properties:
+    - P1
+    - P2
+
+BME280:
+  name: BME280
+  manufacturer: Bosch
+  description: | 
+    This precision sensor from Bosch is the best low-cost sensing solution for measuring humidity with ±3% accuracy,
+    barometric pressure with ±1 hPa absolute accuraccy, and temperature with ±1.0°C accuracy. Because pressure changes with altitude,
+    and the pressure measurements are so good, you can also use it as an altimeter with  ±1 meter or better accuracy! 
+    
+    From: https://www.adafruit.com/product/2652'
+  uri: ''
+  observed_properties:
+    - temperature
+    - pressure
+    - humidity
+    - pressure_at_sealevel # Derived from others?
+
+
+DHT22:
+  name: DHT22
+  manufacturer: various
+  description: |
+    The DHT22 is a basic, low-cost digital temperature and humidity sensor. It uses a capacitive humidity sensor and a thermistor to measure
+    the surrounding air and spits out a digital signal on the data pin (no analog input pins needed). It's fairly simple to use but requires
+    careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using
+    our library, sensor readings can be up to 2 seconds old.
+
+    Low cost
+    Good for 0-100% humidity readings with 2-5% accuracy
+    Good for -40 to 80°C temperature readings ±0.5°C accuracy
+    No more than 0.5 Hz sampling rate (once every 2 seconds)
+
+    From: https://www.adafruit.com/product/385
+  uri: ''
+  observed_properties:
+    - temperature
+    - humidity
 
 SHT31:
   name: SHT31
@@ -18,21 +100,6 @@ SHT31:
   observed_properties:
     - temperature
     - humidity
-
-BME280:
-  name: BME280
-  manufacturer: Bosch
-  description: | 
-    This precision sensor from Bosch is the best low-cost sensing solution for measuring humidity with ±3% accuracy,
-    barometric pressure with ±1 hPa absolute accuraccy, and temperature with ±1.0°C accuracy. Because pressure changes with altitude,
-    and the pressure measurements are so good, you can also use it as an altimeter with  ±1 meter or better accuracy! 
-    https://www.adafruit.com/product/2652'
-  uri: ''
-  observed_properties:
-    - temperature
-    - pressure
-    - humidity
-    - pressure_at_sealevel # Derived from others?
 
 PMS1003:
   name: PMS1003
@@ -169,15 +236,6 @@ Radiation SBM-20:
     - counts
     - sample_time_ms
 
-DHT22:
-  name: DHT22
-  manufacturer: various
-  description: ''
-  uri: ''
-  observed_properties:
-    - temperature
-    - humidity
-
 Radiation Si22G:
   name: Radiation Si22G
   manufacturer: EcoCurious
@@ -188,15 +246,6 @@ Radiation Si22G:
     - hv_pulses
     - counts
     - sample_time_ms
-
-SDS011:
-  name: SDS011
-  manufacturer: Nova Fitness
-  description: ''
-  uri: ''
-  observed_properties:
-    - P1
-    - P2
 
 PMS3003:
   name: PMS3003
