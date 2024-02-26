@@ -1,0 +1,37 @@
+transform:
+  - |
+    (.base | sub("/+$"; "")) as $BASE
+    | { "@id": $BASE, "@base": "\($BASE)/" } + .
+    | .properties |= [ to_entries | .[] | {"@id": "\($BASE)/\(.key)" } + .value ]
+    | ."dct:source" = { "@id": "https://ad4gd.eu/" }
+
+types:
+  $: skos:ConceptScheme
+  $.properties[*]:
+    - skos:Concept
+    - sosa:ObservableProperty
+
+context:
+  $:
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    rdfs: http://www.w3.org/2000/01/rdf-schema#
+    skos: http://www.w3.org/2004/02/skos/core#
+    dct: http://purl.org/dc/terms/
+    sosa: http://www.w3.org/ns/sosa/
+    owl: http://www.w3.org/2002/07/owl#
+    label: skos:prefLabel
+    'properties':
+      '@reverse': 'skos:inScheme'
+    sameAs:
+      '@id': owl:sameAs
+      '@type': '@id'
+    seeAlso:
+      '@id': rdfs:seeAlso
+      '@type': '@id'
+    hasBroader:
+      '@id': skos:broader
+      '@type': '@id'
+    hasNarrower:
+      '@id': skos:narrower
+      '@type': '@id'
+    description: skos:definition
