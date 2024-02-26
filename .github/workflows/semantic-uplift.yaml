@@ -1,4 +1,4 @@
-name: Uplift and push
+name: Semantic uplift
 
 on:
   workflow_dispatch:
