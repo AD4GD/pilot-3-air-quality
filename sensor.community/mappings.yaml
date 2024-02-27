@@ -25,7 +25,7 @@ observed_properties_json_api:
     counts                    : counts
     sample_time_ms            : sample_time_ms
 
-    # These dur and ratio values are only reported by the PPD42NS
+    # These dur and ratio values are only reported by the PPD42NS
     durP1                     : durP1 
     ratioP1                   : ratioP1 
     durP2                     : durP2

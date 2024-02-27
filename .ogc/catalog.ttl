@@ -22,7 +22,7 @@ _:properties a dcat:Dataset, dcfg:UpliftConfiguration ;
 
 _:propertiesEntailments a dcat:Dataset, dcfg:DomainConfiguration ;
   dct:description "Properties entailments" ;
-  dcfg:glob "generic/properties.ttl" ;
+  dcfg:glob "generic/*.ttl" ;
   dcfg:uriRootFilter "/ad4gd/" ;
   dct:conformsTo profiles:skos_shared, profiles:skos_conceptscheme, profiles:skos_conceptscheme_ogc, profiles:vocprez_ogc ;
 .

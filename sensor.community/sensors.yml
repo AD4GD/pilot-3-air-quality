@@ -1,386 +1,374 @@
-# For reference these are the total number of observations reported by each sensor type in a 5 minute interval from sensor.community
-#    SDS011               24029 49%
-#    BME280               10240 21%
-#    DHT22                9352 19%
-#    DNMS (Laerm)         1082 2%
-#    SPS30                771 2%
-#    PMS5003              533 1%
-#    BMP280               509 1%
-#    SHT31                500 1%
-#    PMS7003              371 1%
-#    BMP180               287 1%
-#    SHT30                283 1%
-#    HTU21D               215 0%
-#    Radiation Si22G      143 0%
-#    DS18B20              89 0%
-#    SHT35                20 0%
-#    PMS1003              20 0%
-#    NextPM               16 0%
-#    GPS-NEO-6M           15 0%
-#    HPM                  12 0%
-#    PMS3003              12 0%
-#    SCD30                10 0%
-#    PPD42NS              9 0%
-#    Radiation SBM-20     8 0%
-#    Radiation SBM-19     7 0%
-#    SDS021               6 0%
-#    SHT85                4 0%
-#    SHT11                2 0%
-#    SHT15                1 0%
+# Map observed properties as they are named in the sensor.community json api
+# To out internal namespace
+# The api is hosted at https://data.sensor.community/static/v1/data.json
+# These are currently ordered by the frequency with which they appear in the data
+mappedProperties:
+    temperature               : temperature
+    pressure                  :
+    humidity                  :
+    pressure_at_sealevel      :
+    P1                        : pm10
+    P2                        : pm2.5
+    noise_LAeq                :
+    noise_LA_min              :
+    noise_LA_max              :
+    P0                        : pm1.0 # Based on this being reported by the PMS5003 which measures PM1 PM2.4 and PM10 I think this is PM1.0
+    P4                        : # ??
+    N05                       :
+    N1                        :
+    N25                       :
+    N4                        :
+    N10                       :
+    TS                        : # Timestamp?
+    counts_per_minute         :
+    hv_pulses                 :
+    counts                    :
+    sample_time_ms            :
+
+    # These dur and ratio values are only reported by the PPD42NS
+    durP1                     : durP1
+    ratioP1                   : ratioP1
+    durP2                     : durP2
+    ratioP2                   : ratioP2
+
+    co2_ppm                   : co2_ppm
+    pressure_sealevel         : pressure_sealevel
+    lat                       : lat
+    lon                       : lon
+    height                    : height
+    timestamp                 : timestamp
+    P3                        : P3
+    interval                  : interval
+    samples                   : samples
+    min_micro                 : min_micro
+    max_micro                 : max_micro
+    brightness                : brightness
+
+sensors:
+
+  SDS011:
+    name: SDS011
+    manufacturer: Nova Fitness
+    description: |
+      This is the specification for the SDS011. One should not consider all those values for granted as there is quite often a big difference
+       between what is said to be possible and what is actually possible (and this is why we are setting up all our experiments).
+  
+        Output: PM2.5, PM10
+        Measuring Range: 0.0-999.9μg/m3
+        Response Time 1 second
+        Serial Data Output Frequency: 1 time/second
+        Particle Diameter Resolution: ≤0.3μm
+        Relative Error:10%
+        Temperature Range:-20~50°C
+      
+      Note that the SDS011 humidity working range is 0-70%. This is so good, since above 70% humidity, the readings become unreliable.
+      
+      From: https://aqicn.org/sensor/sds011/
+    references:
+      - https://aqicn.org/sensor/sds011/
+
+    observed_properties:
+      - P1
+      - P2
+
+  BME280:
+    name: BME280
+    manufacturer: Bosch
+    description: | 
+      This precision sensor from Bosch is the best low-cost sensing solution for measuring humidity with ±3% accuracy,
+      barometric pressure with ±1 hPa absolute accuraccy, and temperature with ±1.0°C accuracy. Because pressure changes with altitude,
+      and the pressure measurements are so good, you can also use it as an altimeter with  ±1 meter or better accuracy! 
+      
+      From: https://www.adafruit.com/product/2652'
+    observed_properties:
+      - temperature
+      - pressure
+      - humidity
+      - pressure_at_sealevel # Derived from others?
 
 
-SDS011:
-  name: SDS011
-  manufacturer: Nova Fitness
-  description: |
-    This is the specification for the SDS011. One should not consider all those values for granted as there is quite often a big difference
-     between what is said to be possible and what is actually possible (and this is why we are setting up all our experiments).
+  DHT22:
+    name: DHT22
+    manufacturer: various
+    description: |
+      The DHT22 is a basic, low-cost digital temperature and humidity sensor. It uses a capacitive humidity sensor and a thermistor to measure
+      the surrounding air and spits out a digital signal on the data pin (no analog input pins needed). It's fairly simple to use but requires
+      careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using
+      our library, sensor readings can be up to 2 seconds old.
+  
+      Low cost
+      Good for 0-100% humidity readings with 2-5% accuracy
+      Good for -40 to 80°C temperature readings ±0.5°C accuracy
+      No more than 0.5 Hz sampling rate (once every 2 seconds)
+  
+      From: https://www.adafruit.com/product/385
+    observed_properties:
+      - temperature
+      - humidity
 
-      Output: PM2.5, PM10
-      Measuring Range: 0.0-999.9μg/m3
-      Response Time 1 second
-      Serial Data Output Frequency: 1 time/second
-      Particle Diameter Resolution: ≤0.3μm
-      Relative Error:10%
-      Temperature Range:-20~50°C
-    
-    Note that the SDS011 humidity working range is 0-70%. This is so good, since above 70% humidity, the readings become unreliable.
-    
-    From: https://aqicn.org/sensor/sds011/
-  references:
-    - https://aqicn.org/sensor/sds011/
+  SHT31:
+    name: SHT31
+    manufacturer: Sensirion AG
+    description: |
+      The SHT31-D sensor has an excellent ±2% relative humidity and ±0.3°C accuracy for most uses.
+      https://www.adafruit.com/product/2857'
+    observed_properties:
+      - temperature
+      - humidity
 
-  uri: ''
-  observed_properties:
-    - P1
-    - P2
+  PMS1003:
+    name: PMS1003
+    manufacturer: Plantower
+    description: | 
+      The PMS 1003 Sensor is a recent laser based Air Quality Sensor developped by plantower (chinese name: 攀藤 (pānténg))
+      and used inside a numerous number of air quality sensing devices. It is also sometimes refered as HK 5001, or labelled
+      under the "oneair" brand, but it is indeed developped and produced by plantower (a Shenzhen based company with office in Beijing).
+  
+      Measuring range: 0.3 to 1.0, 1.0 ~ 2.5, 2.5 to 10 microns (um)
+      Range: 0 ~ 500 ug / m3
+      counting accuracy of 50% @ 0.3um, 98% @ ≥0.5 um said the quasi-volume : 0.1 liters (L)
+      Response time: ≤10 seconds (s)
+  
+      https://aqicn.org/sensor/pms1003/
+    references:
+      - https://aqicn.org/sensor/pms1003/
+    observed_properties:
+      - P0
+      - P1
+      - P2
 
-BME280:
-  name: BME280
-  manufacturer: Bosch
-  description: | 
-    This precision sensor from Bosch is the best low-cost sensing solution for measuring humidity with ±3% accuracy,
-    barometric pressure with ±1 hPa absolute accuraccy, and temperature with ±1.0°C accuracy. Because pressure changes with altitude,
-    and the pressure measurements are so good, you can also use it as an altimeter with  ±1 meter or better accuracy! 
-    
-    From: https://www.adafruit.com/product/2652'
-  uri: ''
-  observed_properties:
-    - temperature
-    - pressure
-    - humidity
-    - pressure_at_sealevel # Derived from others?
+  PMS5003:
+    name: PMS5003
+    manufacturer: Plantower
+    description: |
+      Range of measurement: 0.3~1.0; 1.0~2.5; 2.5~10 μ m
+      Effective Range: 0~500 μ g/m³
+      Maximum Range: * ≥1000 μ g/m³
+      Resolution: 1 μ g/m³
+      Standard Volume: 0.1L
+  
+      https://www.adafruit.com/product/3686
+    references:
+      - https://aqicn.org/sensor/pms5003-7003/
+    observed_properties:
+      - P2
+      - P1
+      - P0 # This seems likely to be PM1.0
+      # - P3 # Only observed by very few sensors, probably a mistake
 
+  Radiation SBM-19:
+    name: Radiation SBM-19
+    manufacturer: EcoCurious
+    description: 'As as I know this is an internal sensor.community project not intended for public consumption.'
+    observed_properties:
+      - counts_per_minute
+      - hv_pulses
+      - counts
+      - sample_time_ms
 
-DHT22:
-  name: DHT22
-  manufacturer: various
-  description: |
-    The DHT22 is a basic, low-cost digital temperature and humidity sensor. It uses a capacitive humidity sensor and a thermistor to measure
-    the surrounding air and spits out a digital signal on the data pin (no analog input pins needed). It's fairly simple to use but requires
-    careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using
-    our library, sensor readings can be up to 2 seconds old.
+  SHT11:
+    name: SHT11
+    manufacturer: Sensirion AG
+    description: ''
+    observed_properties:
+      - temperature
+      - humidity
 
-    Low cost
-    Good for 0-100% humidity readings with 2-5% accuracy
-    Good for -40 to 80°C temperature readings ±0.5°C accuracy
-    No more than 0.5 Hz sampling rate (once every 2 seconds)
+  DNMS (Laerm):
+    name: DNMS (Laerm)
+    manufacturer: Luftdaten.info
+    description: ''
+    observed_properties:
+      - noise_LAeq
+      - noise_LA_min
+      - noise_LA_max
 
-    From: https://www.adafruit.com/product/385
-  uri: ''
-  observed_properties:
-    - temperature
-    - humidity
+  PMS7003:
+    name: PMS7003
+    manufacturer: Plantower
+    description: ''
+    references:
+      - https://aqicn.org/sensor/pms5003-7003/
+    observed_properties:
+      - P0
+      - P1
+      - P2
 
-SHT31:
-  name: SHT31
-  manufacturer: Sensirion AG
-  description: |
-    The SHT31-D sensor has an excellent ±2% relative humidity and ±0.3°C accuracy for most uses.
-    https://www.adafruit.com/product/2857'
-  uri: ''
-  observed_properties:
-    - temperature
-    - humidity
+  NextPM:
+    name: NextPM
+    manufacturer: TERA Sensor
+    description: ''
+    observed_properties:
+      - temperature
+      - pressure
+      - humidity
+      - P0
+      - P2
+      - P4
+      - P1
+      - N05
+      - N1
 
-PMS1003:
-  name: PMS1003
-  manufacturer: Plantower
-  description: | 
-    The PMS 1003 Sensor is a recent laser based Air Quality Sensor developped by plantower (chinese name: 攀藤 (pānténg))
-    and used inside a numerous number of air quality sensing devices. It is also sometimes refered as HK 5001, or labelled
-    under the "oneair" brand, but it is indeed developped and produced by plantower (a Shenzhen based company with office in Beijing).
+  PPD42NS:
+    name: PPD42NS
+    manufacturer: Shinyei
+    description: ''
+    references:
+      - https://aqicn.org/sensor/shinyei/
+    observed_properties:
+      - durP1
+      - ratioP1
+      - P1
+      - durP2
+      - ratioP2
+      - P2
 
-    Measuring range: 0.3 to 1.0, 1.0 ~ 2.5, 2.5 to 10 microns (um)
-    Range: 0 ~ 500 ug / m3
-    counting accuracy of 50% @ 0.3um, 98% @ ≥0.5 um said the quasi-volume : 0.1 liters (L)
-    Response time: ≤10 seconds (s)
+  SPS30:
+    name: SPS30
+    manufacturer: Sensirion AG
+    description: ''
+    observed_properties:
+      - P0
+      - P2
+      - P4
+      - P1
+      - N05
+      - N1
+      - N25
+      - N4
+      - N10
+      - TS
 
-    https://aqicn.org/sensor/pms1003/
-  references:
-    - https://aqicn.org/sensor/pms1003/
-  uri: ''
-  observed_properties:
-    - P0
-    - P1
-    - P2
+  Radiation SBM-20:
+    name: Radiation SBM-20
+    manufacturer: EcoCurious
+    description: ''
+    observed_properties:
+      - counts_per_minute
+      - hv_pulses
+      - counts
+      - sample_time_ms
 
-PMS5003:
-  name: PMS5003
-  manufacturer: Plantower
-  description: |
-    Range of measurement: 0.3~1.0; 1.0~2.5; 2.5~10 μ m
-    Effective Range: 0~500 μ g/m³
-    Maximum Range: * ≥1000 μ g/m³
-    Resolution: 1 μ g/m³
-    Standard Volume: 0.1L
+  Radiation Si22G:
+    name: Radiation Si22G
+    manufacturer: EcoCurious
+    description: ''
+    observed_properties:
+      - counts_per_minute
+      - hv_pulses
+      - counts
+      - sample_time_ms
 
-    https://www.adafruit.com/product/3686
-  references:
-    - https://aqicn.org/sensor/pms5003-7003/
+  PMS3003:
+    name: PMS3003
+    manufacturer: Plantower
+    description: ''
+    references:
+      - https://aqicn.org/sensor/pms3003/
+    observed_properties:
+      - P0
+      - P1
+      - P2
 
-  uri: ''
-  observed_properties:
-    - P2
-    - P1
-    - P0 # This seems likely to be PM1.0
-    # - P3 # Only observed by very few sensors, probably a mistake
+  SHT30:
+    name: SHT30
+    manufacturer: Sensirion AG
+    description: ''
+    observed_properties:
+      - temperature
+      - humidity
 
-Radiation SBM-19:
-  name: Radiation SBM-19
-  manufacturer: EcoCurious
-  description: 'As as I know this is an internal sensor.community project not intended for public consumption.'
-  uri: ''
-  observed_properties:
-    - counts_per_minute
-    - hv_pulses
-    - counts
-    - sample_time_ms
+  HTU21D:
+    name: HTU21D
+    manufacturer: Measurement Specialties
+    description: ''
+    observed_properties:
+      - temperature
+      - humidity
 
-SHT11:
-  name: SHT11
-  manufacturer: Sensirion AG
-  description: ''
-  uri: ''
-  observed_properties:
-    - temperature
-    - humidity
+  HPM:
+    name: HPM
+    manufacturer: Honeywell
+    description: ''
+    observed_properties:
+      - P1
+      - P2
 
-DNMS (Laerm):
-  name: DNMS (Laerm)
-  manufacturer: Luftdaten.info
-  description: ''
-  uri: ''
-  observed_properties:
-    - noise_LAeq
-    - noise_LA_min
-    - noise_LA_max
+  PMS6003:
+    name: PMS6003
+    manufacturer: Plantower
+    description: ''
+    observed_properties:
+      - P0
+      - P1
+      - P2
 
-PMS7003:
-  name: PMS7003
-  manufacturer: Plantower
-  description: ''
-  references:
-    - https://aqicn.org/sensor/pms5003-7003/
-  uri: ''
-  observed_properties:
-    - P0
-    - P1
-    - P2
+  SHT35:
+    name: SHT35
+    manufacturer: Sensirion AG
+    description: ''
+    observed_properties:
+      - temperature
+      - humidity
 
-NextPM:
-  name: NextPM
-  manufacturer: TERA Sensor
-  description: ''
-  uri: ''
-  observed_properties:
-    - temperature
-    - pressure
-    - humidity
-    - P0
-    - P2
-    - P4
-    - P1
-    - N05
-    - N1
-
-PPD42NS:
-  name: PPD42NS
-  manufacturer: Shinyei
-  description: ''
-  references:
-    - https://aqicn.org/sensor/shinyei/
-  uri: ''
-  observed_properties:
-    - durP1
-    - ratioP1
-    - P1
-    - durP2
-    - ratioP2
-    - P2
-
-SPS30:
-  name: SPS30
-  manufacturer: Sensirion AG
-  description: ''
-  uri: ''
-  observed_properties:
-    - P0
-    - P2
-    - P4
-    - P1
-    - N05
-    - N1
-    - N25
-    - N4
-    - N10
-    - TS
-
-Radiation SBM-20:
-  name: Radiation SBM-20
-  manufacturer: EcoCurious
-  description: ''
-  uri: ''
-  observed_properties:
-    - counts_per_minute
-    - hv_pulses
-    - counts
-    - sample_time_ms
-
-Radiation Si22G:
-  name: Radiation Si22G
-  manufacturer: EcoCurious
-  description: ''
-  uri: ''
-  observed_properties:
-    - counts_per_minute
-    - hv_pulses
-    - counts
-    - sample_time_ms
-
-PMS3003:
-  name: PMS3003
-  manufacturer: Plantower
-  description: ''
-  references:
-    - https://aqicn.org/sensor/pms3003/
-  uri: ''
-  observed_properties:
-    - P0
-    - P1
-    - P2
-
-SHT30:
-  name: SHT30
-  manufacturer: Sensirion AG
-  description: ''
-  uri: ''
-  observed_properties:
-    - temperature
-    - humidity
-
-HTU21D:
-  name: HTU21D
-  manufacturer: Measurement Specialties
-  description: ''
-  uri: ''
-  observed_properties:
-    - temperature
-    - humidity
-
-HPM:
-  name: HPM
-  manufacturer: Honeywell
-  description: ''
-  uri: ''
-  observed_properties:
-    - P1
-    - P2
-
-PMS6003:
-  name: PMS6003
-  manufacturer: Plantower
-  description: ''
-  uri: ''
-  observed_properties:
-    - P0
-    - P1
-    - P2
-
-SHT35:
-  name: SHT35
-  manufacturer: Sensirion AG
-  description: ''
-  uri: ''
-  observed_properties:
-    - temperature
-    - humidity
-
-BMP280:
-  name: BMP280
-  manufacturer: Bosch
-  description: ''
-  uri: ''
-  observed_properties:
-    - pressure
-    - pressure_at_sealevel
+  BMP280:
+    name: BMP280
+    manufacturer: Bosch
+    description: ''
+    observed_properties:
+      - pressure
+      - pressure_at_sealevel
 
 
-SHT85:
-  name: SHT85
-  manufacturer: Sensirion AG
-  description: ''
-  uri: ''
-  observed_properties:
-    - temperature
-    - humidity
+  SHT85:
+    name: SHT85
+    manufacturer: Sensirion AG
+    description: ''
+    observed_properties:
+      - temperature
+      - humidity
 
-GPS-NEO-6M:
-  name: GPS-NEO-6M
-  manufacturer: ublox
-  description: ''
-  uri: ''
-  observed_properties:
-    - lat
-    - lon
-    - height
-    - timestamp
+  GPS-NEO-6M:
+    name: GPS-NEO-6M
+    manufacturer: ublox
+    description: ''
+    observed_properties:
+      - lat
+      - lon
+      - height
+      - timestamp
 
-SCD30:
-  name: SCD30
-  manufacturer: Sensirion AG
-  description: ''
-  uri: ''
-  observed_properties:
-    - temperature
-    - humidity
-    - co2_ppm
+  SCD30:
+    name: SCD30
+    manufacturer: Sensirion AG
+    description: ''
+    observed_properties:
+      - temperature
+      - humidity
+      - co2_ppm
 
-BMP180:
-  name: BMP180
-  manufacturer: Bosch
-  description: ''
-  uri: ''
-  observed_properties:
-    - pressure
-    - temperature
-    - pressure_at_sealevel
+  BMP180:
+    name: BMP180
+    manufacturer: Bosch
+    description: ''
+    observed_properties:
+      - pressure
+      - temperature
+      - pressure_at_sealevel
 
-DS18B20:
-  name: DS18B20
-  manufacturer: Dallas semiconductor
-  description: ''
-  uri: ''
-  observed_properties:
-    - temperature
+  DS18B20:
+    name: DS18B20
+    manufacturer: Dallas semiconductor
+    description: ''
+    observed_properties:
+      - temperature
 
-SDS021:
-  name: SDS021
-  manufacturer: Nova Fitness
-  description: ''
-  references:
-    - https://aqicn.org/sensor/sds021/
-  uri: ''
-  observed_properties:
-    - P1
-    - P2
+  SDS021:
+    name: SDS021
+    manufacturer: Nova Fitness
+    description: ''
+    references:
+      - https://aqicn.org/sensor/sds021/
+    observed_properties:
+      - P1
+      - P2
