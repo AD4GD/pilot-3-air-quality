@@ -26,23 +26,23 @@ mappedProperties:
     sample_time_ms            :
 
     # These dur and ratio values are only reported by the PPD42NS
-    durP1                     : durP1
-    ratioP1                   : ratioP1
-    durP2                     : durP2
-    ratioP2                   : ratioP2
+    durP1                     :
+    ratioP1                   :
+    durP2                     :
+    ratioP2                   :
 
-    co2_ppm                   : co2_ppm
-    pressure_sealevel         : pressure_sealevel
-    lat                       : lat
-    lon                       : lon
-    height                    : height
-    timestamp                 : timestamp
-    P3                        : P3
-    interval                  : interval
-    samples                   : samples
-    min_micro                 : min_micro
-    max_micro                 : max_micro
-    brightness                : brightness
+    co2_ppm                   :
+    pressure_sealevel         :
+    lat                       :
+    lon                       :
+    height                    :
+    timestamp                 :
+    P3                        :
+    interval                  :
+    samples                   :
+    min_micro                 :
+    max_micro                 :
+    brightness                : 
 
 sensors:
 
