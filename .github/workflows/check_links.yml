@@ -1,4 +1,4 @@
-name: Check URLS are resolvable
+name: Check URLs are resolvable
 
 on: [workflow_dispatch, push]
 
