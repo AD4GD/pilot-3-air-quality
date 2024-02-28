@@ -4,8 +4,8 @@
 # These are currently ordered by the frequency with which they appear in the data
 mappedProperties:
     temperature               : temperature
-    pressure                  :
-    humidity                  :
+    pressure                  : pressure
+    humidity                  : humidity
     pressure_at_sealevel      :
     P1                        : pm10
     P2                        : pm2.5
@@ -61,7 +61,7 @@ sensors:
         Relative Error:10%
         Temperature Range:-20~50°C
       
-      Note that the SDS011 humidity working range is 0-70%. This is so good, since above 70% humidity, the readings become unreliable.
+      Note that the SDS011 humidity working range is 0-70%. Above 70% humidity the readings become unreliable.
       
       From: https://aqicn.org/sensor/sds011/
     references:

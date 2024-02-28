@@ -19,6 +19,9 @@ properties:
 
   pm10:
     label: Particulate matter < 10 µm
+    description: The amount of suspended particulates in the air with a diameter of 10 micrometers (μm) or less.
+    seeAlso: 
+      - https://en.wikipedia.org/wiki/Particulates
     sameAs:
       - https://www.eea.europa.eu/help/glossary/eea-glossary/pm10
       - http://purl.oclc.org/NET/ssnx/cf/cf-property#mass_fraction_of_pm10_ambient_aerosol_in_air
@@ -27,6 +30,9 @@ properties:
 
   pm2.5:
       label: Particulate matter < 2.5 µm
+      description: The amount of suspended particulates in the air with a diameter of 2.5 micrometers (μm) or less.
+      seeAlso: 
+        - https://en.wikipedia.org/wiki/Particulates
       sameAs:
         - http://purl.oclc.org/NET/ssnx/cf/cf-property#mass_fraction_of_pm2p5_ambient_aerosol_in_air
         - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001
@@ -35,6 +41,9 @@ properties:
 
   pm1.0:
       label: Particulate matter < 1 µm
+      description: The amount of suspended particulates in the air with a diameter of 1 micrometer (μm) or less.
+      seeAlso: 
+        - https://en.wikipedia.org/wiki/Particulates
       sameAs:
         - http://purl.oclc.org/NET/ssnx/cf/cf-property#mass_fraction_of_pm1_ambient_aerosol_in_air
         - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6002
@@ -48,3 +57,41 @@ properties:
         - http://purl.org/iot/vocab/iot-taxonomy-lite#Temperature
         - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/54
         - http://w3id.org/ad4gd/ev/eav/AirTemperature
+
+  pressure:
+      label: Air Pressure
+      sameAs:
+        - http://purl.oclc.org/NET/ssnx/qu/quantity#pressure
+        - http://purl.oclc.org/NET/ssnx/cf/cf-property#air_pressure
+        - http://purl.org/iot/vocab/iot-taxonomy-lite#Pressure
+
+  humidity:
+      label: Air Humidity
+      sameAs:
+        - https://saref.etsi.org/core/Humidity
+        - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/55
+        - http://purl.oclc.org/NET/ssnx/cf/cf-feature#Humidity
+        - https://space.oscar.wmo.int/variables/view/specific_humidity
+        - https://www.eionet.europa.eu/gemet/en/concept/626
+        - http://vocabs.lter-europe.net/EnvThes/21579
+
+  NO2:
+   label: NO₂ (Nitrogen dioxide)
+   description: A measurement of the quantity of Nitrogen Dioxide in the air.
+   sameAs:
+    - http://dd.eionet.europa.eu/vocabulary/IEDAnnexIIModule3/EQSAirPollutantsGlassCode/072
+    - http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationNO2
+    - https://space.oscar.wmo.int/variables/view/no2
+    - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=40#40
+    - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8
+
+  O3:
+    label: O₃ (Ozone)
+    description: A measurement of the quantity of ozone in the air.
+    sameAs:
+      - https://space.oscar.wmo.int/variables/view/o3
+      - https://www.eionet.europa.eu/gemet/en/concept/5991
+      - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=41#41
+      - http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationO3
+      - http://dd.eionet.europa.eu/vocabulary/IEDAnnexIIModule3/EQSAirPollutantsGlassCode/078
+      - http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationO3

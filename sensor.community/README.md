@@ -31,3 +31,48 @@ from sensor.community.
 | SHT85            | 4      | 0%  |
 | SHT11            | 2      | 0%  |
 | SHT15            | 1      | 0%  |
+
+## Sensors
+
+Sensor entries look like this:
+```yaml
+  SDS011:
+    name: SDS011
+    manufacturer: Nova Fitness
+    description: |
+      This is the specification for the SDS011. One should not consider all those values for granted as there is quite often a big difference
+       between what is said to be possible and what is actually possible (and this is why we are setting up all our experiments).
+  
+        Output: PM2.5, PM10
+        Measuring Range: 0.0-999.9μg/m3
+        Response Time 1 second
+        Serial Data Output Frequency: 1 time/second
+        Particle Diameter Resolution: ≤0.3μm
+        Relative Error:10%
+        Temperature Range:-20~50°C
+      
+      Note that the SDS011 humidity working range is 0-70%. Above 70% humidity the readings become unreliable.
+      
+      From: https://aqicn.org/sensor/sds011/
+    references:
+      - https://aqicn.org/sensor/sds011/
+
+    observed_properties:
+      - P1
+      - P2
+```
+
+Which should be mostly self explanatory. Note that the keys in observed_properties are those as they appear in the data, `mappedProperties:` contains the mapping to a more generic term which is defined in `generic/properties.yaml`. So for example, `P1` measured by the SDS011 gets mapped by this line:
+```
+    P2                        : pm2.5
+```
+to a generic term `pm2.5` that is defined like this in `generic/properties.yml`:
+```
+  pm2.5:
+      label: Particulate matter < 2.5 µm
+      sameAs:
+        - http://purl.oclc.org/NET/ssnx/cf/cf-property#mass_fraction_of_pm2p5_ambient_aerosol_in_air
+        - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001
+        - https://www.iqair.com/us/newsroom/pm2-5
+        - https://www.eea.europa.eu/help/glossary/eea-glossary/pm2.5
+```
