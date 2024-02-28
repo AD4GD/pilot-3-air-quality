@@ -19,7 +19,10 @@ properties:
 
   pm10:
     label: Particulate matter < 10 µm
-    description: The amount of suspended particulates in the air with a diameter of 10 micrometers (μm) or less.
+    description: |
+      The amount of suspended particulates in the air with a diameter of 10 micrometers (μm) or less. 
+      Note that aerosol particles take up ambient water through hygroscopic growth so the local temperature 
+      and humidity at the time the reading was taken is relevant to interpreting the result.
     seeAlso: 
       - https://en.wikipedia.org/wiki/Particulates
     sameAs:
@@ -95,3 +98,28 @@ properties:
       - http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationO3
       - http://dd.eionet.europa.eu/vocabulary/IEDAnnexIIModule3/EQSAirPollutantsGlassCode/078
       - http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationO3
+
+units:
+  degrees_celsius:
+    label: °C 
+    description: Degrees Celsius, a unit of temperature.
+    sameAs:
+      - http://qudt.org/vocab/unit/DEG_C
+      - http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius
+      - http://purl.org/iot/vocab/m3-lite#DegreeCelsius
+      - http://dd.eionet.europa.eu/vocabulary/wise/uom/Cel
+
+  mass_fraction:
+    label: Mass Fraction
+    description: The ratio of the mass of the substance to the total mass of the parent mixture.
+
+  microgram_per_meter_cubed:
+    label: μg/m³
+
+
+processSteps:
+  pm_humidity_correction:
+    label: Humidity Correction
+    description: | 
+      Particulates suspended in air take up ambient water through hygroscopic growth.
+      This process corrects for that effect and outputs a value defined at a standard humidity. 
