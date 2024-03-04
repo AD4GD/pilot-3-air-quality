@@ -31,6 +31,7 @@ jobs:
             --ttl --work-dir . --domain-config .ogc/catalog.ttl
           python -m ogc.na.ingest_json --batch --skip-on-missing-context \
             --ttl */sensors.yml
+          rm -f generic/sensors.ttl
           cat */sensors.ttl > generic/sensors.ttl || echo "WARNING: No sensors TTL files found" >&2
           python -m ogc.na.update_vocabs -w . .ogc/catalog.ttl --use-git-status \
             --update --graph-store https://defs-dev.opengis.net/fuseki-hosted/data

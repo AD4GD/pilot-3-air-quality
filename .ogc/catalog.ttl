@@ -6,7 +6,7 @@
 
 _:ad4gd-pilot3 a dcat:Catalog;
   dct:title "AD4GD Pilot 3 semantic catalog" ;
-  dcat:dataset _:properties, _:propertiesEntailments ;
+  dcat:dataset _:properties, _:propertiesEntailments, _:procedures ;
   dcfg:hasProfileSource "sparql:http://defs-dev.opengis.net/fuseki/query" ;
   dcfg:ignoreProfileArtifactErrors true ;
 .
@@ -20,10 +20,18 @@ _:properties a dcat:Dataset, dcfg:UpliftConfiguration ;
   ] ;
 .
 
+_:procedures a dcat:Dataset, dcfg:UpliftConfiguration ;
+  dct:description "Procedures uplift" ;
+  dcfg:glob "generic/procedures.yml" ;
+  dcfg:hasUpliftDefinition [
+    dcfg:order 1 ;
+    dcfg:file "generic/procedures-uplift.yml" ;
+  ] ;
+.
+
 _:propertiesEntailments a dcat:Dataset, dcfg:DomainConfiguration ;
   dct:description "Properties entailments" ;
   dcfg:glob "generic/*.ttl" ;
-  dcfg:uriRootFilter "/ad4gd/" ;
   dct:conformsTo profiles:skos_shared, profiles:skos_conceptscheme, profiles:skos_conceptscheme_ogc, profiles:vocprez_ogc ;
 .
 

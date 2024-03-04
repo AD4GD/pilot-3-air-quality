@@ -68,7 +68,10 @@ sensors:
       - https://aqicn.org/sensor/sds011/
 
     observed_properties:
-      - P1
+      - name: P1
+        unit: unit:MicroGM-PER-M3
+        procedure_steps:
+          - pm-humidity-correction
       - P2
 
   BME280:
@@ -81,7 +84,8 @@ sensors:
       
       From: https://www.adafruit.com/product/2652'
     observed_properties:
-      - temperature
+      - name: temperature
+        unit: unit:DEG_C
       - pressure
       - humidity
       - pressure_at_sealevel # Derived from others?

@@ -1,0 +1,21 @@
+base: https://w3id.org/ad4gd/procedures                 # Base URI (no trailing slash!)
+label: AD4GD observation procedures                     # Label for property collection
+## Optional: add description
+# description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+procedures:
+  ## Format for procedures (same as properties):
+  # id:                                                 # URI slug
+  #   label: Label for the term                         # Required
+  #   description: Term description                     # Optional
+  #   sameAs:                                           # List of "same as" URIs, optional
+  #     - https://another.vocabulary.com/another/term
+  #   seeAlso:                                          # List of websites with definitions (non-semantic)
+  #     - https://en.wikipedia.org/wiki/Term
+  #   hasBroader:                                       # List of terms that are more generic than this one.
+  #     - anotherBroadTerm                              # *Only local ids*
+  #   hasNarrower:                                      # Same as hasBroader, but for linking to more specific terms
+  #     - anotherNarrowTerm
+
+  pm-humidity-correction:
+    label: Humidity correction for Particulate Matter

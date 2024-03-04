@@ -11,9 +11,25 @@ transform:
     | [to_entries 
       | .[]
       | .value + { "key": "\(.value.manufacturer | to_iri)/\(.key | to_iri)" }
-      | .manufacturer |= { "@id": ("manuf:" + to_iri), "name": ., "inScheme": "https://w3id.org/ad4gd/sensors" }
-      | (.observed_properties |= map(if contains(":") then . else $PROPERTIES.[.] // empty end))
-      | ."inScheme" = "https://w3id.org/ad4gd/sensors"
+      | . + {
+        "manufacturer": {
+          "@id": ("manuf:" + (.manufacturer | to_iri)), 
+          "name": .manufacturer,
+          "inScheme": "https://w3id.org/ad4gd/sensors" 
+        },
+        "observed_properties": (.observed_properties | map(
+          if type == "object" then {
+            "broader": (.name | if contains(":") then . else $PROPERTIES.[.] // empty end),
+            "hasUnit": (.unit // empty),
+            "procedures": (.procedure_steps // []) | to_entries | map({
+              "qb:order": (.key + 1),
+              "broader": (.value | if contains(":") then . else "ad4gd-procedure:\(.)" // empty end)
+            }) 
+          } else (if contains(":") then . else $PROPERTIES.[.] // empty end) end
+        )),
+        "inScheme": "https://w3id.org/ad4gd/sensors",
+        "subClassOf": "sosa:Sensor"
+      }
       | del(..|select(. == ""))
     ] + [
       {
@@ -30,7 +46,7 @@ transform:
 
 types:
   $[?observed_properties]:
-    - sosa:Sensor
+    - owl:Class
     - skos:Concept
   $[*].manufacturer:
     - skos:Concept
@@ -42,18 +58,29 @@ context:
     '@base': https://w3id.org/ad4gd/sensors/
     manuf: https://w3id.org/ad4gd/sensors/manufacturers/
     sosa: http://www.w3.org/ns/sosa/
+    ssn: http://www.w3.org/ns/ssn/
     dct: http://purl.org/dc/terms/
     rdfs: http://www.w3.org/2000/01/rdf-schema#
     skos: http://www.w3.org/2004/02/skos/core#
     owl: http://www.w3.org/2002/07/owl#
+    qudt: http://qudt.org/schema/qudt/
+    unit: http://qudt.org/vocab/unit/
+    qb: http://purl.org/linked-data/cube#
+    ad4gd-prop: https://w3id.org/ad4gd/properties/
+    ad4gd-procedure: https://w3id.org/ad4gd/procedures/
     ad4gd: 'urn:ad4gd:'
     key: '@id'
+    subClassOf:
+      '@id': rdfs:subClassOf
+      '@type': '@id'
     observed_properties:
       '@id': sosa:observes
       '@type': '@id'
       '@context':
         '@base': https://w3id.org/ad4gd/properties/
-    manufacturer: skos:broader
+    manufacturer:
+      '@id': skos:broader
+      '@type': '@id'
     name: skos:prefLabel
     description: dct:description
     inScheme:
@@ -61,4 +88,13 @@ context:
       '@type': '@id'
     references:
       '@id': rdfs:seeAlso
+      '@type': '@id'
+    hasUnit:
+      '@id': qudt:hasUnit
+      '@type': '@id'
+    broader:
+      '@id': skos:broader
+      '@type': '@id'
+    procedures:
+      '@id': ssn:implements
       '@type': '@id'
