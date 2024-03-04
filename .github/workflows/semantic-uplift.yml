@@ -35,3 +35,7 @@ jobs:
           cat */sensors.ttl > generic/sensors.ttl || echo "WARNING: No sensors TTL files found" >&2
           python -m ogc.na.update_vocabs -w . .ogc/catalog.ttl --use-git-status \
             --update --graph-store https://defs-dev.opengis.net/fuseki-hosted/data
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '**/*.ttl'
