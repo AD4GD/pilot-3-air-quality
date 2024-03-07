@@ -7,7 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ad4gd/procedures/pm-humidity-correction> a skos:Concept,
-        sosa:ObservableProperty ;
+        sosa:Procedure ;
     skos:inScheme <https://w3id.org/ad4gd/procedures> ;
     skos:prefLabel "Humidity correction for Particulate Matter" .
 
@@ -16,16 +16,16 @@
     skos:prefLabel "AD4GD observation procedures" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-03-04T14:47:28.181990"^^xsd:dateTime ;
-    prov:startedAtTime "2024-03-04T14:47:28.132083"^^xsd:dateTime ;
+    prov:endedAtTime "2024-03-07T19:42:44.244001"^^xsd:dateTime ;
+    prov:startedAtTime "2024-03-07T19:42:44.164438"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:a8918617e04e191326ffac2a7602673c7a8a8de7" ;
+            dct:hasVersion "git:a4a6e804c2a611b50dbe16672f7c9b51dc8775b2" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/generic/procedures.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.3.39" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "f702247f-7a07-4e74-920b-3b6b20658120" ] .
+    prov:wasInformedBy [ dct:identifier "bdd3cca9-82d4-4d3e-b476-b905f9bbf6cd" ] .
 

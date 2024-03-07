@@ -406,16 +406,16 @@ ad4gd:SensorManufacturer a owl:Class,
     skos:prefLabel "AD4GD sensors" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-03-04T14:47:28.613377"^^xsd:dateTime ;
-    prov:startedAtTime "2024-03-04T14:47:28.495593"^^xsd:dateTime ;
+    prov:endedAtTime "2024-03-07T19:42:44.733361"^^xsd:dateTime ;
+    prov:startedAtTime "2024-03-07T19:42:44.612857"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:a8918617e04e191326ffac2a7602673c7a8a8de7" ;
+            dct:hasVersion "git:a4a6e804c2a611b50dbe16672f7c9b51dc8775b2" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/sensor.community/sensors.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.3.39" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "fdffa0a4-9cdd-457b-87f3-59452974e6e4" ] .
+    prov:wasInformedBy [ dct:identifier "41e66f87-c2da-4c9a-928e-6690cf32e8a4" ] .
 
