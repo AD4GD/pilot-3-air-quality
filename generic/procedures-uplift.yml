@@ -9,7 +9,7 @@ types:
   $: skos:ConceptScheme
   $.procedures[*]:
     - skos:Concept
-    - sosa:ObservableProperty
+    - sosa:Procedure
 
 context:
   $:
