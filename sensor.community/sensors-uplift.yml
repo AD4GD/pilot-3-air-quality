@@ -17,6 +17,9 @@ transform:
           "name": .manufacturer,
           "inScheme": "https://w3id.org/ad4gd/sensors" 
         },
+        "skos:broader": {
+          "@id": ("manuf:" + (.manufacturer | to_iri))
+        },
         "observed_properties": (.observed_properties | map(
           if type == "object" then {
             "broader": (.name | if contains(":") then . else $PROPERTIES.[.] // empty end),
@@ -79,7 +82,7 @@ context:
       '@context':
         '@base': https://w3id.org/ad4gd/properties/
     manufacturer:
-      '@id': skos:broader
+      '@id': dct:creator
       '@type': '@id'
     name: skos:prefLabel
     description: dct:description

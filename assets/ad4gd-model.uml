@@ -28,12 +28,12 @@ abstract "ad4gd:ProcedureStep" {
 }
 
 "sosa:Sensor" <|-- "ad4gd:Sensor" : "rdfs:subClassOf"
-"ad4gd:Sensor" -> "ad4gd:SensorManufacturer" : "skos:broader"
+"ad4gd:Sensor" -> "ad4gd:SensorManufacturer" : "dct:creator"
 "ad4gd:Sensor" --> "sosa:ObservedProperty" : "sosa:observes"
 "ad4gd:Sensor" --> "ad4gd:PropertySpecialization" : "sosa:observes"
 "ad4gd:PropertySpecialization" --> "ad4gd:ProcedureStep" : "sosa:implements"
 "ad4gd:PropertySpecialization" --> "sosa:ObservedProperty" : "skos:broader"
-"ad4gd:PropertySpecialization" --> "qudt:Unit" : "qudt:unit"
+"ad4gd:PropertySpecialization" --> "qudt:Unit" : "qudt:hasUnit"
 "ad4gd:ProcedureStep" --> "sosa:Procedure" : "skos:broader"
 "sosa:ObservedProperty" -> "sosa:ObservedProperty" : owl:sameAs
 @enduml
