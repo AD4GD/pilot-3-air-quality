@@ -434,16 +434,16 @@ manuf:Sensirion-AG a skos:Concept,
     skos:prefLabel "AD4GD sensors" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-03-12T12:36:31.279800"^^xsd:dateTime ;
-    prov:startedAtTime "2024-03-12T12:36:31.155452"^^xsd:dateTime ;
+    prov:endedAtTime "2024-03-12T14:31:48.534265"^^xsd:dateTime ;
+    prov:startedAtTime "2024-03-12T14:31:48.415312"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:bd102022be0a41bd074a5a5b3344721f66ead34f" ;
+            dct:hasVersion "git:ec72283ade91a07c4ca9852e79f0ee33b9f50f9c" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/sensor.community/sensors.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.3.40" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "de6df2f9-0063-496e-a573-d8f498de4090" ] .
+    prov:wasInformedBy [ dct:identifier "8b8d0cf9-938b-448c-8ee9-228b0835b8a5" ] .
 
