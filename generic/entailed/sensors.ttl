@@ -18,37 +18,37 @@
 
 <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/entailed/sensors.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    dct:hasVersion "git:a4a6e804c2a611b50dbe16672f7c9b51dc8775b2" ;
-    prov:wasAttributedTo _:N8f6a37350bd74c35ae5eb97f7df416ef ;
+    dct:hasVersion "git:bd102022be0a41bd074a5a5b3344721f66ead34f" ;
+    prov:wasAttributedTo _:N243df595560640d7ba9fec6f934f72a7 ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w . .ogc/catalog.ttl --use-git-status --update --graph-store https://defs-dev.opengis.net/fuseki-hosted/data" ;
-            prov:endedAtTime "2024-03-07T19:42:55.136415"^^xsd:dateTime ;
-            prov:startedAtTime "2024-03-07T19:42:51.704304"^^xsd:dateTime ;
+            prov:endedAtTime "2024-03-12T12:36:39.396389"^^xsd:dateTime ;
+            prov:startedAtTime "2024-03-12T12:36:36.170245"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
+                    dct:format "text/turtle" ;
+                    dct:hasVersion "git:bd102022be0a41bd074a5a5b3344721f66ead34f" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/.ogc/catalog.ttl> ],
+                [ a prov:Entity ;
                     rdfs:seeAlso <http://defs-dev.opengis.net/def/metamodel/profiles/skos_shared?_profile=shacl&_mediatype=text/turtle> ],
                 [ a prov:Entity ;
                     rdfs:seeAlso <https://datashapes.org/dash.ttl> ],
+                [ a prov:Entity ;
+                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/definitions/profiles/resources/skos_shared_shacl.ttl> ],
+                [ a prov:Entity ;
+                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/skosbasics.shapes.ttl> ],
+                [ a prov:Entity ;
+                    dct:format "text/turtle" ;
+                    dct:hasVersion "git:bd102022be0a41bd074a5a5b3344721f66ead34f" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/sensors.ttl> ],
                 [ a prov:Entity ;
                     rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/ogc_skos_profile.shapes.ttl> ],
                 [ a prov:Entity ;
                     rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
                 [ a prov:Entity ;
-                    dct:format "text/turtle" ;
-                    dct:hasVersion "git:a4a6e804c2a611b50dbe16672f7c9b51dc8775b2" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/.ogc/catalog.ttl> ],
-                [ a prov:Entity ;
-                    dct:format "text/turtle" ;
-                    dct:hasVersion "git:a4a6e804c2a611b50dbe16672f7c9b51dc8775b2" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/sensors.ttl> ],
-                [ a prov:Entity ;
-                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/definitions/profiles/resources/skos_shared_shacl.ttl> ],
-                [ a prov:Entity ;
-                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/ogc_skos_profile_entailments.ttl> ],
-                [ a prov:Entity ;
-                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/skosbasics.shapes.ttl> ] ;
-            prov:wasAssociatedWith _:N8f6a37350bd74c35ae5eb97f7df416ef ;
-            prov:wasInformedBy [ dct:identifier "e96277e7-8ab1-499e-9120-a4c5303d69bb" ] ] .
+                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/ogc_skos_profile_entailments.ttl> ] ;
+            prov:wasAssociatedWith _:N243df595560640d7ba9fec6f934f72a7 ;
+            prov:wasInformedBy [ dct:identifier "597d0d04-c36c-4df8-b3e3-398d33a75c7c" ] ] .
 
 <http://www.opengis.net/def/entities/bodies/ogcna> a skos:Concept .
 
@@ -60,6 +60,7 @@
 
 <https://w3id.org/ad4gd/sensors/Bosch/BME280> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Bosch ;
     dct:description """This precision sensor from Bosch is the best low-cost sensing solution for measuring humidity with ±3% accuracy,
 barometric pressure with ±1 hPa absolute accuraccy, and temperature with ±1.0°C accuracy. Because pressure changes with altitude,
 and the pressure measurements are so good, you can also use it as an altimeter with  ±1 meter or better accuracy! 
@@ -78,6 +79,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/Bosch/BMP180> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Bosch ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Bosch ;
@@ -88,6 +90,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/Bosch/BMP280> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Bosch ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Bosch ;
@@ -97,6 +100,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/Dallas-semiconductor/DS18B20> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Dallas-semiconductor ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Dallas-semiconductor ;
@@ -106,6 +110,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/EcoCurious/Radiation-SBM-19> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:EcoCurious ;
     dct:description "As as I know this is an internal sensor.community project not intended for public consumption." ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -115,6 +120,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/EcoCurious/Radiation-SBM-20> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:EcoCurious ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:EcoCurious ;
@@ -123,6 +129,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/EcoCurious/Radiation-Si22G> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:EcoCurious ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:EcoCurious ;
@@ -131,6 +138,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/Honeywell/HPM> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Honeywell ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Honeywell ;
@@ -141,6 +149,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/Luftdateninfo/DNMS-Laerm> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Luftdateninfo ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Luftdateninfo ;
@@ -149,6 +158,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/Measurement-Specialties/HTU21D> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Measurement-Specialties ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Measurement-Specialties ;
@@ -159,6 +169,7 @@ From: https://www.adafruit.com/product/2652'
 
 <https://w3id.org/ad4gd/sensors/Nova-Fitness/SDS011> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Nova-Fitness ;
     dct:description """This is the specification for the SDS011. One should not consider all those values for granted as there is quite often a big difference
  between what is said to be possible and what is actually possible (and this is why we are setting up all our experiments).
 
@@ -188,6 +199,7 @@ From: https://aqicn.org/sensor/sds011/
 
 <https://w3id.org/ad4gd/sensors/Nova-Fitness/SDS021> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Nova-Fitness ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:seeAlso <https://aqicn.org/sensor/sds021/> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -199,6 +211,7 @@ From: https://aqicn.org/sensor/sds011/
 
 <https://w3id.org/ad4gd/sensors/Plantower/PMS1003> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Plantower ;
     dct:description """The PMS 1003 Sensor is a recent laser based Air Quality Sensor developped by plantower (chinese name: 攀藤 (pānténg))
 and used inside a numerous number of air quality sensing devices. It is also sometimes refered as HK 5001, or labelled
 under the "oneair" brand, but it is indeed developped and produced by plantower (a Shenzhen based company with office in Beijing).
@@ -222,6 +235,7 @@ https://aqicn.org/sensor/pms1003/
 
 <https://w3id.org/ad4gd/sensors/Plantower/PMS3003> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Plantower ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:seeAlso <https://aqicn.org/sensor/pms3003/> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -234,6 +248,7 @@ https://aqicn.org/sensor/pms1003/
 
 <https://w3id.org/ad4gd/sensors/Plantower/PMS5003> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Plantower ;
     dct:description """Range of measurement: 0.3~1.0; 1.0~2.5; 2.5~10 μ m
 Effective Range: 0~500 μ g/m³
 Maximum Range: * ≥1000 μ g/m³
@@ -254,6 +269,7 @@ https://www.adafruit.com/product/3686
 
 <https://w3id.org/ad4gd/sensors/Plantower/PMS6003> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Plantower ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Plantower ;
@@ -265,6 +281,7 @@ https://www.adafruit.com/product/3686
 
 <https://w3id.org/ad4gd/sensors/Plantower/PMS7003> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Plantower ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:seeAlso <https://aqicn.org/sensor/pms5003-7003/> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -277,6 +294,7 @@ https://www.adafruit.com/product/3686
 
 <https://w3id.org/ad4gd/sensors/Sensirion-AG/SCD30> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Sensirion-AG ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Sensirion-AG ;
@@ -287,6 +305,7 @@ https://www.adafruit.com/product/3686
 
 <https://w3id.org/ad4gd/sensors/Sensirion-AG/SHT11> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Sensirion-AG ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Sensirion-AG ;
@@ -297,6 +316,7 @@ https://www.adafruit.com/product/3686
 
 <https://w3id.org/ad4gd/sensors/Sensirion-AG/SHT30> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Sensirion-AG ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Sensirion-AG ;
@@ -307,6 +327,7 @@ https://www.adafruit.com/product/3686
 
 <https://w3id.org/ad4gd/sensors/Sensirion-AG/SHT31> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Sensirion-AG ;
     dct:description """The SHT31-D sensor has an excellent ±2% relative humidity and ±0.3°C accuracy for most uses.
 https://www.adafruit.com/product/2857'
 """ ;
@@ -320,6 +341,7 @@ https://www.adafruit.com/product/2857'
 
 <https://w3id.org/ad4gd/sensors/Sensirion-AG/SHT35> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Sensirion-AG ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Sensirion-AG ;
@@ -330,6 +352,7 @@ https://www.adafruit.com/product/2857'
 
 <https://w3id.org/ad4gd/sensors/Sensirion-AG/SHT85> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Sensirion-AG ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Sensirion-AG ;
@@ -340,6 +363,7 @@ https://www.adafruit.com/product/2857'
 
 <https://w3id.org/ad4gd/sensors/Sensirion-AG/SPS30> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Sensirion-AG ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:Sensirion-AG ;
@@ -351,6 +375,7 @@ https://www.adafruit.com/product/2857'
 
 <https://w3id.org/ad4gd/sensors/Shinyei/PPD42NS> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:Shinyei ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:seeAlso <https://aqicn.org/sensor/shinyei/> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -362,6 +387,7 @@ https://www.adafruit.com/product/2857'
 
 <https://w3id.org/ad4gd/sensors/TERA-Sensor/NextPM> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:TERA-Sensor ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:TERA-Sensor ;
@@ -376,6 +402,7 @@ https://www.adafruit.com/product/2857'
 
 <https://w3id.org/ad4gd/sensors/ublox/GPS-NEO-6M> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:ublox ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:broader manuf:ublox ;
@@ -384,6 +411,7 @@ https://www.adafruit.com/product/2857'
 
 <https://w3id.org/ad4gd/sensors/various/DHT22> a owl:Class,
         skos:Concept ;
+    dct:creator manuf:various ;
     dct:description """The DHT22 is a basic, low-cost digital temperature and humidity sensor. It uses a capacitive humidity sensor and a thermistor to measure
 the surrounding air and spits out a digital signal on the data pin (no analog input pins needed). It's fairly simple to use but requires
 careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using
@@ -509,6 +537,10 @@ manuf:Plantower a skos:Concept,
     skos:prefLabel "Plantower" ;
     skos:topConceptOf <https://w3id.org/ad4gd/sensors> .
 
+ad4gd:SensorManufacturer a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "Sensor Manufacturer" .
+
 manuf:Sensirion-AG a skos:Concept,
         ad4gd:SensorManufacturer ;
     ns1:status <http://www.opengis.net/def/status/valid> ;
@@ -522,10 +554,6 @@ manuf:Sensirion-AG a skos:Concept,
         <https://w3id.org/ad4gd/sensors/Sensirion-AG/SPS30> ;
     skos:prefLabel "Sensirion AG" ;
     skos:topConceptOf <https://w3id.org/ad4gd/sensors> .
-
-ad4gd:SensorManufacturer a owl:Class,
-        skos:Concept ;
-    skos:prefLabel "Sensor Manufacturer" .
 
 <https://w3id.org/ad4gd/sensors> a skos:ConceptScheme ;
     dct:source <http://www.opengis.net/def/entities/bodies/ogcna> ;
@@ -546,23 +574,23 @@ ad4gd:SensorManufacturer a owl:Class,
     skos:prefLabel "AD4GD sensors" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-03-07T19:42:44.733361"^^xsd:dateTime ;
-    prov:startedAtTime "2024-03-07T19:42:44.612857"^^xsd:dateTime ;
+    prov:endedAtTime "2024-03-12T12:36:31.279800"^^xsd:dateTime ;
+    prov:startedAtTime "2024-03-12T12:36:31.155452"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:a4a6e804c2a611b50dbe16672f7c9b51dc8775b2" ;
+            dct:hasVersion "git:bd102022be0a41bd074a5a5b3344721f66ead34f" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/sensor.community/sensors.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.3.39" ;
+            dct:hasVersion "0.3.40" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "41e66f87-c2da-4c9a-928e-6690cf32e8a4" ] .
+    prov:wasInformedBy [ dct:identifier "de6df2f9-0063-496e-a573-d8f498de4090" ] .
 
-_:N8f6a37350bd74c35ae5eb97f7df416ef a prov:Agent,
+_:N243df595560640d7ba9fec6f934f72a7 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.3.39" ;
-    rdfs:comment "ogc.na.update_vocabs version 0.3.39" ;
+    dct:hasVersion "0.3.40" ;
+    rdfs:comment "ogc.na.update_vocabs version 0.3.40" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 
