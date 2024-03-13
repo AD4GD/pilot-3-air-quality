@@ -50,7 +50,7 @@ properties:
         - https://www.iqair.com/us/newsroom/pm1
 
   temperature:
-      label: Air temperature
+      label: Air Temperature
       sameAs:
         - https://www.eionet.europa.eu/gemet/en/concept/281
         - http://vocabs.lter-europe.net/EnvThes/22035
