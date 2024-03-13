@@ -88,23 +88,23 @@
         <http://w3id.org/ad4gd/ev/eav/AirTemperature>,
         <https://www.eionet.europa.eu/gemet/en/concept/281> ;
     skos:inScheme <https://w3id.org/ad4gd/properties> ;
-    skos:prefLabel "Air temperature" .
+    skos:prefLabel "Air Temperature" .
 
 <https://w3id.org/ad4gd/properties> a skos:ConceptScheme ;
     dct:source <https://ad4gd.eu/> ;
     skos:prefLabel "AD4GD observable properties" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-03-12T14:31:48.109445"^^xsd:dateTime ;
-    prov:startedAtTime "2024-03-12T14:31:48.058640"^^xsd:dateTime ;
+    prov:endedAtTime "2024-03-13T10:35:02.552588"^^xsd:dateTime ;
+    prov:startedAtTime "2024-03-13T10:35:02.499129"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:ec72283ade91a07c4ca9852e79f0ee33b9f50f9c" ;
+            dct:hasVersion "git:3c5285a2233f4a9dd037f05f11cd3918611821c8" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/generic/properties.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.3.40" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "6f536920-99d8-464b-97bb-0565732bea7b" ] .
+    prov:wasInformedBy [ dct:identifier "a2b388dd-9534-4760-9a2b-cd4676fc0451" ] .
 
