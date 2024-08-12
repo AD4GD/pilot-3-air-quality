@@ -1,6 +1,8 @@
 name: Check URLs are resolvable
 
-on: [workflow_dispatch, push]
+on:
+  workflow_dispatch:
+  workflow_call:
 
 jobs:
   check-urls:
