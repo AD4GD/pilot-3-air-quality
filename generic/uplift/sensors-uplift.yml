@@ -22,7 +22,6 @@ transform:
             }) 
           } else . end
         )),
-        "inScheme": "https://w3id.org/ad4gd/sensors",
         "subClassOf": "sosa:Sensor"
       }
       | del(..|select(. == ""))
@@ -70,9 +69,6 @@ context:
     name: skos:prefLabel
     label: skos:prefLabel
     description: dct:description
-    inScheme:
-      '@id': skos:inScheme
-      '@type': '@id'
     references:
       '@id': rdfs:seeAlso
       '@type': '@id'

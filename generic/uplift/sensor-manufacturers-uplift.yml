@@ -15,6 +15,7 @@ transform:
 
 types:
   $: skos:ConceptScheme
+  $.manufacturers[*]: skos:Concept
 
 context:
   $:
@@ -51,9 +52,6 @@ context:
     name: skos:prefLabel
     label: skos:prefLabel
     description: dct:description
-    inScheme:
-      '@id': skos:inScheme
-      '@type': '@id'
     references:
       '@id': rdfs:seeAlso
       '@type': '@id'
