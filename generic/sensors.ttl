@@ -1,7 +1,7 @@
 @prefix ad4gd-procedure: <https://w3id.org/ad4gd/procedures/> .
 @prefix ad4gd-prop: <https://w3id.org/ad4gd/properties/> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix manuf: <https://w3id.org/ad4gd/manufacturers/> .
+@prefix manuf: <https://w3id.org/ad4gd/sensor-manufacturers/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
@@ -67,16 +67,16 @@ From: https://aqicn.org/sensor/sds011/
     skos:prefLabel "AD4GD air quality sensors" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-08-12T11:02:25.126421"^^xsd:dateTime ;
-    prov:startedAtTime "2024-08-12T11:02:25.076144"^^xsd:dateTime ;
+    prov:endedAtTime "2024-08-12T11:13:07.667518"^^xsd:dateTime ;
+    prov:startedAtTime "2024-08-12T11:13:07.613830"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:795b6b8da0fcc6c8dda8cbc8bcae0768624815ff" ;
+            dct:hasVersion "git:11f77da26d7afa467ccb7490b31e7f2a5c1b7e7a" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/generic/sensors.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 sdo:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.3.50" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "6d540f4d-4a23-444b-908b-a40f4cd28881" ] .
+    prov:wasInformedBy [ dct:identifier "eceaa9a7-e4fe-4a1a-b807-94cb99264b17" ] .
 
