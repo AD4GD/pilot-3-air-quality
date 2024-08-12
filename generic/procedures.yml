@@ -1,5 +1,5 @@
-base: https://w3id.org/ad4gd/procedures                 # Base URI (no trailing slash!)
-label: AD4GD observation procedures                     # Label for property collection
+base: https://w3id.org/ad4gd/air-quality/procedures     # Base URI (no trailing slash!)
+label: AD4GD air quality observation procedures         # Label for collection
 ## Optional: add description
 # description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

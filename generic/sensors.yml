@@ -1,0 +1,71 @@
+base: https://w3id.org/ad4gd/air-quality/sensors        # Base URI (no trailing slash!)
+label: AD4GD air quality sensors                        # Label for collection
+## Optional: add description
+# description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+sensors:
+
+  ## Format for sensors:
+  # id:                                                 # URI slug
+  #   label: Label for the term                         # Required
+  #   manufacturers:                                    # List of manufacturers (omit if unknown or "various")
+  #     - manufacturer1                                 #   refers to the key for the manufacturer entry in sensor-manufacturers.yml
+  #   description: Term description                     # Optional
+  #   sameAs:                                           # List of "same as" URIs, optional
+  #     - https://another.vocabulary.com/another/term
+  #   references:                                       # List of websites with definitions, data sheets, etc. (non-semantic)
+  #     - https://en.wikipedia.org/wiki/Term
+  #   observed_properties:                              # List of properties that this sensor observes
+  #     - pm2.5                                         #   option 1: just the id from properties.yml
+  #     - name: pm10                                    #   option 2: object with "name" as the id of the property
+  #       unit: unit:MicroGM-PER-M3                     #     optionally, a unit from QUDT, with prefix "unit:" (https://www.qudt.org/doc/DOC_VOCAB-UNITS.html)
+  #       procedure_steps:                              #     optionally, a set of procedure steps from procedures.yml
+  #         - pm-humidity-correction
+
+
+  SDS011:
+    name: SDS011
+    manufacturers:
+      - nova-fitness
+    description: |
+      This is the specification for the SDS011. One should not consider all those values for granted as there is quite often a big difference
+       between what is said to be possible and what is actually possible (and this is why we are setting up all our experiments).
+  
+        Output: PM2.5, PM10
+        Measuring Range: 0.0-999.9μg/m3
+        Response Time 1 second
+        Serial Data Output Frequency: 1 time/second
+        Particle Diameter Resolution: ≤0.3μm
+        Relative Error:10%
+        Temperature Range:-20~50°C
+      
+      Note that the SDS011 humidity working range is 0-70%. Above 70% humidity the readings become unreliable.
+      
+      From: https://aqicn.org/sensor/sds011/
+    references:
+      - https://aqicn.org/sensor/sds011/
+
+    observed_properties:
+      - name: pm10
+        unit: unit:MicroGM-PER-M3
+        procedure_steps:
+          - pm-humidity-correction
+      - pm2.5
+
+  DHT22:
+    name: DHT22
+    description: |
+      The DHT22 is a basic, low-cost digital temperature and humidity sensor. It uses a capacitive humidity sensor and a thermistor to measure
+      the surrounding air and spits out a digital signal on the data pin (no analog input pins needed). It's fairly simple to use but requires
+      careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using
+      our library, sensor readings can be up to 2 seconds old.
+
+      Low cost
+      Good for 0-100% humidity readings with 2-5% accuracy
+      Good for -40 to 80°C temperature readings ±0.5°C accuracy
+      No more than 0.5 Hz sampling rate (once every 2 seconds)
+
+      From: https://www.adafruit.com/product/385
+    observed_properties:
+      - temperature
+      - humidity

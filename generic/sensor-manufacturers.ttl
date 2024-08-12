@@ -3,25 +3,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ad4gd/air-quality/procedures/pm-humidity-correction> a skos:Concept,
-        sosa:Procedure ;
-    skos:inScheme <https://w3id.org/ad4gd/air-quality/procedures> ;
-    skos:prefLabel "Humidity correction for Particulate Matter" .
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/nova-fitness> skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Nova Fitness" .
 
-<https://w3id.org/ad4gd/air-quality/procedures> a skos:ConceptScheme ;
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers> a skos:ConceptScheme ;
     dct:source <https://ad4gd.eu/> ;
-    skos:prefLabel "AD4GD air quality observation procedures" .
+    skos:prefLabel "AD4GD air quality sensor manufacturers" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-08-12T12:30:59.946157"^^xsd:dateTime ;
-    prov:startedAtTime "2024-08-12T12:30:59.915640"^^xsd:dateTime ;
+    prov:endedAtTime "2024-08-12T12:30:59.963800"^^xsd:dateTime ;
+    prov:startedAtTime "2024-08-12T12:30:59.947273"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
             dct:hasVersion "git:9d2d455c4ce6a4d6d478a1ca3551188a6f1ce95c" ;
-            rdfs:seeAlso <file:///home/avillar/Proyectos/ogc/ad4gd-p3-airquality/generic/procedures.yml> ] ;
+            rdfs:seeAlso <file:///home/avillar/Proyectos/ogc/ad4gd-p3-airquality/generic/sensor-manufacturers.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;

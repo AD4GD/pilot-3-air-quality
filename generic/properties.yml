@@ -1,5 +1,5 @@
-base: https://w3id.org/ad4gd/properties                 # Base URI (no trailing slash!)
-label: AD4GD observable properties                      # Label for property collection
+base: https://w3id.org/ad4gd/air-quality/properties     # Base URI (no trailing slash!)
+label: AD4GD air quality observable properties          # Label for property collection
 ## Optional: add description
 # description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 properties:

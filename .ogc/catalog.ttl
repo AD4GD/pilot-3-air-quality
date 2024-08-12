@@ -6,7 +6,7 @@
 
 _:ad4gd-pilot3 a dcat:Catalog;
   dct:title "AD4GD Pilot 3 semantic catalog" ;
-  dcat:dataset _:properties, _:propertiesEntailments, _:procedures ;
+  dcat:dataset _:properties, _:propertiesEntailments, _:procedures, _:sensors, _:manufacturers ;
   dcfg:hasProfileSource "sparql:http://defs-dev.opengis.net/fuseki/query" ;
   dcfg:ignoreProfileArtifactErrors true ;
 .
@@ -16,7 +16,7 @@ _:properties a dcat:Dataset, dcfg:UpliftConfiguration ;
   dcfg:glob "generic/properties.yml" ;
   dcfg:hasUpliftDefinition [
     dcfg:order 1 ;
-    dcfg:file "generic/properties-uplift.yml" ;
+    dcfg:file "generic/uplift/properties-uplift.yml" ;
   ] ;
 .
 
@@ -25,9 +25,28 @@ _:procedures a dcat:Dataset, dcfg:UpliftConfiguration ;
   dcfg:glob "generic/procedures.yml" ;
   dcfg:hasUpliftDefinition [
     dcfg:order 1 ;
-    dcfg:file "generic/procedures-uplift.yml" ;
+    dcfg:file "generic/uplift/procedures-uplift.yml" ;
   ] ;
 .
+
+_:sensors a dcat:Dataset, dcfg:UpliftConfiguration ;
+  dct:description "Sensors uplift" ;
+  dcfg:glob "generic/sensors.yml" ;
+  dcfg:hasUpliftDefinition [
+    dcfg:order 1 ;
+    dcfg:file "generic/uplift/sensors-uplift.yml" ;
+  ] ;
+.
+
+_:manufacturers a dcat:Dataset, dcfg:UpliftConfiguration ;
+  dct:description "Sensor manufacturers uplift" ;
+  dcfg:glob "generic/sensor-manufacturers.yml" ;
+  dcfg:hasUpliftDefinition [
+    dcfg:order 1 ;
+    dcfg:file "generic/uplift/sensor-manufacturers-uplift.yml" ;
+  ] ;
+.
+
 
 _:propertiesEntailments a dcat:Dataset, dcfg:DomainConfiguration ;
   dct:description "Properties entailments" ;

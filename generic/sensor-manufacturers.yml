@@ -1,0 +1,16 @@
+base: https://w3id.org/ad4gd/air-quality/sensor-manufacturers  # Base URI (no trailing slash!)
+label: AD4GD air quality sensor manufacturers                  # Label for collection
+## Optional: add description
+# description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+manufacturers:
+
+  ## Format for manufacturers:
+  # id:                                                 # URI slug
+  #   label: Label for the term                         # Required
+  #   description: Term description                     # Optional
+  #   seeAlso:                                          # List of websites with definitions / links (non-semantic)
+  #     - https://en.wikipedia.org/wiki/Term
+
+  nova-fitness:
+    name: Nova Fitness

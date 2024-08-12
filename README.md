@@ -7,7 +7,8 @@ The following files are semantically uplifted and published in the
 
 * `generic/properties.yml`: AD4GD properties
 * `generic/procedures.yml`: AD4GD procedures
-* `*/sensors.yml`: AD4GD sensors.
+* `generic/sensors.yml`: AD4GD sensors
+* `generic/sensor-manufacturers.yml`: AD4GD sensor anufacturers)
 
 New uplift entries can be configured inside `.ogc/catalog.ttl`
 (see [Documentation and tutorials](#documentation-and-tutorials) below).
