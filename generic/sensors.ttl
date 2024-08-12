@@ -29,8 +29,7 @@ No more than 0.5 Hz sampling rate (once every 2 seconds)
 From: https://www.adafruit.com/product/385
 """ ;
     rdfs:subClassOf sosa:Sensor ;
-    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors>,
-        <https://w3id.org/ad4gd/sensors> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "DHT22" ;
     sosa:observes ad4gd-prop:humidity,
         ad4gd-prop:temperature .
@@ -54,8 +53,7 @@ From: https://aqicn.org/sensor/sds011/
 """ ;
     rdfs:seeAlso <https://aqicn.org/sensor/sds011/> ;
     rdfs:subClassOf sosa:Sensor ;
-    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors>,
-        <https://w3id.org/ad4gd/sensors> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SDS011" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ;
@@ -69,16 +67,16 @@ From: https://aqicn.org/sensor/sds011/
     skos:prefLabel "AD4GD air quality sensors" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-08-12T10:54:06.345832"^^xsd:dateTime ;
-    prov:startedAtTime "2024-08-12T10:54:06.292700"^^xsd:dateTime ;
+    prov:endedAtTime "2024-08-12T11:02:25.126421"^^xsd:dateTime ;
+    prov:startedAtTime "2024-08-12T11:02:25.076144"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:fddfc60b0dd5847fc2ccdcd9493b2e6829359d54" ;
+            dct:hasVersion "git:795b6b8da0fcc6c8dda8cbc8bcae0768624815ff" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/generic/sensors.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 sdo:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.3.50" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "a4de537c-9981-4897-af29-87c22d388f74" ] .
+    prov:wasInformedBy [ dct:identifier "6d540f4d-4a23-444b-908b-a40f4cd28881" ] .
 
