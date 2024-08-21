@@ -11,6 +11,68 @@ manufacturers:
   #   description: Term description                     # Optional
   #   seeAlso:                                          # List of websites with definitions / links (non-semantic)
   #     - https://en.wikipedia.org/wiki/Term
-
+  #   references:                                       # List of websites with definitions, data sheets, etc. (non-semantic)
+  #     - https://en.wikipedia.org/wiki/Term
+ 
   nova-fitness:
     name: Nova Fitness
+
+  bosch:
+    name: Bosch
+    references:
+      - https://www.bosch-sensortec.com/products/environmental-sensors/
+
+  sensirion-AG:
+    name: Sensirion AG
+    references:
+      - https://sensirion.com/
+
+  plantower:
+    name: Plantower
+    references:
+      - https://www.plantower.com/en/
+
+  TERA-Sensor:
+    name: TERA Sensor
+    references:
+     - https://tera-sensor.com/
+
+  shinyei:
+    name: Shinyei
+    references:
+      - https://www.shinyei.co.jp/stc/eng/
+
+  measurement-specialties:
+    name: Measurement Specialties
+    references:
+      - https://www.te.com/en/products/brands/meas.html?tab=pgp-story
+
+  honeywell:
+    name: Honeywell
+    references:
+      - https://www.honeywell.com/us/en
+
+  dallas-semiconductor:
+    name: Dallas Semiconductor
+    references:
+      - https://en.wikipedia.org/wiki/Dallas_Semiconductor
+
+  plume-labs:
+    name: Plume Labs
+    references:
+      - https://plumelabs.com/en/
+
+  earthsense:
+    name: EarthSense
+    references:
+      - https://www.earthsense.co.uk/
+
+  Sensor.Community:
+    name: Sensor.Community
+    references:
+      - https://sensor.community/en/
+
+  various:
+    name: various
+    description: |
+      Unknown manufacturer.
