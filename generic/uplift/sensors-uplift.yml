@@ -37,7 +37,7 @@ types:
 context:
   $:
     # TODO: URIs
-    manuf: https://w3id.org/ad4gd/sensor-manufacturers/
+    manuf: https://w3id.org/ad4gd/air-quality/sensor-manufacturers/
     sosa: http://www.w3.org/ns/sosa/
     ssn: http://www.w3.org/ns/ssn/
     dct: http://purl.org/dc/terms/
@@ -48,8 +48,8 @@ context:
     unit: http://qudt.org/vocab/unit/
     qb: http://purl.org/linked-data/cube#
     sdo: https://schema.org/
-    ad4gd-prop: https://w3id.org/ad4gd/properties/
-    ad4gd-procedure: https://w3id.org/ad4gd/procedures/
+    ad4gd-prop: https://w3id.org/ad4gd/air-quality/properties/
+    ad4gd-procedure: https://w3id.org/ad4gd/air-quality/procedures/
     ad4gd: 'urn:ad4gd:'
     key: '@id'
     base: '@id'
@@ -62,7 +62,7 @@ context:
       '@id': sosa:observes
       '@type': '@id'
       '@context':
-        '@base': https://w3id.org/ad4gd/properties/
+        '@base': https://w3id.org/ad4gd/air-quality/properties/
     manufacturer:
       '@id': dct:creator
       '@type': '@id'
