@@ -20,7 +20,7 @@ properties:
   pm10:
     label: Particulate matter < 10 µm
     description: The amount of suspended particulates in the air with a diameter of 10 micrometers (μm) or less.
-    seeAlso: 
+    seeAlso:
       - https://en.wikipedia.org/wiki/Particulates
     sameAs:
       - https://www.eea.europa.eu/help/glossary/eea-glossary/pm10
@@ -29,65 +29,68 @@ properties:
       - https://www.iqair.com/us/newsroom/pm10
 
   pm2.5:
-      label: Particulate matter < 2.5 µm
-      description: The amount of suspended particulates in the air with a diameter of 2.5 micrometers (μm) or less.
-      seeAlso: 
-        - https://en.wikipedia.org/wiki/Particulates
-      sameAs:
-        - http://purl.oclc.org/NET/ssnx/cf/cf-property#mass_fraction_of_pm2p5_ambient_aerosol_in_air
-        - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001
-        - https://www.iqair.com/us/newsroom/pm2-5
-        - https://www.eea.europa.eu/help/glossary/eea-glossary/pm2.5
+    label: Particulate matter < 2.5 µm
+    description: The amount of suspended particulates in the air with a diameter of 2.5 micrometers (μm) or less.
+    seeAlso:
+      - https://en.wikipedia.org/wiki/Particulates
+    sameAs:
+      - http://purl.oclc.org/NET/ssnx/cf/cf-property#mass_fraction_of_pm2p5_ambient_aerosol_in_air
+      - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001
+      - https://www.iqair.com/us/newsroom/pm2-5
+      - https://www.eea.europa.eu/help/glossary/eea-glossary/pm2.5
 
   pm1.0:
-      label: Particulate matter < 1 µm
-      description: The amount of suspended particulates in the air with a diameter of 1 micrometer (μm) or less.
-      seeAlso: 
-        - https://en.wikipedia.org/wiki/Particulates
-      sameAs:
-        - http://purl.oclc.org/NET/ssnx/cf/cf-property#mass_fraction_of_pm1_ambient_aerosol_in_air
-        - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6002
-        - https://www.iqair.com/us/newsroom/pm1
+    label: Particulate matter < 1 µm
+    description: The amount of suspended particulates in the air with a diameter of 1 micrometer (μm) or less.
+    seeAlso:
+      - https://en.wikipedia.org/wiki/Particulates
+    sameAs:
+      - http://purl.oclc.org/NET/ssnx/cf/cf-property#mass_fraction_of_pm1_ambient_aerosol_in_air
+      - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6002
+      - https://www.iqair.com/us/newsroom/pm1
 
   temperature:
-      label: Air Temperature
-      description: [GEMET] The temperature of the atmosphere which represents the average kinetic energy of the molecular motion in a small region and is defined in terms of a standard or calibrated thermometer in thermal equilibrium with the air.
-      sameAs:
-        - https://www.eionet.europa.eu/gemet/en/concept/281
-        - http://vocabs.lter-europe.net/EnvThes/22035
-        - http://purl.org/iot/vocab/iot-taxonomy-lite#Temperature
-        - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/54
-        - http://w3id.org/ad4gd/ev/eav/AirTemperature
+    label: Air Temperature
+    description: |
+      [ GEMET ] The temperature of the atmosphere which represents the average kinetic energy of the molecular motion in a small region and is defined in terms of a standard or calibrated thermometer in thermal equilibrium with the air.
+    sameAs:
+      - https://www.eionet.europa.eu/gemet/en/concept/281
+      - http://vocabs.lter-europe.net/EnvThes/22035
+      - http://purl.org/iot/vocab/iot-taxonomy-lite#Temperature
+      - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/54
+      - http://w3id.org/ad4gd/ev/eav/AirTemperature
 
   pressure:
-      label: Air Pressure
-      description: Atmospheric pressure, also known as air pressure or barometric pressure (after the barometer), is the pressure within the atmosphere of Earth.
-      see also: 
-        - https://en.wikipedia.org/wiki/Atmospheric_pressure
-      sameAs:
-        - http://purl.oclc.org/NET/ssnx/qu/quantity#pressure
-        - http://purl.oclc.org/NET/ssnx/cf/cf-property#air_pressure
-        - http://purl.org/iot/vocab/iot-taxonomy-lite#Pressure
-        - https://space.oscar.wmo.int/variables/view/air_pressure_near_surface
+    label: Air Pressure
+    description: Atmospheric pressure, also known as air pressure or barometric pressure (after the barometer), is the pressure within the atmosphere of Earth.
+    see also:
+      - https://en.wikipedia.org/wiki/Atmospheric_pressure
+    sameAs:
+      - http://purl.oclc.org/NET/ssnx/qu/quantity#pressure
+      - http://purl.oclc.org/NET/ssnx/cf/cf-property#air_pressure
+      - http://purl.org/iot/vocab/iot-taxonomy-lite#Pressure
+      - https://space.oscar.wmo.int/variables/view/air_pressure_near_surface
 
   humidity:
-      label: Air Humidity
-      description: [GEMET] A measurable quantity of the moisture content found in the earth's atmosphere.
-      sameAs:
-        - https://saref.etsi.org/core/Humidity
-        - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/55
-        - http://purl.oclc.org/NET/ssnx/cf/cf-feature#Humidity
-        - https://www.eionet.europa.eu/gemet/en/concept/626
-        - https://vocabs.lter-europe.net/envthes/en/page/22032
+    label: Air Humidity
+    description: |
+      [ GEMET ] A measurable quantity of the moisture content found in the earth's atmosphere.
+    sameAs:
+      - https://saref.etsi.org/core/Humidity
+      - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/55
+      - http://purl.oclc.org/NET/ssnx/cf/cf-feature#Humidity
+      - https://www.eionet.europa.eu/gemet/en/concept/626
+      - https://vocabs.lter-europe.net/envthes/en/page/22032
 
   relative-humidity:
-      label: Relative Humidity
-      description: [OSCAR] 3D field of relative humidity in the atmosphere. Relative humidity is the ratio of the amount of atmospheric moisture present relative to the amount that would be present if the air were saturated with respct to water or ice to be specified in the metadata .
-      sameAs:
-        - https://smartdatamodels.org/dataModel.Weather/relativeHumidity
-        - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/58
-        - http://purl.org/iot/vocab/iot-taxonomy-lite#RelativeHumidity
-        - https://space.oscar.wmo.int/variables/view/relative_humidity
+    label: Relative Humidity
+    description: |
+      [ OSCAR ] 3D field of relative humidity in the atmosphere. Relative humidity is the ratio of the amount of atmospheric moisture present relative to the amount that would be present if the air were saturated with respct to water or ice to be specified in the metadata .
+    sameAs:
+      - https://smartdatamodels.org/dataModel.Weather/relativeHumidity
+      - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/58
+      - http://purl.org/iot/vocab/iot-taxonomy-lite#RelativeHumidity
+      - https://space.oscar.wmo.int/variables/view/relative_humidity
   
   NO:
     label: NO (Nitric Oxide)
@@ -98,18 +101,19 @@ properties:
       - https://space.oscar.wmo.int/variables/view/no
 
   NO2:
-   label: NO₂ (Nitrogen Dioxide)
-   description: A measurement of the quantity of Nitrogen Dioxide in the air.
-   sameAs:
-    - http://dd.eionet.europa.eu/vocabulary/IEDAnnexIIModule3/EQSAirPollutantsGlassCode/072
-    - http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationNO2
-    - https://space.oscar.wmo.int/variables/view/no2
-    - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=40#40
-    - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8
+    label: NO₂ (Nitrogen Dioxide)
+    description: A measurement of the quantity of Nitrogen Dioxide in the air.
+    sameAs:
+      - http://dd.eionet.europa.eu/vocabulary/IEDAnnexIIModule3/EQSAirPollutantsGlassCode/072
+      - http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationNO2
+      - https://space.oscar.wmo.int/variables/view/no2
+      - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=40#40
+      - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8
 
   NOx:
     label: NOx (Oxides of Nitrogen)
-    description: [DEFRA] Combustion processes emit a mixture of nitrogen oxides (NOX), primarily nitric oxide (NO) which is quickly oxidised in the atmosphere to nitrogen dioxide (NO2). Nitrogen dioxide has a variety of environmental and health impacts. It is a respiratory irritant which may exacerbate asthma and possibly increase susceptibility to infections. In the presence of sunlight, it reacts with hydrocarbons to produce photochemical pollutants such as ozone. NO2 can be further oxidised in air to acidic gases, which contribute towards the generation of acid rain.
+    description: |
+      [ DEFRA ] Combustion processes emit a mixture of nitrogen oxides (NOX), primarily nitric oxide (NO) which is quickly oxidised in the atmosphere to nitrogen dioxide (NO2). Nitrogen dioxide has a variety of environmental and health impacts. It is a respiratory irritant which may exacerbate asthma and possibly increase susceptibility to infections. In the presence of sunlight, it reacts with hydrocarbons to produce photochemical pollutants such as ozone. NO2 can be further oxidised in air to acidic gases, which contribute towards the generation of acid rain.
     sameAs:
       - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=40#40
 
@@ -127,7 +131,8 @@ properties:
 
   CO:
     label: CO (Carbon Monoxide)
-    description: [GEMET] Colorless, odourless, tasteless, non-corrosive, highly poisonous gas of about the same density as that of air. Very flammable, burning in air with bright blue flame. Although each molecule of CO has one carbon atom and one oxygen atom, it has a shape similar to that of an oxygen molecule (two atoms of oxygen), which is important with regard to it's lethality.
+    description: |
+      [ GEMET ] Colorless, odourless, tasteless, non-corrosive, highly poisonous gas of about the same density as that of air. Very flammable, burning in air with bright blue flame. Although each molecule of CO has one carbon atom and one oxygen atom, it has a shape similar to that of an oxygen molecule (two atoms of oxygen), which is important with regard to it's lethality.
     sameAs:
       - https://www.eionet.europa.eu/gemet/en/concept/1173
       - http://vocabs.lter-europe.net/EnvThes/20809
@@ -136,7 +141,8 @@ properties:
 
   CO2:
     label: CO2 (Carbon Dioxide)
-    description: [GEMET] A colourless gas with a faint tingling smell and taste. Atmospheric carbon dioxide is the source of carbon for plants. As carbon dioxide is heavier than air and does not support combustion, it is used in fire extinguishers. It is a normal constituent of the atmosphere, relatively innocuous in itself but playing an important role in the greenhouse effect. It is produced during the combustion of fossil fuels when the carbon content of the fuels reacts with the oxygen during combustion. It is also produced when living organisms respire. It is essential for plant nutrition and in the ocean phytoplankton is capable of absorbing and releasing large quantities of the gas.
+    description: |
+      [ GEMET ] A colourless gas with a faint tingling smell and taste. Atmospheric carbon dioxide is the source of carbon for plants. As carbon dioxide is heavier than air and does not support combustion, it is used in fire extinguishers. It is a normal constituent of the atmosphere, relatively innocuous in itself but playing an important role in the greenhouse effect. It is produced during the combustion of fossil fuels when the carbon content of the fuels reacts with the oxygen during combustion. It is also produced when living organisms respire. It is essential for plant nutrition and in the ocean phytoplankton is capable of absorbing and releasing large quantities of the gas.
     sameAs:
       - https://www.eionet.europa.eu/gemet/en/concept/1168
       - http://vocabs.lter-europe.net/EnvThes/20808
@@ -144,7 +150,8 @@ properties:
 
   SO2:
     label: SO2 (Sulphur Dioxide)
-    description: [DEFRA] Sulphur dioxide is a corrosive, acidic gas which combines with water vapour in the atmosphere to produce acid rain. Both wet and dry deposition have been implicated in the damage and destruction of vegetation and in the degradation of soils, building materials and watercourses. SO2 in ambient air is also associated with asthma and chronic bronchitis.
+    description: |
+      [ DEFRA ] Sulphur dioxide is a corrosive, acidic gas which combines with water vapour in the atmosphere to produce acid rain. Both wet and dry deposition have been implicated in the damage and destruction of vegetation and in the degradation of soils, building materials and watercourses. SO2 in ambient air is also associated with asthma and chronic bronchitis.
     sameAs:
       - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=49#49
       - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1
@@ -152,15 +159,17 @@ properties:
 
   H2S:
     label: H2S (Hydrogen Sulfide)
-    description: [SLB] An extraordinarily poisonous gas with a molecular formula of H2S. At low concentrations, H2S has the odor of rotten eggs, but at higher, lethal concentrations, it is odorless.
+    description: |
+      [ SLB ] An extraordinarily poisonous gas with a molecular formula of H2S. At low concentrations, H2S has the odor of rotten eggs, but at higher, lethal concentrations, it is odorless.
     see also:
       - https://en.wikipedia.org/wiki/Hydrogen_sulfide
     sameAs:
       - https://glossary.slb.com/en/terms/h/h2s
-    
+
   VOCs:
     label: VOCs (Volatile Organic Compounds)
-    description: [GEMET] Organic compound readily passing off by evaporation.
+    description: |
+      [ GEMET ] Organic compound readily passing off by evaporation.
     sameAs:
       - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=53#53
       - https://www.eionet.europa.eu/gemet/en/concept/8993
