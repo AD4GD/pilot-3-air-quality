@@ -5,25 +5,85 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/SensorCommunity> a skos:Concept ;
+    rdfs:seeAlso <https://sensor.community/en/> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Sensor.Community" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/TERA-Sensor> a skos:Concept ;
+    rdfs:seeAlso <https://tera-sensor.com/> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "TERA Sensor" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/bosch> a skos:Concept ;
+    rdfs:seeAlso <https://www.bosch-sensortec.com/products/environmental-sensors/> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Bosch" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/dallas-semiconductor> a skos:Concept ;
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Dallas_Semiconductor> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Dallas Semiconductor" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/earthsense> a skos:Concept ;
+    rdfs:seeAlso <https://www.earthsense.co.uk/> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "EarthSense" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/honeywell> a skos:Concept ;
+    rdfs:seeAlso <https://www.honeywell.com/us/en> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Honeywell" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/measurement-specialties> a skos:Concept ;
+    rdfs:seeAlso <https://www.te.com/en/products/brands/meas.html?tab=pgp-story> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Measurement Specialties" .
+
 <https://w3id.org/ad4gd/air-quality/sensor-manufacturers/nova-fitness> a skos:Concept ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
     skos:prefLabel "Nova Fitness" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/plantower> a skos:Concept ;
+    rdfs:seeAlso <https://www.plantower.com/en/> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Plantower" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/plume-labs> a skos:Concept ;
+    rdfs:seeAlso <https://plumelabs.com/en/> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Plume Labs" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/sensirion-AG> a skos:Concept ;
+    rdfs:seeAlso <https://sensirion.com/> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Sensirion AG" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/shinyei> a skos:Concept ;
+    rdfs:seeAlso <https://www.shinyei.co.jp/stc/eng/> ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "Shinyei" .
+
+<https://w3id.org/ad4gd/air-quality/sensor-manufacturers/various> a skos:Concept ;
+    dct:description "Unknown manufacturer." ;
+    skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
+    skos:prefLabel "various" .
 
 <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> a skos:ConceptScheme ;
     dct:source <https://ad4gd.eu/> ;
     skos:prefLabel "AD4GD air quality sensor manufacturers" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-08-12T11:13:07.721146"^^xsd:dateTime ;
-    prov:startedAtTime "2024-08-12T11:13:07.670226"^^xsd:dateTime ;
+    prov:endedAtTime "2024-08-21T11:06:21.134719"^^xsd:dateTime ;
+    prov:startedAtTime "2024-08-21T11:06:21.050258"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:11f77da26d7afa467ccb7490b31e7f2a5c1b7e7a" ;
+            dct:hasVersion "git:4acd0d242e6d72e027d5755cf3daef30903379b9" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/generic/sensor-manufacturers.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.3.50" ;
+            dct:hasVersion "0.3.51" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "eceaa9a7-e4fe-4a1a-b807-94cb99264b17" ] .
+    prov:wasInformedBy [ dct:identifier "e5deddd0-011b-4d10-ac5b-6b5e438b7260" ] .
 
