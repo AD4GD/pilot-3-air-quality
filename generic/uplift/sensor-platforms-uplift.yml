@@ -1,0 +1,73 @@
+transform:
+  # Create concept scheme
+  # Flatten object to array with "key" property
+  # Map properties to IRIs
+  # Remove empty values
+  # TODO: rest of known properties
+  - |
+    def to_iri: gsub(" "; "-") | gsub("[^A-Za-z0-9_-]"; "") ;
+    (.base | sub("/+$"; "")) as $BASE
+    | .platforms |= [ to_entries | .[] |
+        .value + { "@id": "\($BASE)/\(.key | to_iri)", "rdfs:subClassOf": "sosa:Platform" }
+        | (.manufacturers |= (if type == "array" then map("manuf:\(to_iri)") else null end))
+        | (.sensors |= (if type == "array" then map("sensor:\(to_iri)") else null end))
+        | del(..|select(. == ""))
+      ]
+    | ."dct:source" = { "@id": "https://ad4gd.eu/" }
+
+types:
+  $: skos:ConceptScheme
+  $.platforms[*]: skos:Concept
+
+context:
+  $:
+    # TODO: URIs
+    '@base': https://w3id.org/ad4gd/sensor-platforms/
+    manuf: https://w3id.org/ad4gd/manufacturers/
+    sensor: https://w3id.org/ad4gd/sensors/
+    sosa: http://www.w3.org/ns/sosa/
+    ssn: http://www.w3.org/ns/ssn/
+    dct: http://purl.org/dc/terms/
+    rdfs: http://www.w3.org/2000/01/rdf-schema#
+    skos: http://www.w3.org/2004/02/skos/core#
+    owl: http://www.w3.org/2002/07/owl#
+    qudt: http://qudt.org/schema/qudt/
+    unit: http://qudt.org/vocab/unit/
+    qb: http://purl.org/linked-data/cube#
+    ad4gd-prop: https://w3id.org/ad4gd/properties/
+    ad4gd-procedure: https://w3id.org/ad4gd/procedures/
+    sdo: https://schema.org/
+    ad4gd: 'urn:ad4gd:'
+    base: '@id'
+    key: '@id'
+    platforms:
+      '@reverse': skos:inScheme
+    subClassOf:
+      '@id': rdfs:subClassOf
+      '@type': '@id'
+    observed_properties:
+      '@id': sosa:observes
+      '@type': '@id'
+      '@context':
+        '@base': https://w3id.org/ad4gd/properties/
+    name: skos:prefLabel
+    label: skos:prefLabel
+    description: dct:description
+    references:
+      '@id': rdfs:seeAlso
+      '@type': '@id'
+    hasUnit:
+      '@id': qudt:hasUnit
+      '@type': '@id'
+    broader:
+      '@id': skos:broader
+      '@type': '@id'
+    procedures:
+      '@id': ssn:implements
+      '@type': '@id'
+    manufacturers:
+      '@id': sdo:manufacturer
+      '@type': '@id'
+    sensors:
+      '@id': sosa:hosts
+      '@type': '@id'

@@ -6,7 +6,7 @@
 
 _:ad4gd-pilot3 a dcat:Catalog;
   dct:title "AD4GD Pilot 3 semantic catalog" ;
-  dcat:dataset _:properties, _:propertiesEntailments, _:procedures, _:sensors, _:manufacturers ;
+  dcat:dataset _:properties, _:propertiesEntailments, _:procedures, _:sensors, _:manufacturers, _:platforms ;
   dcfg:hasProfileSource "sparql:http://defs-dev.opengis.net/fuseki/query" ;
   dcfg:ignoreProfileArtifactErrors true ;
 .
@@ -44,6 +44,15 @@ _:manufacturers a dcat:Dataset, dcfg:UpliftConfiguration ;
   dcfg:hasUpliftDefinition [
     dcfg:order 1 ;
     dcfg:file "generic/uplift/sensor-manufacturers-uplift.yml" ;
+  ] ;
+.
+
+_:platforms a dcat:Dataset, dcfg:UpliftConfiguration ;
+  dct:description "Sensor platforms uplift" ;
+  dcfg:glob "generic/sensor-platforms.yml" ;
+  dcfg:hasUpliftDefinition [
+    dcfg:order 1 ;
+    dcfg:file "generic/uplift/sensor-platforms-uplift.yml" ;
   ] ;
 .
 
