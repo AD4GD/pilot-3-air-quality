@@ -92,3 +92,8 @@ _:obs75134 a sosa:Observation ;
 For reference, the observation perspective of the [SOSA/SSN ontology](https://www.w3.org/TR/vocab-ssn/) model follows.
 
 ![SOSA-SSN Model](assets/sosa_model.png)
+
+## Acknowledgements
+
+The work has been co-funded by the European Union and the United Kingdom under the 
+Horizon Europe [AD4GD Project](https://www.ogc.org/initiatives/ad4gd/).
