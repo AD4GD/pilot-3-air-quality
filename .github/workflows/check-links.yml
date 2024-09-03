@@ -20,4 +20,4 @@ jobs:
             pip install requests pyyaml
 
       - name: Check URLS
-        run: python scripts/check_links.py
+        run: python rainbow/scripts/check_links.py
