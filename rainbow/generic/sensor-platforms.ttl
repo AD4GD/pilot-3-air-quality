@@ -63,16 +63,16 @@ From: https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e
     skos:prefLabel "AD4GD air quality sensor platforms" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-08-21T11:38:09.073863"^^xsd:dateTime ;
-    prov:startedAtTime "2024-08-21T11:38:08.980867"^^xsd:dateTime ;
+    prov:endedAtTime "2024-09-03T14:04:01.453756"^^xsd:dateTime ;
+    prov:startedAtTime "2024-09-03T14:04:01.385276"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:f9a52281afd6c985f9c4da6c6e370591fd5db3ff" ;
-            rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/generic/sensor-platforms.yml> ] ;
+            dct:hasVersion "git:6eb0bef622b0356d282b6ebf88162e9b20db7e1c" ;
+            rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow/generic/sensor-platforms.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 sdo:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.3.51" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "b7cdd187-e07f-4948-9810-28cc8ec7d605" ] .
+    prov:wasInformedBy [ dct:identifier "84c2597f-df74-415e-b1ed-5a27e64a1cc5" ] .
 
