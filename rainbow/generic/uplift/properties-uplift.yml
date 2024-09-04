@@ -35,3 +35,8 @@ context:
       '@id': skos:narrower
       '@type': '@id'
     description: skos:definition
+    relatedMatch: skos:relatedMatch
+    closeMatch: skos:closeMatch
+    broadMatch: skos:broadMatch
+    narrowMatch: skos:narrowMatch
+    exactMatch: skos:exactMatch
