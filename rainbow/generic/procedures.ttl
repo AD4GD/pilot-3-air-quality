@@ -16,16 +16,16 @@
     skos:prefLabel "AD4GD air quality observation procedures" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-09-03T14:04:01.294825"^^xsd:dateTime ;
-    prov:startedAtTime "2024-09-03T14:04:01.246261"^^xsd:dateTime ;
+    prov:endedAtTime "2024-09-04T08:46:35.811304"^^xsd:dateTime ;
+    prov:startedAtTime "2024-09-04T08:46:35.761476"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:6eb0bef622b0356d282b6ebf88162e9b20db7e1c" ;
+            dct:hasVersion "git:dd39b657e7d09026ea1600203fae9883db7d74c1" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow/generic/procedures.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.3.51" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "84c2597f-df74-415e-b1ed-5a27e64a1cc5" ] .
+    prov:wasInformedBy [ dct:identifier "fe36114d-db76-4d46-91ec-4c00ead00e60" ] .
 
