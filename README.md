@@ -1,7 +1,7 @@
 <p align="center">
 <img alt="image" src="https://github.com/user-attachments/assets/4a215329-7835-4d37-aeb6-92141f14b6b5">
 </p>
----
+
 
 # AD4GD Pilot 3: Air Quality
 
