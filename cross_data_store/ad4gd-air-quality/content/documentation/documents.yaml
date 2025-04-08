@@ -1,0 +1,7 @@
+- url: https://github.com/AD4GD/pilot-3-air-quality
+  description: A git repository that holds code, data and documentation related to this dataset.
+  title: Git Repository
+# - url: https://doi.org/10.5194/essd-12-2097-2020
+#   title: 'WFDE5: bias-adjusted ERA5 reanalysis data for impact studies'
+#   description: A peer reviewed article which describes the methods used in the generation
+#     of this dataset and the results of the validation experiments.

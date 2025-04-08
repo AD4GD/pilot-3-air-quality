@@ -1,0 +1,13 @@
+Data description:
+  Data type: Gridded
+  Projection: Regular latitude-longitude grid
+  File format: NetCDF 4
+  Horizontal coverage: Europe land
+  Horizontal resolution: "0.5\xB0 x 0.5\xB0"
+  Vertical coverage: Surface
+  Vertical resolution: Single level
+  Temporal coverage: From 2024 onwards
+  Temporal resolution: TODO
+  Update frequency: Daily
+  Conventions: Climate and Forecast (CF) Metadata Convention v1.7
+  Versions: "1.0"
