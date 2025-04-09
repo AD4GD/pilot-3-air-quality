@@ -63,16 +63,16 @@ From: https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e
     skos:prefLabel "AD4GD air quality sensor platforms" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-04-09T07:17:54.097487"^^xsd:dateTime ;
-    prov:startedAtTime "2025-04-09T07:17:54.041438"^^xsd:dateTime ;
+    prov:endedAtTime "2025-04-09T14:18:50.296231"^^xsd:dateTime ;
+    prov:startedAtTime "2025-04-09T14:18:50.239471"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:efb2db81a281005cb306822a973fcb0e55b523f4" ;
+            dct:hasVersion "git:e2d37640a86bd9da505cd3cda5bef32effe3875f" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow/generic/sensor-platforms.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 sdo:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "272dc2fb-9e1f-4306-99ee-72718cc18407" ] .
+    prov:wasInformedBy [ dct:identifier "261c1b01-8980-4074-a7b5-a1a5c2424e04" ] .
 
