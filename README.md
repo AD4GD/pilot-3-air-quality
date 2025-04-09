@@ -7,6 +7,9 @@
 
 **Pilot 3** focuses on leveraging IoT sensor data to monitor air quality, with an emphasis on understanding the impact of air pollution on health. This study zeroes in on regions like Benelux and Northern Italy's Po Valley—areas with distinct pollution profiles. By analyzing data from low-cost sensors (LCS) and Citizen Science contributions, we aim to enhance air quality monitoring, identify pollution hotspots, and provide real-time insights with high spatial resolution. Ultimately, this pilot will explore how IoT data can complement traditional monitoring methods, support public health policy, and improve air quality forecasts.
 
+## Demos
+[Download and visualise the air quality dataset](demos/download_air_quality_data.ipynb)
+
 ## Dataset
 
 A high resolution dataset for particulate matter (PM2.5 and PM10) generated from low cost sensor (LCS) measurements, in the framework of the Horizon Europe [All Data for Green Deal (AD4GD)](http://ad4gd.eu/) project.
