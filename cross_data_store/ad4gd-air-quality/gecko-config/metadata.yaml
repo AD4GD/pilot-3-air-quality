@@ -1,4 +1,4 @@
-Title: Near surface variables from 1979 to present derived from reanalysis
+Title: AD4GD Gridded Air Quality Data
 Creator Name: AD4GD
 Publisher: ECMWF
 Publication year: 2025
@@ -24,21 +24,21 @@ data_type: grid
 unit_measure: dd
 representative_fraction: 0.25
 topic: climatologyMeteorologyAtmosphere
-bboxN: 89
-bboxW: 0
-bboxS: -89
-bboxE: 360
-begin_date: 1979-01-01
-end_date: 2018-12-31
-file_format: grib
-format_version: null
-lineage: EC Copernicus program
+bboxN: 72
+bboxW: -25
+bboxS: 35
+bboxE: 45
+begin_date: 2019-01-01
+end_date: 2025-12-31
+file_format: netCDF4
+format_version: 4
+lineage: 
 resource_type: dataset
-doi: 10.24381/cds.20d54e34
+doi: 
 licences:
   - licence-to-use-copernicus-products
 keywords:
   - "Product type: Derived reanalysis"
-  - "Spatial coverage: Global"
+  - "Spatial coverage: Europe"
   - "Variable domain: Atmosphere (surface)"
   - "Temporal coverage: Past"

@@ -1,82 +1,64 @@
-# advice everyhing that makes the file unique in the filename!
-# example.com/data/{year}/{month}/{day}/{year}_{month}_{day}_{variable}
-# example.com/data/{year}_{month}_{day}_{variable}
-# for area selector widget to work use netCDF
-# For example of netcdf format look at: http://cataloguedata-ecv.data.compute.cci1.ecmwf.int/data3/wfde5/data/WFDE5/v1.0/Wind/CRU/Wind_WFDE5_CRU_197905_v1.0.nc
-
-# netcdf Wind_WFDE5_CRU_197905_v1.0 {
-# dimensions:
-#         time = 744 ;
-#         longitude = 720 ;
-#         latitude = 360 ;
-# variables:
-#         double time(time) ;
-#                 time:_FillValue = NaN ;
-#                 time:standard_name = "time" ;
-#                 time:long_name = "Time" ;
-#                 time:axis = "T" ;
-#                 time:units = "hours since 1900-01-01" ;
-#                 time:calendar = "gregorian" ;
-#         double longitude(longitude) ;
-#                 lon:_FillValue = NaN ;
-#                 lon:standard_name = "longitude" ;
-#                 lon:units = "degrees_east" ;
-#                 lon:axis = "X" ;
-#                 lon:long_name = "Longitude" ;
-#         double latitude(latitude) ;
-#                 lat:_FillValue = NaN ;
-#                 lat:standard_name = "latitude" ;
-#                 lat:units = "degrees_north" ;
-#                 lat:axis = "Y" ;
-#                 lat:long_name = "Latitude" ;
-#         float Wind(time, lat, lon) ;
-#                 Wind:_FillValue = 1.e+20f ;
-#                 Wind:units = "m s-1" ;
-#                 Wind:long_name = "Near-Surface Wind Speed" ;
-#                 Wind:standard_name = "wind_speed" ;
-
 adaptor: url
-# manifest:
-#   - url to get the manifest file from provider (myself)
+manifest:
+  - http://ad4gd-test.ecmwf-development.f.ewcloud.host/manifest.txt
 regex:
-# {type}/{variable}/{frequency}/{year}/{month}/{day}/{type}_{variable}_{frequency}_{year}{month}{day}.nc
-  # - (?P<__0>.*)/(?P<variable_1>[^/]*)/(?P<frequency_1>[^/]*)/(?P<year_1>\d{4})/(?P<month_1>\d{2})/(?P<day_1>\d{2})/(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2})_(?P<variable_1>[0-9a-zA-Z_]*).nc
   - (?P<__0>.*)/(?P<type_1>[^/]+)/(?P<variable_1>[^/]+)/(?P<frequency_1>[^/]+)/(?P<year_1>\d{4})/(?P<month_1>\d{2})/(?P<day_1>\d{2})/(?P<type_2>[^/]+)_(?P<variable_2>[^/]+)_(?P<frequency_2>[^/]+)_(?P<year_2>\d{4})(?P<month_2>\d{2})(?P<day_2>\d{2}).nc
   - (?P<__0>.*)/(?P<type_1>[^/]+)/(?P<variable_1>[^/]+)/(?P<frequency_1>[^/]+)/(?P<year_1>\d{4})/(?P<month_1>\d{2})/(?P<type_2>[^/]+)_(?P<variable_2>[^/]+)_(?P<frequency_2>[^/]+)_(?P<year_2>\d{4})(?P<month_2>\d{2})(?P<day_1>\d{2}).nc
 
 import:
   - area-selector-widget
+
+widget_overrides:
+  area:
+    details:
+      enableMap: true
+      range:
+        n: 72
+        w: -25
+        s: 35
+        e: 45
+      default:
+        n: 72
+        w: -25
+        s: 35
+        e: 45
+
+# bboxN: 72
+# bboxW: -25
+# bboxS: 35
+# bboxE: 45
+
 labels:
+  type:
+    iot_cams: Combined IoT + CAMS
+    iot_only: Only IoT data
+
   variable:
-    PM2_5: Grid-point altitude
-    PM10: Near-surface wind speed
-  reference_dataset:
-    CRU: CRU (Climate Research Unit)
-    CRU+GPCC:
-      CRU and GPCC (Climate Research Unit and Global Precipitation Climatology
-      Centre)
+    pm25: "Particulate matter d < 2.5 \xB5m (PM2.5)"
+    pm10: "Particulate matter d < 10 \xB5m (PM10)"
+  
+  frequency:
+    daily: Daily
+    hourly: Hourly
 
 
 defaults:
-  version:
-    - "2.1"
-columns:
-  variable: 2
-  reference_dataset: 1
+  type:
+    - "iot_cams"
+
+  frequency:
+    - "daily"
+
+
 widget_order:
   - variable
-  - reference_dataset
+  - type
+  - frequency
   - year
   - month
-  - version
-widget_types:
-  reference_dataset: StringChoiceWidget
+  - day
+
+
 helps:
-  reference_dataset:
-    '"CRU and GPCC" uses data from a larger number of stations for
-    the bias correction of the precipitation fields but the temporal coverage ends
-    at the end of 2016.'
-  version:
-    Version 1.0 of this dataset has been deprecated due to an issue which affects
-    the "Surface downwelling shortwave radiation" data. Access to version 1.0 is provided
-    for traceability purposes only. Version 1.1 provides corrected data.
+  type:
+    Choose "Combined IoT + CAMS" for a dataset derived from a combination of low cost sensor data and the CAMS Europe model or a dataset using only low cost sensor data.
