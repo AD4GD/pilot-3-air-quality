@@ -91,7 +91,7 @@ _:obs75134 a sosa:Observation ;
 
 For reference, the observation perspective of the [SOSA/SSN ontology](https://www.w3.org/TR/vocab-ssn/) model follows.
 
-![SOSA-SSN Model](assets/sosa_model.png)
+![SOSA-SSN Model](../assets/sosa_model.png)
 
 ## Acknowledgements
 
