@@ -75,16 +75,16 @@ manuf:various a skos:Concept ;
     skos:prefLabel "AD4GD air quality sensor manufacturers" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-04-11T10:33:10.772864"^^xsd:dateTime ;
-    prov:startedAtTime "2025-04-11T10:33:10.715365"^^xsd:dateTime ;
+    prov:endedAtTime "2025-04-11T11:13:09.131045"^^xsd:dateTime ;
+    prov:startedAtTime "2025-04-11T11:13:09.074665"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:5215c2bbf79e3b4048217dd1973647268d215128" ;
+            dct:hasVersion "git:2740eee93e4ea8642bce2c0e8e500a987e40ff70" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow/generic/sensor-manufacturers.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "be157546-2a20-4a27-b132-d19ec38f1893" ] .
+    prov:wasInformedBy [ dct:identifier "ffab684a-d64e-4031-8b0e-77d7514f635d" ] .
 
