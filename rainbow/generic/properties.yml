@@ -16,6 +16,10 @@ properties:
   #     - anotherBroadTerm                              # *Only local ids*
   #   hasNarrower:                                      # Same as hasBroader, but for linking to more specific terms
   #     - anotherNarrowTerm
+  #   sources:
+  #     - label: Label for source
+  #       url: URL for source
+  #     - http://direct.url/for/source
 
   pm10:
     label: Particulate matter < 10 µm
