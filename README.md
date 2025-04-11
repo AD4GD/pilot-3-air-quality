@@ -7,6 +7,16 @@
 
 **Pilot 3** focuses on leveraging IoT sensor data to monitor air quality, with an emphasis on understanding the impact of air pollution on health. This study zeroes in on regions like Benelux and Northern Italy's Po Valley—areas with distinct pollution profiles. By analyzing data from low-cost sensors (LCS) and Citizen Science contributions, we aim to enhance air quality monitoring, identify pollution hotspots, and provide real-time insights with high spatial resolution. Ultimately, this pilot will explore how IoT data can complement traditional monitoring methods, support public health policy, and improve air quality forecasts.
 
+## What's in here
+```
+.
+├── README.md <--- You are here.
+├── assets Images and other assets.
+├── cross_data_store Metadata for pilot 3 dataset on xds.ecmwf.int
+├── demos Demo notebooks showing how to access and use the data
+└── rainbow Semantic Metadata for bringing the Pilot 3 datasets into RAINBOW
+```
+
 ## Demos
 [Download and visualise the air quality dataset](demos/download_air_quality_data.ipynb)
 

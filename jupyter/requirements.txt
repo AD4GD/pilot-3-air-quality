@@ -1,4 +1,0 @@
-jupyterlab
-ogc-na
-pyyaml
-requests
