@@ -10,17 +10,17 @@ The following files are semantically uplifted and published in the
 * `generic/sensors.yml`: AD4GD sensors
 * `generic/sensor-manufacturers.yml`: AD4GD sensor anufacturers)
 
-New uplift entries can be configured inside `.ogc/catalog.ttl`
+New uplift entries can be configured inside `catalog.ttl`
 (see [Documentation and tutorials](#documentation-and-tutorials) below).
 
-Please bear in mind that any `.ttl` files that you may find in this repository (apart from `.ogc/catalog.ttl`)
+Please bear in mind that any `.ttl` files that you may find in this repository (apart from `catalog.ttl`)
 are most certainly going to be auto-generated, and thus you should not edit them directly because your changes
 will be lost. The repository is set up to work with YAML/JSON files and JSON-LD uplift definitions (`*-uplift.yml`
 files), and to generate (and publish) their RDF representations automatically.
 
 ### Documentation and tutorials
 
-* [Example domain definition (like `.ogc/catalog.ttl`)](https://opengeospatial.github.io/ogc-na-tools/examples/#sample-domain-configuration)
+* [Example domain definition (like `catalog.ttl`)](https://opengeospatial.github.io/ogc-na-tools/examples/#sample-domain-configuration)
 * [How to create a JSON-LD uplift context definition](https://opengeospatial.github.io/ogc-na-tools/tutorials/#how-to-create-a-json-ld-uplift-context-definition)
 
 ## The data model

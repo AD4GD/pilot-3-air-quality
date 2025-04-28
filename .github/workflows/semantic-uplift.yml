@@ -33,8 +33,8 @@ jobs:
           DB_PASSWORD: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
         run: |
           python -m ogc.na.ingest_json --batch --skip-on-missing-context --all \
-            --ttl --work-dir ./rainbow --domain-config rainbow/catalog.ttl
-          python -m ogc.na.update_vocabs -w ./rainbow rainbow/catalog.ttl --use-git-status \
+            --ttl --work-dir ./rainbow-data --domain-config rainbow-data/catalog.ttl
+          python -m ogc.na.update_vocabs -w ./rainbow-data rainbow-data/catalog.ttl --use-git-status \
             --update --graph-store https://defs-dev.opengis.net/fuseki-hosted/data
       - name: Commit changes
         uses: EndBug/add-and-commit@v9

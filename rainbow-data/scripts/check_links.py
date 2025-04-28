@@ -36,12 +36,12 @@ def check_urls_on_keys(file, yaml_list, keys):
                     yield (file, name, key, url, info)
 
 
-properties = load_yaml("rainbow/generic/properties.yml")["properties"]
-sensors = load_yaml("rainbow/sensors.yml")["sensors"]
+properties = load_yaml("rainbow-data/generic/properties.yml")["properties"]
+sensors = load_yaml("rainbow-data/sensors.yml")["sensors"]
 
 issues = [
-    *check_urls_on_keys("rainbow/generic/properties.yml", properties, ["sameAs", "seeAlso"]),
-    *check_urls_on_keys("rainbow/generic/sensors.yml", properties, ["references"]),
+    *check_urls_on_keys("rainbow-data/generic/properties.yml", properties, ["sameAs", "seeAlso"]),
+    *check_urls_on_keys("rainbow-data/generic/sensors.yml", properties, ["references"]),
 ]
 
 if issues:
