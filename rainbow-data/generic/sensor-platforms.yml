@@ -7,16 +7,23 @@ platforms:
 
   ## Format for sensor platforms:
   # id:                                                 # URI slug
-  #   label: Label for the term                         # Required
+  #   label:                                            # Label for the term, required
   #   manufacturers:                                    # List of manufacturers (omit if unknown or "various")
   #     - manufacturer1                                 #   refers to the key for the manufacturer entry in sensor-manufacturers.yml
-  #   sensors:                                          # Required
+  #   sensors:                                          # List of sensors, required
   #     - sensor1                                       #   refers to the key for the sensor entry in sensors.yml
-  #   description: Term description                     # Optional
+  #   description:                                      # Term description, optional
+  #   sources:                                          # Websites from which the description was acquired (non-semantic), optional
+  #     - https://example.com/description
+  #     - label: My source
+  #       url: https://example.com/description
+  #   references:                                       # List of websites with definitions, data sheets, etc. (non-semantic), optional
+  #     - https://en.wikipedia.org/wiki/Term
   #   sameAs:                                           # List of "same as" URIs, optional
   #     - https://another.vocabulary.com/another/term
-  #   references:                                       # List of websites with definitions, data sheets, etc. (non-semantic)
+  #   seeAlso:                                          # List of websites with definitions (non-semantic), optional
   #     - https://en.wikipedia.org/wiki/Term
+
 
   AirRohr:
     name: AirRohr
@@ -24,7 +31,9 @@ platforms:
       - Sensor.Community
     description: |
       Build your DIY sensor and become part of the worldwide, opendata & civictech network. With airRohr you can measure air pollution yourself.
-      From: https://sensor.community/en/sensors/airrohr/
+    sources:
+      - label: Sensor.Community
+        url: https://sensor.community/en/sensors/airrohr/
     sensors:
       - SDS011
       - BME280
@@ -38,8 +47,10 @@ platforms:
       - plume-labs
     description: |
       The Plume Labs Flow 2 is a wearable air quality sensor that provides real-time measurements of particulate matter (PM1.0, PM2.5 and PM­10) mass concentrations, VOC and NO2 concentrations. Data can be visualized and exported using the phone application for Android and iPhone via Bluetooth.
-      We created Flow to answer a question: “what is in the air I breathe.” In the spring of 2023 we made the tough decision to dedicate this knowledge, system, and tech to advancing research, raising awareness, and fostering action. As a result Flow and Flow 2 are no longer for sale.
-      From: https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2       
+      We created Flow to answer a question: “what is in the air I breathe.” In the spring of 2023 we made the tough decision to dedicate this knowledge, system, and tech to advancing research, raising awareness, and fostering action. As a result Flow and Flow 2 are no longer for sale.    
+    sources:
+      - label: AQMD
+        url: https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2   
     sensors:
       - SDS011
       - PlumeFlow2TH
@@ -56,7 +67,9 @@ platforms:
     description: |
       The Zephyr® is an award-winning, certified, indicative ambient air quality monitor that accurately measures harmful gases and particle matter. 
       Zephyr® monitors provide detailed air quality measurements in real-time to help identify pollution hotspots at a localised level such as busy road junctions. Extensive networks can be easily deployed for city-wide pollution data used to aid the development of smarter and cleaner towns and cities.
-      From: https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf 
+    sources:
+      - label: Earthsense
+        url: https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf 
     sensors:
       - ZephyrTH
       - ZephyrP
