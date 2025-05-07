@@ -26,12 +26,12 @@ From: https://www.adafruit.com/product/2652'
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "BME280" ;
-    sosa:observes [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ],
-        [ qudt:hasUnit unit:PA ;
+    sosa:observes [ qudt:hasUnit unit:PA ;
             skos:broader ad4gd-prop:pressure ],
         [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ] ;
     sdo:manufacturer manuf:bosch .
 
 <https://w3id.org/ad4gd/air-quality/sensors/BMP180> a owl:Class,
@@ -117,13 +117,13 @@ From: https://www.mouser.co.uk/new/honeywell/honeywell-hpm-particulate-matter-se
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "HPM" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ],
+            skos:broader ad4gd-prop:pm4 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
+            skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm4 ] ;
+            skos:broader ad4gd-prop:pm1 ] ;
     sdo:manufacturer manuf:honeywell .
 
 <https://w3id.org/ad4gd/air-quality/sensors/HTU21D> a owl:Class,
@@ -152,11 +152,11 @@ From: https://tera-sensor.com/product/nextpm/
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "NextPM" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
+            skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm2.5 ] ;
     sdo:manufacturer manuf:TERA-Sensor .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS1003> a owl:Class,
@@ -177,11 +177,11 @@ From: https://aqicn.org/sensor/pms1003/
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS1003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
+            skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ] ;
+            skos:broader ad4gd-prop:pm2.5 ] ;
     sdo:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS3003> a owl:Class,
@@ -205,11 +205,11 @@ From: https://aqicn.org/sensor/pms3003/
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS3003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm10 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm2.5 ] ;
     sdo:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS5003> a owl:Class,
@@ -229,11 +229,11 @@ From: https://aqicn.org/sensor/pms5003-7003/
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS5003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm10 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm2.5 ] ;
     sdo:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS6003> a owl:Class,
@@ -254,11 +254,11 @@ From: https://www.plantower.com/en/products_33/75.html
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS6003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm10 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm1 ] ;
     sdo:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS7003> a owl:Class,
@@ -280,9 +280,9 @@ From: https://aqicn.org/sensor/pms5003-7003/
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
+            skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ] ;
+            skos:broader ad4gd-prop:pm2.5 ] ;
     sdo:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PPD42NS> a owl:Class,
@@ -330,10 +330,10 @@ Weight: 24g (Approx.)
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "Plume Flow 2 Air Temperature and Air Humidity sensor sensor" ;
-    sosa:observes [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ],
-        [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ] ;
     sdo:manufacturer manuf:plume-labs .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PlumeFlow2VOC> a owl:Class,
@@ -388,11 +388,11 @@ From: https://aqicn.org/sensor/sds011/
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SDS011" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ;
+            skos:broader ad4gd-prop:pm2.5 ;
             ssn:implements [ qb:order 1 ;
                     skos:broader ad4gd-procedure:pm-humidity-correction ] ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ;
+            skos:broader ad4gd-prop:pm10 ;
             ssn:implements [ qb:order 1 ;
                     skos:broader ad4gd-procedure:pm-humidity-correction ] ] ;
     sdo:manufacturer manuf:nova-fitness .
@@ -424,10 +424,10 @@ From: https://sensirion.com/products/catalog/SHT11
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SHT11" ;
-    sosa:observes [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ],
-        [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ] ;
     sdo:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/SHT30> a owl:Class,
@@ -439,10 +439,10 @@ From: https://www.farnell.com/datasheets/2901984.pdf
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SHT30" ;
-    sosa:observes [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ],
-        [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ] ;
     sdo:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/SHT31> a owl:Class,
@@ -516,13 +516,13 @@ From: https://sensirion.com/products/catalog/SPS30
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SPS30" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm4 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ] ;
+            skos:broader ad4gd-prop:pm1 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm2.5 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm4 ] ;
     sdo:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/ZephyrCO> a owl:Class,
@@ -616,9 +616,9 @@ From: https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "Zephyr particulate matter (PM) sensor" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ] ;
     sdo:manufacturer manuf:earthsense .
@@ -675,16 +675,16 @@ From: https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e
     skos:prefLabel "AD4GD air quality sensors" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-05-07T07:36:11.129003"^^xsd:dateTime ;
-    prov:startedAtTime "2025-05-07T07:36:11.049898"^^xsd:dateTime ;
+    prov:endedAtTime "2025-05-07T07:39:28.920014"^^xsd:dateTime ;
+    prov:startedAtTime "2025-05-07T07:39:28.831773"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:094991f871bfe3264b72b99983abd85c606beede" ;
+            dct:hasVersion "git:c4dfa0f4219344a3b6617eac714acf450598cef0" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/sensors.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 sdo:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "2b6ae13b-fbac-459a-a692-ed36535d3e79" ] .
+    prov:wasInformedBy [ dct:identifier "39ec3eae-18a3-41f3-850e-d66ca1bdd0c4" ] .
 
