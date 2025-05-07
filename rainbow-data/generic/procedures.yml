@@ -4,18 +4,30 @@ label: AD4GD air quality observation procedures         # Label for collection
 # description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 procedures:
+
   ## Format for procedures (same as properties):
   # id:                                                 # URI slug
-  #   label: Label for the term                         # Required
-  #   description: Term description                     # Optional
+  #   label:                                            # Label for the term, required
+  #   description:                                      # Term description, optional
+  #   sources:                                          # Websites from which the description was acquired (non-semantic), optional
+  #     - https://example.com/description
+  #     - label: My source
+  #       url: https://example.com/description
+  #   references:                                       # List of websites with definitions, data sheets, etc. (non-semantic), optional
+  #     - https://en.wikipedia.org/wiki/Term
   #   sameAs:                                           # List of "same as" URIs, optional
   #     - https://another.vocabulary.com/another/term
-  #   seeAlso:                                          # List of websites with definitions (non-semantic)
+  #   seeAlso:                                          # List of websites with definitions (non-semantic), optional
   #     - https://en.wikipedia.org/wiki/Term
-  #   hasBroader:                                       # List of terms that are more generic than this one.
+  #   hasBroader:                                       # List of terms that are more generic than this one, optional
   #     - anotherBroadTerm                              # *Only local ids*
-  #   hasNarrower:                                      # Same as hasBroader, but for linking to more specific terms
+  #   hasNarrower:                                      # Same as hasBroader, but for linking to more specific terms, optional
   #     - anotherNarrowTerm
 
   pm-humidity-correction:
     label: Humidity correction for Particulate Matter
+    description: Humidity correction for particulate matter (PM) refers to adjustments made to PM measurements to account for the effects of water vapor on particle size and concentration.
+    sources:
+      - label: AD4GD
+        url: https://ad4gd.eu/
+    
