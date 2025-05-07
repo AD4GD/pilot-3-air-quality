@@ -2,28 +2,36 @@ base: https://w3id.org/ad4gd/air-quality/properties     # Base URI (no trailing 
 label: AD4GD air quality observable properties          # Label for property collection
 ## Optional: add description
 # description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
 properties:
 
   ## Format for properties:
   # id:                                                 # URI slug
-  #   label: Label for the term                         # Required
-  #   description: Term description                     # Optional
+  #   label:                                            # Label for the term, required
+  #   description:                                      # Term description, optional
+  #   sources:                                          # Websites from which the description was acquired (non-semantic), optional
+  #     - https://example.com/description
+  #     - label: My source
+  #       url: https://example.com/description
+  #   references:                                       # List of websites with definitions, data sheets, etc. (non-semantic), optional
+  #     - https://en.wikipedia.org/wiki/Term
   #   sameAs:                                           # List of "same as" URIs, optional
   #     - https://another.vocabulary.com/another/term
-  #   seeAlso:                                          # List of websites with definitions (non-semantic)
+  #   seeAlso:                                          # List of websites with definitions (non-semantic), optional
   #     - https://en.wikipedia.org/wiki/Term
-  #   hasBroader:                                       # List of terms that are more generic than this one.
+  #   hasBroader:                                       # List of terms that are more generic than this one, optional
   #     - anotherBroadTerm                              # *Only local ids*
-  #   hasNarrower:                                      # Same as hasBroader, but for linking to more specific terms
+  #   hasNarrower:                                      # Same as hasBroader, but for linking to more specific terms, optional
   #     - anotherNarrowTerm
-  #   sources:
-  #     - label: Label for source
-  #       url: URL for source
-  #     - http://direct.url/for/source
+  #   relatedMatch:                                     # List of related matches (skos:relatedMatch), optional
+  #     - https://another.vocabulary.com/another/term   
 
   pm10:
     label: Particulate matter < 10 µm
     description: The amount of suspended particulates in the air with a diameter of 10 micrometers (μm) or less.
+    sources:
+      - label: AD4GD
+        url: https://ad4gd.eu/
     seeAlso:
       - https://en.wikipedia.org/wiki/Particulates
     sameAs:
@@ -35,6 +43,9 @@ properties:
   pm2.5:
     label: Particulate matter < 2.5 µm
     description: The amount of suspended particulates in the air with a diameter of 2.5 micrometers (μm) or less.
+    sources:
+      - label: AD4GD
+        url: https://ad4gd.eu/
     seeAlso:
       - https://en.wikipedia.org/wiki/Particulates
     sameAs:
@@ -46,6 +57,9 @@ properties:
   pm1.0:
     label: Particulate matter < 1 µm
     description: The amount of suspended particulates in the air with a diameter of 1 micrometer (μm) or less.
+    sources:
+      - label: AD4GD
+        url: https://ad4gd.eu/
     seeAlso:
       - https://en.wikipedia.org/wiki/Particulates
     sameAs:
@@ -56,7 +70,10 @@ properties:
   temperature:
     label: Air Temperature
     description: |
-      [ GEMET ] The temperature of the atmosphere which represents the average kinetic energy of the molecular motion in a small region and is defined in terms of a standard or calibrated thermometer in thermal equilibrium with the air.
+      The temperature of the atmosphere which represents the average kinetic energy of the molecular motion in a small region and is defined in terms of a standard or calibrated thermometer in thermal equilibrium with the air.
+    sources:
+      - label: GEMET
+        url: https://www.eionet.europa.eu/gemet/en/concept/281
     sameAs:
       - https://www.eionet.europa.eu/gemet/en/concept/281
       - http://vocabs.lter-europe.net/EnvThes/22035
@@ -67,6 +84,9 @@ properties:
   pressure:
     label: Air Pressure
     description: Atmospheric pressure, also known as air pressure or barometric pressure (after the barometer), is the pressure within the atmosphere of Earth.
+    sources:
+      - label: Wikipedia
+        url: https://en.wikipedia.org/wiki/Atmospheric_pressure
     see also:
       - https://en.wikipedia.org/wiki/Atmospheric_pressure
     sameAs:
@@ -78,7 +98,10 @@ properties:
   humidity:
     label: Air Humidity
     description: |
-      [ GEMET ] A measurable quantity of the moisture content found in the earth's atmosphere.
+      A measurable quantity of the moisture content found in the earth's atmosphere.
+    sources:
+      - label: GEMET
+        url: https://www.eionet.europa.eu/gemet/en/concept/626
     sameAs:
       - https://saref.etsi.org/core/Humidity
       - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/55
@@ -89,7 +112,10 @@ properties:
   relative-humidity:
     label: Relative Humidity
     description: |
-      [ OSCAR ] 3D field of relative humidity in the atmosphere. Relative humidity is the ratio of the amount of atmospheric moisture present relative to the amount that would be present if the air were saturated with respct to water or ice to be specified in the metadata .
+      3D field of relative humidity in the atmosphere. Relative humidity is the ratio of the amount of atmospheric moisture present relative to the amount that would be present if the air were saturated with respct to water or ice to be specified in the metadata .
+    sources:
+      - label: OSCAR
+        url: https://space.oscar.wmo.int/variables/view/relative_humidity
     sameAs:
       - https://smartdatamodels.org/dataModel.Weather/relativeHumidity
       - http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/58
@@ -99,6 +125,9 @@ properties:
   NO:
     label: NO (Nitric Oxide)
     description: Nitric oxide (nitrogen oxide or nitrogen monoxide) is a colorless gas with the formula NO. It is one of the principal oxides of nitrogen.
+    sources:
+      - label: Wikipedia
+        url: https://en.wikipedia.org/wiki/Nitric_oxide
     see also:
       - https://en.wikipedia.org/wiki/Nitric_oxide
     sameAs:
@@ -107,6 +136,9 @@ properties:
   NO2:
     label: NO₂ (Nitrogen Dioxide)
     description: A measurement of the quantity of Nitrogen Dioxide in the air.
+    sources:
+      - label: AD4GD
+        url: https://ad4gd.eu/
     sameAs:
       - http://dd.eionet.europa.eu/vocabulary/IEDAnnexIIModule3/EQSAirPollutantsGlassCode/072
       - http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationNO2
@@ -117,13 +149,19 @@ properties:
   NOx:
     label: NOx (Oxides of Nitrogen)
     description: |
-      [ DEFRA ] Combustion processes emit a mixture of nitrogen oxides (NOX), primarily nitric oxide (NO) which is quickly oxidised in the atmosphere to nitrogen dioxide (NO2). Nitrogen dioxide has a variety of environmental and health impacts. It is a respiratory irritant which may exacerbate asthma and possibly increase susceptibility to infections. In the presence of sunlight, it reacts with hydrocarbons to produce photochemical pollutants such as ozone. NO2 can be further oxidised in air to acidic gases, which contribute towards the generation of acid rain.
+      Combustion processes emit a mixture of nitrogen oxides (NOX), primarily nitric oxide (NO) which is quickly oxidised in the atmosphere to nitrogen dioxide (NO2). Nitrogen dioxide has a variety of environmental and health impacts. It is a respiratory irritant which may exacerbate asthma and possibly increase susceptibility to infections. In the presence of sunlight, it reacts with hydrocarbons to produce photochemical pollutants such as ozone. NO2 can be further oxidised in air to acidic gases, which contribute towards the generation of acid rain.
+    sources:
+      - label: DEFRA
+        url: https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=40#40
     sameAs:
       - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=40#40
 
   O3:
     label: O3 (Ozone)
     description: A measurement of the quantity of ozone in the air.
+    sources:
+      - label: AD4GD
+        url: https://ad4gd.eu/
     sameAs:
       - https://space.oscar.wmo.int/variables/view/o3
       - https://www.eionet.europa.eu/gemet/en/concept/5991
@@ -136,7 +174,10 @@ properties:
   CO:
     label: CO (Carbon Monoxide)
     description: |
-      [ GEMET ] Colorless, odourless, tasteless, non-corrosive, highly poisonous gas of about the same density as that of air. Very flammable, burning in air with bright blue flame. Although each molecule of CO has one carbon atom and one oxygen atom, it has a shape similar to that of an oxygen molecule (two atoms of oxygen), which is important with regard to it's lethality.
+      Colorless, odourless, tasteless, non-corrosive, highly poisonous gas of about the same density as that of air. Very flammable, burning in air with bright blue flame. Although each molecule of CO has one carbon atom and one oxygen atom, it has a shape similar to that of an oxygen molecule (two atoms of oxygen), which is important with regard to it's lethality.
+    sources:
+      - label: GEMET
+        url: https://www.eionet.europa.eu/gemet/en/concept/1173
     sameAs:
       - https://www.eionet.europa.eu/gemet/en/concept/1173
       - http://vocabs.lter-europe.net/EnvThes/20809
@@ -146,7 +187,10 @@ properties:
   CO2:
     label: CO2 (Carbon Dioxide)
     description: |
-      [ GEMET ] A colourless gas with a faint tingling smell and taste. Atmospheric carbon dioxide is the source of carbon for plants. As carbon dioxide is heavier than air and does not support combustion, it is used in fire extinguishers. It is a normal constituent of the atmosphere, relatively innocuous in itself but playing an important role in the greenhouse effect. It is produced during the combustion of fossil fuels when the carbon content of the fuels reacts with the oxygen during combustion. It is also produced when living organisms respire. It is essential for plant nutrition and in the ocean phytoplankton is capable of absorbing and releasing large quantities of the gas.
+      A colourless gas with a faint tingling smell and taste. Atmospheric carbon dioxide is the source of carbon for plants. As carbon dioxide is heavier than air and does not support combustion, it is used in fire extinguishers. It is a normal constituent of the atmosphere, relatively innocuous in itself but playing an important role in the greenhouse effect. It is produced during the combustion of fossil fuels when the carbon content of the fuels reacts with the oxygen during combustion. It is also produced when living organisms respire. It is essential for plant nutrition and in the ocean phytoplankton is capable of absorbing and releasing large quantities of the gas.
+    sources:
+      - label: GEMET
+        url: https://www.eionet.europa.eu/gemet/en/concept/1168
     sameAs:
       - https://www.eionet.europa.eu/gemet/en/concept/1168
       - http://vocabs.lter-europe.net/EnvThes/20808
@@ -155,7 +199,10 @@ properties:
   SO2:
     label: SO2 (Sulphur Dioxide)
     description: |
-      [ DEFRA ] Sulphur dioxide is a corrosive, acidic gas which combines with water vapour in the atmosphere to produce acid rain. Both wet and dry deposition have been implicated in the damage and destruction of vegetation and in the degradation of soils, building materials and watercourses. SO2 in ambient air is also associated with asthma and chronic bronchitis.
+      Sulphur dioxide is a corrosive, acidic gas which combines with water vapour in the atmosphere to produce acid rain. Both wet and dry deposition have been implicated in the damage and destruction of vegetation and in the degradation of soils, building materials and watercourses. SO2 in ambient air is also associated with asthma and chronic bronchitis.
+    sources:
+      - label: DEFRA
+        url: https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=49#49
     sameAs:
       - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=49#49
       - http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1
@@ -164,7 +211,10 @@ properties:
   H2S:
     label: H2S (Hydrogen Sulfide)
     description: |
-      [ SLB ] An extraordinarily poisonous gas with a molecular formula of H2S. At low concentrations, H2S has the odor of rotten eggs, but at higher, lethal concentrations, it is odorless.
+      An extraordinarily poisonous gas with a molecular formula of H2S. At low concentrations, H2S has the odor of rotten eggs, but at higher, lethal concentrations, it is odorless.
+    sources:
+      - label: SLB
+        url: https://glossary.slb.com/en/terms/h/h2s
     see also:
       - https://en.wikipedia.org/wiki/Hydrogen_sulfide
     sameAs:
@@ -173,7 +223,10 @@ properties:
   VOCs:
     label: VOCs (Volatile Organic Compounds)
     description: |
-      [ GEMET ] Organic compound readily passing off by evaporation.
+      Organic compound readily passing off by evaporation.
+    sources:
+      - label: GEMET
+        url: https://www.eionet.europa.eu/gemet/en/concept/8993
     sameAs:
       - https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=53#53
       - https://www.eionet.europa.eu/gemet/en/concept/8993
