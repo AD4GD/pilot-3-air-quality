@@ -7,13 +7,17 @@ manufacturers:
 
   ## Format for manufacturers:
   # id:                                                 # URI slug
-  #   label: Label for the term                         # Required
-  #   description: Term description                     # Optional
-  #   seeAlso:                                          # List of websites with definitions / links (non-semantic)
+  #   label:                                            # Label for the term, required
+  #   description:                                      # Term description, optional
+  #   sources:                                          # Websites from which the description was acquired (non-semantic), optional
+  #     - https://example.com/description
+  #     - label: My source
+  #       url: https://example.com/description
+  #   references:                                       # List of websites with definitions, data sheets, etc. (non-semantic), optional
   #     - https://en.wikipedia.org/wiki/Term
-  #   references:                                       # List of websites with definitions, data sheets, etc. (non-semantic)
+  #   seeAlso:                                          # List of websites with definitions (non-semantic), optional
   #     - https://en.wikipedia.org/wiki/Term
- 
+
   nova-fitness:
     name: Nova Fitness
 
