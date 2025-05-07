@@ -10,7 +10,6 @@
 
 <https://w3id.org/ad4gd/air-quality/sensor-platforms/AirRohr> a skos:Concept ;
     dct:description """Build your DIY sensor and become part of the worldwide, opendata & civictech network. With airRohr you can measure air pollution yourself.
-From: https://sensor.community/en/sensors/airrohr/
 """ ;
     rdfs:seeAlso <https://nettigo.eu/products/sensor-community-kit-sds011-bme280-english-language-harness-cable-edition>,
         <https://sensor.community/en/sensors/airrohr/> ;
@@ -23,8 +22,7 @@ From: https://sensor.community/en/sensors/airrohr/
 
 <https://w3id.org/ad4gd/air-quality/sensor-platforms/PlumeFlow2> a skos:Concept ;
     dct:description """The Plume Labs Flow 2 is a wearable air quality sensor that provides real-time measurements of particulate matter (PM1.0, PM2.5 and PM­10) mass concentrations, VOC and NO2 concentrations. Data can be visualized and exported using the phone application for Android and iPhone via Bluetooth.
-We created Flow to answer a question: “what is in the air I breathe.” In the spring of 2023 we made the tough decision to dedicate this knowledge, system, and tech to advancing research, raising awareness, and fostering action. As a result Flow and Flow 2 are no longer for sale.
-From: https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2       
+We created Flow to answer a question: “what is in the air I breathe.” In the spring of 2023 we made the tough decision to dedicate this knowledge, system, and tech to advancing research, raising awareness, and fostering action. As a result Flow and Flow 2 are no longer for sale.    
 """ ;
     rdfs:seeAlso <https://plumelabs.com/en/flow/>,
         <https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2> ;
@@ -40,7 +38,6 @@ From: https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2
 <https://w3id.org/ad4gd/air-quality/sensor-platforms/Zephyr> a skos:Concept ;
     dct:description """The Zephyr® is an award-winning, certified, indicative ambient air quality monitor that accurately measures harmful gases and particle matter. 
 Zephyr® monitors provide detailed air quality measurements in real-time to help identify pollution hotspots at a localised level such as busy road junctions. Extensive networks can be easily deployed for city-wide pollution data used to aid the development of smarter and cleaner towns and cities.
-From: https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf 
 """ ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
@@ -63,16 +60,16 @@ From: https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e
     skos:prefLabel "AD4GD air quality sensor platforms" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-05-07T07:40:34.055520"^^xsd:dateTime ;
-    prov:startedAtTime "2025-05-07T07:40:33.978480"^^xsd:dateTime ;
+    prov:endedAtTime "2025-05-07T07:41:14.880521"^^xsd:dateTime ;
+    prov:startedAtTime "2025-05-07T07:41:14.789165"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:5b17d3c3e1f0e006e140e8e409a388bd203a9518" ;
+            dct:hasVersion "git:e25ad679aecfba6cd648b242b81dc83249750f07" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/sensor-platforms.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 sdo:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "2b704291-a95f-457c-8d54-4c56b69d7397" ] .
+    prov:wasInformedBy [ dct:identifier "2b069efd-6357-48fb-be22-82e3b43288b1" ] .
 
