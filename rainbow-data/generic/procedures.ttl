@@ -1,4 +1,5 @@
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <foaf:> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
@@ -8,6 +9,8 @@
 
 <https://w3id.org/ad4gd/air-quality/procedures/pm-humidity-correction> a skos:Concept,
         sosa:Procedure ;
+    dct:source [ ns1:homepage <https://ad4gd.eu/> ;
+            skos:prefLabel "AD4GD" ] ;
     skos:definition "Humidity correction for particulate matter (PM) refers to adjustments made to PM measurements to account for the effects of water vapor on particle size and concentration." ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/procedures> ;
     skos:prefLabel "Humidity correction for Particulate Matter" .
@@ -17,16 +20,16 @@
     skos:prefLabel "AD4GD air quality observation procedures" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-05-12T09:35:19.374494"^^xsd:dateTime ;
-    prov:startedAtTime "2025-05-12T09:35:19.320183"^^xsd:dateTime ;
+    prov:endedAtTime "2025-05-13T13:07:14.176068"^^xsd:dateTime ;
+    prov:startedAtTime "2025-05-13T13:07:14.101776"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:b3a8913c00018d4a755587553725fb87f1dd32c0" ;
+            dct:hasVersion "git:59d88f21bab0cc6fe2914786285f4f8285943873" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/procedures.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "63b01f32-b50e-4404-b22c-70dde89d96d7" ] .
+    prov:wasInformedBy [ dct:identifier "421d5bab-07db-44be-90e1-d7183deed34e" ] .
 
