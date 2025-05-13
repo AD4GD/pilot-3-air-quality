@@ -35,3 +35,11 @@ context:
       '@id': skos:narrower
       '@type': '@id'
     description: skos:definition
+    sources:
+      '@id': dct:source
+      '@type': '@id'
+      '@context':
+        'label': skos:prefLabel
+        'url':
+          '@id': foaf:homepage
+          '@type': '@id'

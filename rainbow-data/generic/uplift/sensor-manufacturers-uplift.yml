@@ -64,3 +64,11 @@ context:
     procedures:
       '@id': ssn:implements
       '@type': '@id'
+    sources:
+      '@id': dct:source
+      '@type': '@id'
+      '@context':
+        'label': skos:prefLabel
+        'url':
+          '@id': foaf:homepage
+          '@type': '@id'
