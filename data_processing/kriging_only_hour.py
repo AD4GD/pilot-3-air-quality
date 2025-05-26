@@ -12,7 +12,6 @@ from sklearn.neighbors import BallTree
 from scipy.spatial import KDTree
 from utils import latlon_to_geocentric
 import variogram
-import torch_functions
 from pok import run_kriging
 
 
