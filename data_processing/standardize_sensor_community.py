@@ -31,7 +31,7 @@ class StandardizeData:
                  date: datetime,
                  sensor: str,
                  inputfn: Path,
-                 outputfold: Path):
+                 outputfold: Path) -> None:
 
         self.date = date
         self.inputfn = inputfn
@@ -39,13 +39,14 @@ class StandardizeData:
         self.outputfold = outputfold
 
 
-    def standard_sds(self) -> None:
+    def standard_sds(self, show_progress: bool = False) -> None:
         """
         Standardize SDS011 data to hourly data and save to netcdf files
 
         Parameters
         ----------
-        None.
+        show_progress : bool, optional
+            If True, show progress bar, by default False.
 
         Returns
         -------
@@ -70,7 +71,7 @@ class StandardizeData:
         statdict = {}
         measdict = {'P1': {}, 'P2': {}}
         uniqlocs = sorted(df.location.unique())
-        for uloc in tqdm(uniqlocs, disable=False):
+        for uloc in tqdm(uniqlocs, disable=~show_progress):
             seldf = df[df.location == uloc]
             sellat = seldf.lat.iloc[0]
             sellon = seldf.lon.iloc[0]
@@ -123,18 +124,19 @@ class StandardizeData:
             pmds.to_netcdf(ncfn)
 
 
-    def run(self) -> None:
+    def run(self, show_progress=False) -> None:
         """
         Run standardization procedure of IoT data to hourly data
 
         Parameters
         ----------
-        None.
+        show_progress : bool, optional
+            If True, show progress bar, by default False.
         """
 
         #  set paths
         if not self.outputfold.exists():
-            outputfold.mkdir(parents=True)
+            self.outputfold.mkdir(parents=True)
 
         if self.sensor == 'sds011':
             self.standard_sds()
