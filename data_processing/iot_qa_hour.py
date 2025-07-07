@@ -14,6 +14,7 @@ from dateutil import rrule, relativedelta
 from scipy import ndimage, signal
 from scipy.spatial import KDTree
 from earthkit.meteo import thermo
+from typing import List, Union
 import joblib
 
 import warnings
@@ -107,16 +108,18 @@ class Corrector:
 
     Parameters
     ----------
+    scomfn : Path
+        Path to Sensor.Community data file.
     month : datetime
         Month for which to run the process
     pollutant : str
-        Pollutant for which to run the process
-    sam_num : int
-        Number of cluster size for Sensor.Community data
-    eea_num : int
-        Number of EEA stations in IoT clusters data
-    outputfolder : pathlib.Path
-        Folder where to save the combined dataset.
+        Pollutant for which to run the process, e.g. 'pm10', 'pm25'
+    meteofn : Path
+        Path to meteorological data file (ERA5).
+    camsfn : Path
+        Path to CAMS Europe data file.
+    outputfolder : Path, optional
+        Output folder for corrected data. The default is Path.home().
     """
 
     def __init__(self,

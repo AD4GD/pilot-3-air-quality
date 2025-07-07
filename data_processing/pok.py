@@ -3,8 +3,12 @@ import numpy as np
 from tqdm import tqdm
 import torch
 import matplotlib.pyplot as plt
-import variogram
-import torch_functions
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+from data_processing import variogram, torch_functions
+# import torch_functions
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

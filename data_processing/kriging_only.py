@@ -10,9 +10,13 @@ from scipy.interpolate import RegularGridInterpolator as RGI
 from sklearn import cluster
 from sklearn.neighbors import BallTree
 from scipy.spatial import KDTree
-from utils import latlon_to_geocentric
-import variogram
-from pok import run_kriging
+import sys
+
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+from data_processing.utils import latlon_to_geocentric
+from data_processing import variogram
+from data_processing.pok import run_kriging
 from typing import Literal
 
 
@@ -66,7 +70,8 @@ class KrigingIoT:
                             'ds': 0.01},
                     }
 
-        self.cdict = areadict[area]
+        self.area = 'CAMS'  # set area of interest
+        self.cdict = areadict[self.area]
 
         if self.tness == 'hourly':
             self.measvar = 'hour_median_corr'
