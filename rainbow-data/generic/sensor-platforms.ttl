@@ -67,16 +67,16 @@ Zephyr® monitors provide detailed air quality measurements in real-time to help
     skos:prefLabel "AD4GD air quality sensor platforms" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-07T14:17:33.146650"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-07T14:17:33.084413"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-07T14:42:27.615155"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-07T14:42:27.558332"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:8bd46abe0140952c97e0b6cc2100715b0f907464" ;
+            dct:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/sensor-platforms.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 sdo:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "47ea9063-1fe5-40b8-829b-5d89e72690b2" ] .
+    prov:wasInformedBy [ dct:identifier "6e4bde46-13dc-42b9-81bc-c18eade359d6" ] .
 

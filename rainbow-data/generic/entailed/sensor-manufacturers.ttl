@@ -8,27 +8,27 @@
 
 <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/entailed/sensor-manufacturers.ttl> a prov:Entity ;
     dcterms:format "text/turtle" ;
-    dcterms:hasVersion "git:8bd46abe0140952c97e0b6cc2100715b0f907464" ;
-    prov:wasAttributedTo _:N6ecaef89b30c4e8a9fb8ba42b39d81e2 ;
+    dcterms:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
+    prov:wasAttributedTo _:Ne90895134c7b4cb9b55b271c870a97d5 ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w ./rainbow-data rainbow-data/catalog.ttl --use-git-status --update --graph-store https://defs-hosted.opengis.net/fuseki-hosted/data" ;
-            prov:endedAtTime "2025-07-07T14:17:43.405132"^^xsd:dateTime ;
-            prov:startedAtTime "2025-07-07T14:17:43.298253"^^xsd:dateTime ;
+            prov:endedAtTime "2025-07-07T14:42:36.814756"^^xsd:dateTime ;
+            prov:startedAtTime "2025-07-07T14:42:36.710968"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:8bd46abe0140952c97e0b6cc2100715b0f907464" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/sensor-manufacturers.ttl> ],
-                [ a prov:Entity ;
-                    dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:8bd46abe0140952c97e0b6cc2100715b0f907464" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
-                [ a prov:Entity ;
                     rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
                 [ a prov:Entity ;
-                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ] ;
-            prov:wasAssociatedWith _:N6ecaef89b30c4e8a9fb8ba42b39d81e2 ;
-            prov:wasInformedBy [ dcterms:identifier "01e07a50-f481-4461-8de9-6d48339bf379" ] ] .
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
+                [ a prov:Entity ;
+                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ],
+                [ a prov:Entity ;
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/sensor-manufacturers.ttl> ] ;
+            prov:wasAssociatedWith _:Ne90895134c7b4cb9b55b271c870a97d5 ;
+            prov:wasInformedBy [ dcterms:identifier "700c2f32-89db-490f-ade2-6c9326ab6e60" ] ] .
 
 manuf:SensorCommunity a skos:Concept ;
     rdfs:seeAlso <https://sensor.community/en/> ;
@@ -100,20 +100,20 @@ manuf:various a skos:Concept ;
     skos:prefLabel "AD4GD air quality sensor manufacturers" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-07T14:17:32.978316"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-07T14:17:32.919500"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-07T14:42:27.413699"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-07T14:42:27.357209"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dcterms:format "application/json" ;
-            dcterms:hasVersion "git:8bd46abe0140952c97e0b6cc2100715b0f907464" ;
+            dcterms:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/sensor-manufacturers.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dcterms:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dcterms:identifier "47ea9063-1fe5-40b8-829b-5d89e72690b2" ] .
+    prov:wasInformedBy [ dcterms:identifier "6e4bde46-13dc-42b9-81bc-c18eade359d6" ] .
 
-_:N6ecaef89b30c4e8a9fb8ba42b39d81e2 a prov:Agent,
+_:Ne90895134c7b4cb9b55b271c870a97d5 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dcterms:hasVersion "0.4" ;
