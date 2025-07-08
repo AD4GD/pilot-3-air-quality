@@ -533,9 +533,14 @@ class Corrector:
         try:
             hour_polds = hour_polds.drop('level')
         except ValueError:
+            # if 'level' variable is not present, do nothing
             pass
-        camstime = pd.to_timedelta(hour_polds.time) + self.month
-        hour_polds.coords['time'] = camstime
+        try:
+            camstime = pd.to_timedelta(hour_polds.time) + self.month
+            hour_polds.coords['time'] = camstime
+        except TypeError:
+            # if time is already in datetime format, do nothing
+            pass
 
         return erads, hour_polds
 
