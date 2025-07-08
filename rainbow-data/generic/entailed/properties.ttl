@@ -10,27 +10,27 @@
 
 <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/entailed/properties.ttl> a prov:Entity ;
     dcterms:format "text/turtle" ;
-    dcterms:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
-    prov:wasAttributedTo _:N700b72c5ea804d6a9c8a3e9c55f4759d ;
+    dcterms:hasVersion "git:f4f3812abd3634c11a74d89ada98a6933b103632" ;
+    prov:wasAttributedTo _:N03ea62eace914489ac29992c664b3c41 ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w ./rainbow-data rainbow-data/catalog.ttl --use-git-status --update --graph-store https://defs-hosted.opengis.net/fuseki-hosted/data" ;
-            prov:endedAtTime "2025-07-07T14:42:36.129445"^^xsd:dateTime ;
-            prov:startedAtTime "2025-07-07T14:42:35.903966"^^xsd:dateTime ;
+            prov:endedAtTime "2025-07-08T12:04:28.073771"^^xsd:dateTime ;
+            prov:startedAtTime "2025-07-08T12:04:27.843601"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
+                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ],
+                [ a prov:Entity ;
                     rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
                 [ a prov:Entity ;
                     dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
-                [ a prov:Entity ;
-                    dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
+                    dcterms:hasVersion "git:f4f3812abd3634c11a74d89ada98a6933b103632" ;
                     rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/properties.ttl> ],
                 [ a prov:Entity ;
-                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ] ;
-            prov:wasAssociatedWith _:N700b72c5ea804d6a9c8a3e9c55f4759d ;
-            prov:wasInformedBy [ dcterms:identifier "700c2f32-89db-490f-ade2-6c9326ab6e60" ] ] .
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:f4f3812abd3634c11a74d89ada98a6933b103632" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ] ;
+            prov:wasAssociatedWith _:N03ea62eace914489ac29992c664b3c41 ;
+            prov:wasInformedBy [ dcterms:identifier "65958a96-8bb1-4786-b4c6-c590a43a384c" ] ] .
 
 <https://w3id.org/ad4gd/air-quality/properties/CO> a skos:Concept,
         sosa:ObservableProperty ;
@@ -233,20 +233,20 @@
     skos:prefLabel "AD4GD air quality observable properties" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-07T14:42:27.548388"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-07T14:42:27.472349"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-08T12:04:18.164495"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-08T12:04:18.064548"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dcterms:format "application/json" ;
-            dcterms:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
+            dcterms:hasVersion "git:f4f3812abd3634c11a74d89ada98a6933b103632" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/properties.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dcterms:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dcterms:identifier "6e4bde46-13dc-42b9-81bc-c18eade359d6" ] .
+    prov:wasInformedBy [ dcterms:identifier "8bb4670d-8f6f-4b39-a330-fdab2d34d7e8" ] .
 
-_:N700b72c5ea804d6a9c8a3e9c55f4759d a prov:Agent,
+_:N03ea62eace914489ac29992c664b3c41 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dcterms:hasVersion "0.4" ;

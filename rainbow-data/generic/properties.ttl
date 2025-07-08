@@ -209,16 +209,16 @@
     skos:prefLabel "AD4GD air quality observable properties" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-07T14:42:27.548388"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-07T14:42:27.472349"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-08T12:04:18.164495"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-08T12:04:18.064548"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:16788b6b9687d51892301832cef06edc7598336a" ;
+            dct:hasVersion "git:f4f3812abd3634c11a74d89ada98a6933b103632" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/properties.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "6e4bde46-13dc-42b9-81bc-c18eade359d6" ] .
+    prov:wasInformedBy [ dct:identifier "8bb4670d-8f6f-4b39-a330-fdab2d34d7e8" ] .
 
