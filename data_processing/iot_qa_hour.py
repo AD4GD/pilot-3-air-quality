@@ -530,7 +530,10 @@ class Corrector:
         hourds = hourds.assign_coords(longitude=(((hourds[lonname] + 180) % 360) - 180)).sortby(lonname)
         hourds = hourds.sortby('latitude')
         hour_polds = hourds[vardict[self.poll]['camsname']]
-        hour_polds = hour_polds.drop('level')
+        try:
+            hour_polds = hour_polds.drop('level')
+        except ValueError:
+            pass
         camstime = pd.to_timedelta(hour_polds.time) + self.month
         hour_polds.coords['time'] = camstime
 
