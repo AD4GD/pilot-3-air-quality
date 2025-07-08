@@ -6,6 +6,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from argparse import ArgumentParser
 import xarray as xr
+import numpy as np
+import pandas as pd
 import earthkit.data
 from earthkit.meteo import thermo
 
@@ -40,6 +42,109 @@ def get_sensor_community_urls(date: datetime,
     with open(downtxt, 'w') as f:
         for url in sorted(urls):
             f.write(url+'\n')
+
+
+# function to convert string to float
+def conv(x: str) -> float:
+    """
+    Convert string to float. If string cannot be converted to float,
+    return np.nan.
+
+    Parameters
+    ----------
+    x : str
+        string to be converted to float
+
+    Returns
+    -------
+    a : float
+        float value of string
+    """
+    try:
+        a = np.float32(x)
+    except (ValueError, TypeError):
+        a = np.nan
+    return a
+
+
+def processs_sensor_community_nrt(sensor: str,
+                              date: datetime,
+                              iotpath: str) -> None:
+    """
+    Process downloaded (NRT) IoT data from sensor.community and save as
+    parquet file.
+
+    Parameters
+    ----------
+    sensor : str
+        sensor type
+    date : datetime.datetime
+        date corresponding to downloaded data
+    iotpath : str
+        path to IoT data folder
+
+    Returns
+    -------
+    No returns, but saves parquet file to disk.
+    """
+
+    #  vectorize function
+    vecconv = np.vectorize(lambda x: conv(x))
+
+    #  set dictionary for sensor data
+    sensordict = {'sds011':
+                {'dropcols': ["sensor_type", "durP1", "ratioP1",
+                                "durP2", "ratioP2"],
+                'floatcols': ['lat', 'lon', 'P1', 'P2'],
+                'intcols': ['sensor_id', 'location']
+                },
+                'bme280':
+                {'dropcols': ['altitude', 'pressure_sealevel', 'sensor_type'],
+                'floatcols': ['pressure', 'temperature', 'humidity', 'lat', 'lon'],
+                'intcols': ['sensor_id', 'location']
+                },
+                'dht22':
+                {'dropcols': ['sensor_type'],
+                'floatcols': ['temperature', 'humidity', 'lat', 'lon'],
+                'intcols': ['sensor_id', 'location']
+                }
+                }
+
+    fnlist = sorted(iotpath.glob('*.csv'))
+    if len(fnlist) == 0:
+        raise ValueError(f"No files found for {sensor} on {date:%Y-%m-%d}.")
+
+    # download IoT data from sensor.community
+    coldf = []
+    for csvfn in tqdm(fnlist, total=len(fnlist)):
+
+        # read unzipped file and clean up data
+        sdict = sensordict[sensor]
+        floatcols = sdict['floatcols']
+        intcols = sdict['intcols']
+        dropcols = sdict['dropcols']
+
+        df = pd.read_csv(csvfn, sep=';')
+        df = df.drop(dropcols, axis=1)
+        df['timestamp'] = pd.to_datetime(df['timestamp'], format='mixed',
+                                         errors='coerce')
+        df[floatcols] = vecconv(df[floatcols])
+        df[intcols] = df[intcols].astype(np.int32)
+        df = df.dropna()
+        coldf.append(df)
+
+    #  merge chunks of cleaned dataframes
+    mergedf = pd.concat(coldf)
+    mergedf = mergedf.dropna()
+
+    iotpath = Path(iotpath)
+    outfold = Path(iotpath.parent, 'L1A', sensor)
+    if not outfold.exists():
+        outfold.mkdir(parents=True)
+
+    outname = f"{sensor}_{date:%Y%m%d}.parquet"
+    outfn = Path(outfold, outname)
+    mergedf.to_parquet(outfn, index=False)
 
 
 def download_ecmwf_data(date: datetime,
