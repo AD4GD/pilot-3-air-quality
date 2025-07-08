@@ -68,10 +68,10 @@ def conv(x: str) -> float:
     return a
 
 
-def processs_sensor_community_nrt(sensor: str,
-                              date: datetime,
-                              iotpath: str,
-                              outfn: Path = None) -> None:
+def process_sensor_community_nrt(sensor: str,
+                                 date: datetime,
+                                 iotpath: str,
+                                 outfn: Path = None) -> None:
     """
     Process downloaded (NRT) IoT data from sensor.community and save as
     parquet file.
