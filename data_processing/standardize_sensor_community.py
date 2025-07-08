@@ -71,7 +71,7 @@ class StandardizeData:
         statdict = {}
         measdict = {'P1': {}, 'P2': {}}
         uniqlocs = sorted(df.location.unique())
-        for uloc in tqdm(uniqlocs, disable=~show_progress):
+        for uloc in tqdm(uniqlocs, disable=not show_progress):
             seldf = df[df.location == uloc]
             sellat = seldf.lat.iloc[0]
             sellon = seldf.lon.iloc[0]
@@ -139,7 +139,7 @@ class StandardizeData:
             self.outputfold.mkdir(parents=True)
 
         if self.sensor == 'sds011':
-            self.standard_sds()
+            self.standard_sds(show_progress=show_progress)
         else:
             raise ValueError('Unknown sensor')
 
@@ -166,4 +166,4 @@ if __name__ == '__main__':
                                args.sensor,
                                args.inputfn,
                                args.outputfold)
-    Standard.run()
+    Standard.run(show_progress=True)
