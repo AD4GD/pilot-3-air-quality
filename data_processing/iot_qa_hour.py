@@ -128,7 +128,8 @@ class Corrector:
                  pollutant: str,
                  meteofn: Path,
                  camsfn: Path,
-                 outputfolder: Path=Path.home()):
+                 outputfolder: Path=Path.home(),
+                 outfn: Union[Path, None]=None) -> None:
 
         self.scomfn = scomfn
         self.month = month
@@ -596,11 +597,15 @@ class Corrector:
         combids = combids.drop_vars(['hour_mean', 'hour_per10', 'hour_per90', 'hour_std'])
 
         # Save combined dataset
-        outname = f'iot_hour_corr_{self.poll}_{self.month:%Y%m}.nc'
-        if not self.outfold.exists():
-            self.outfold.mkdir(parents=True)
+        if self.outfn is None:
+            outname = f'iot_hour_corr_{self.poll}_{self.month:%Y%m}.nc'
+            if not self.outfold.exists():
+                self.outfold.mkdir(parents=True)
 
-        outfn = self.outfold / outname
+            outfn = self.outfold / outname
+        else:
+            outfn = self.outfn
+
         combids.to_netcdf(outfn)
 
 
@@ -619,8 +624,10 @@ if __name__ == '__main__':
                         help='Meteorological data file')
     parser.add_argument('-c', '--camsfn', type=Path,
                         help='CAMS data file')
-    parser.add_argument('-o', '--outputfolder', type=Path,
+    parser.add_argument('--outputfolder', type=Path,
                         help='Output folder for corrected data')
+    parser.add_argument('--outfn', type=Path, default=None,
+                        help='Output filename for corrected data')
 
     args = parser.parse_args()
 
@@ -629,7 +636,8 @@ if __name__ == '__main__':
                      args.pollutant,
                      args.meteofn,
                      args.camsfn,
-                     args.outputfolder)
+                     args.outputfolder,
+                     args.outfn)
     Corr.run()
 
 
