@@ -188,10 +188,25 @@ def download_ecmwf_data(date: datetime,
     meteods = meteods.squeeze()
     rh = thermo.relative_humidity_from_dewpoint(meteods['2t'], meteods['2d'])
     meteods['rh'] = rh
-    dayds = meteods.mean('step')
-    dayds = dayds.drop_vars(['number', 'surface'])
+
+    meteods = meteods.rename({'2t': 't2m', '2d': 'd2m'})
+
+    # convert steps to datetime objects
+    init_time = datetime.strptime(str(meteods.date), '%Y%m%d')
+    init_time = init_time.replace(hour=meteods.time)
+    valid_for = pd.Timestamp(init_time) + pd.TimedeltaIndex(meteods.step)
+
+    # replace step variable and dimension with valid time
+    meteods = meteods.rename({'step': 'time'})
+    meteods = meteods.assign_coords({'time': valid_for})
+
+    # before saving, convert to float32 and drop unnecessary attributes
+    meteods = meteods.astype(np.float32)
+    meteods = meteods.drop_attrs()
+
+    # save dataset to netCDF
     outfn = Path(outfold, f"meteo_{date:%Y%m%d}.nc")
-    dayds.to_netcdf(outfn)
+    meteods.to_netcdf(outfn)
 
     colpm = []
     for pmvar in ['particulate_matter_10um', 'particulate_matter_2.5um']:
@@ -216,13 +231,21 @@ def download_ecmwf_data(date: datetime,
         camsdata = earthkit.data.from_source("ads", 'cams-europe-air-quality-forecasts', cams_params)
         camsds = camsdata.to_xarray()
         camsds = camsds.squeeze()
-        camsds = camsds.drop_vars(['step', 'surface', 'valid_time'])
+        camsds = camsds.rename({'forecast_reference_time': 'time'})
+        try:
+            camsds = camsds.drop_vars(['step', 'surface', 'valid_time'])
+        except ValueError:
+            pass
 
         polname = 'pm10_conc' if '10um' in pmvar else 'pm2p5_conc'
         camsds = camsds.rename({'mdens': polname})
         colpm.append(camsds)
 
     camsds = xr.merge(colpm)
+
+    # convert to float32 and drop attributes
+    camsds = camsds.astype(np.float32)
+    camsds = camsds.drop_attrs()
     outfn = Path(outfold, f"cams_{date:%Y%m%d}.nc")
     camsds.to_netcdf(outfn)
 
