@@ -69,7 +69,8 @@ def conv(x: str) -> float:
 
 def processs_sensor_community_nrt(sensor: str,
                               date: datetime,
-                              iotpath: str) -> None:
+                              iotpath: str,
+                              outfn: Path = None) -> None:
     """
     Process downloaded (NRT) IoT data from sensor.community and save as
     parquet file.
@@ -82,6 +83,8 @@ def processs_sensor_community_nrt(sensor: str,
         date corresponding to downloaded data
     iotpath : str
         path to IoT data folder
+    outfn : Path, optional
+        output filename to save parquet file, by default None.
 
     Returns
     -------
@@ -142,8 +145,10 @@ def processs_sensor_community_nrt(sensor: str,
     if not outfold.exists():
         outfold.mkdir(parents=True)
 
-    outname = f"{sensor}_{date:%Y%m%d}.parquet"
-    outfn = Path(outfold, outname)
+    if outfn is None:
+        outname = f"{sensor}_{date:%Y%m%d}.parquet"
+        outfn = Path(outfold, outname)
+
     mergedf.to_parquet(outfn, index=False)
 
 
@@ -181,7 +186,7 @@ def download_ecmwf_data(date: datetime,
     meteodata = earthkit.data.from_source('mars', params)
     meteods = meteodata.to_xarray()
     meteods = meteods.squeeze()
-    rh = thermo.relative_humidity_from_dewpoint(meteods['t2m'], meteods['d2m'])
+    rh = thermo.relative_humidity_from_dewpoint(meteods['2t'], meteods['2d'])
     meteods['rh'] = rh
     dayds = meteods.mean('step')
     dayds = dayds.drop_vars(['number', 'surface'])
