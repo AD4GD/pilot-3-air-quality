@@ -8,6 +8,7 @@ from argparse import ArgumentParser
 import xarray as xr
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
 import earthkit.data
 from earthkit.meteo import thermo
 
