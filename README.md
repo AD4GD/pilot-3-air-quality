@@ -18,7 +18,7 @@
 ```
 
 ## Demos
-[Download and visualise the air quality dataset](demos/download_air_quality_data.ipynb)
+[Download and visualise the air quality dataset](demos/download_direct_from_server.ipynb)
 
 ## Dataset
 
