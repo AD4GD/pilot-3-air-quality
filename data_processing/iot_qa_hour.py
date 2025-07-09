@@ -150,6 +150,7 @@ class Corrector:
         self.centerfn = Path(self.xgbfold, f'cluster_centers_{self.poll}.csv')
 
         self.outfold = Path(outputfolder, pollutant)
+        self.outfn = outfn
 
 
     def correct_sensor_community(self,
