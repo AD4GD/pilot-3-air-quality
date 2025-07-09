@@ -34,3 +34,8 @@ For this purpose, observations from the [sensor.community project](sensor.commun
 Particulate Matter (<2.5µm) and Particulate Matter (<10µm)
 
 The mass concentration of fine particulate matter (particles with a aerodynamic diameter of 2.5 micrometers or less) present in the ambient air. Values are derived from a mixture of data from low cost sensors and and the CAMS Europe Air Quality Forecast. Units: µg m^-3
+
+## Acknowledgements
+
+The work has been co-funded by the European Union and the United Kingdom under the 
+Horizon Europe [AD4GD Project](https://www.ogc.org/initiatives/ad4gd/).
