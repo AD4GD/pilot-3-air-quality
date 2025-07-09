@@ -1,4 +1,4 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix manuf: <https://w3id.org/ad4gd/air-quality/sensor-manufacturers/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,28 +7,28 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/entailed/sensor-manufacturers.ttl> a prov:Entity ;
-    dcterms:format "text/turtle" ;
-    dcterms:hasVersion "git:f4f3812abd3634c11a74d89ada98a6933b103632" ;
-    prov:wasAttributedTo _:N687b77fb15c343098930985e65443117 ;
+    dct:format "text/turtle" ;
+    dct:hasVersion "git:b179d7ef9e4fdc812747694cefa34b78a0481011" ;
+    prov:wasAttributedTo _:N62682ad25d784ebc980e2a33856b2507 ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w ./rainbow-data rainbow-data/catalog.ttl --use-git-status --update --graph-store https://defs-hosted.opengis.net/fuseki-hosted/data" ;
-            prov:endedAtTime "2025-07-08T12:04:28.797952"^^xsd:dateTime ;
-            prov:startedAtTime "2025-07-08T12:04:28.691316"^^xsd:dateTime ;
+            prov:endedAtTime "2025-07-09T10:01:26.695467"^^xsd:dateTime ;
+            prov:startedAtTime "2025-07-09T10:01:26.587365"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:f4f3812abd3634c11a74d89ada98a6933b103632" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/sensor-manufacturers.ttl> ],
-                [ a prov:Entity ;
                     rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
                 [ a prov:Entity ;
-                    dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:f4f3812abd3634c11a74d89ada98a6933b103632" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
+                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ],
                 [ a prov:Entity ;
-                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ] ;
-            prov:wasAssociatedWith _:N687b77fb15c343098930985e65443117 ;
-            prov:wasInformedBy [ dcterms:identifier "65958a96-8bb1-4786-b4c6-c590a43a384c" ] ] .
+                    dct:format "text/turtle" ;
+                    dct:hasVersion "git:b179d7ef9e4fdc812747694cefa34b78a0481011" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/sensor-manufacturers.ttl> ],
+                [ a prov:Entity ;
+                    dct:format "text/turtle" ;
+                    dct:hasVersion "git:b179d7ef9e4fdc812747694cefa34b78a0481011" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ] ;
+            prov:wasAssociatedWith _:N62682ad25d784ebc980e2a33856b2507 ;
+            prov:wasInformedBy [ dct:identifier "ff6b99fb-fe40-4437-9188-33c8a355cbe0" ] ] .
 
 manuf:SensorCommunity a skos:Concept ;
     rdfs:seeAlso <https://sensor.community/en/> ;
@@ -90,33 +90,33 @@ manuf:shinyei a skos:Concept ;
     skos:prefLabel "Shinyei" .
 
 manuf:various a skos:Concept ;
-    dcterms:description """Unknown manufacturer.
+    dct:description """Unknown manufacturer.
 """ ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> ;
     skos:prefLabel "various" .
 
 <https://w3id.org/ad4gd/air-quality/sensor-manufacturers> a skos:ConceptScheme ;
-    dcterms:source <https://ad4gd.eu/> ;
+    dct:source <https://ad4gd.eu/> ;
     skos:prefLabel "AD4GD air quality sensor manufacturers" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-08T12:04:18.336957"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-08T12:04:18.280026"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-09T10:01:14.424168"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-09T10:01:14.348140"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dcterms:format "application/json" ;
-            dcterms:hasVersion "git:f4f3812abd3634c11a74d89ada98a6933b103632" ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:b179d7ef9e4fdc812747694cefa34b78a0481011" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/sensor-manufacturers.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dcterms:hasVersion "0.4" ;
+            dct:hasVersion "0.4" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dcterms:identifier "8bb4670d-8f6f-4b39-a330-fdab2d34d7e8" ] .
+    prov:wasInformedBy [ dct:identifier "a7d93859-2455-482d-bc90-e11a6f873272" ] .
 
-_:N687b77fb15c343098930985e65443117 a prov:Agent,
+_:N62682ad25d784ebc980e2a33856b2507 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dcterms:hasVersion "0.4" ;
+    dct:hasVersion "0.4" ;
     rdfs:comment "ogc.na.update_vocabs version 0.4" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 
