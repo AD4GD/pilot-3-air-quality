@@ -9,27 +9,27 @@
 
 <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/entailed/procedures.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    dct:hasVersion "git:b179d7ef9e4fdc812747694cefa34b78a0481011" ;
-    prov:wasAttributedTo _:N682033b29af94b4ea7b88696dafb3328 ;
+    dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
+    prov:wasAttributedTo _:N377e0f32c48645ea906df8f84632da06 ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w ./rainbow-data rainbow-data/catalog.ttl --use-git-status --update --graph-store https://defs-hosted.opengis.net/fuseki-hosted/data" ;
-            prov:endedAtTime "2025-07-09T10:01:24.953443"^^xsd:dateTime ;
-            prov:startedAtTime "2025-07-09T10:01:15.928314"^^xsd:dateTime ;
+            prov:endedAtTime "2025-07-21T12:00:31.745074"^^xsd:dateTime ;
+            prov:startedAtTime "2025-07-21T12:00:22.291351"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
                 [ a prov:Entity ;
-                    dct:format "text/turtle" ;
-                    dct:hasVersion "git:b179d7ef9e4fdc812747694cefa34b78a0481011" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/procedures.ttl> ],
+                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ],
                 [ a prov:Entity ;
                     dct:format "text/turtle" ;
-                    dct:hasVersion "git:b179d7ef9e4fdc812747694cefa34b78a0481011" ;
+                    dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
                     rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
                 [ a prov:Entity ;
-                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ] ;
-            prov:wasAssociatedWith _:N682033b29af94b4ea7b88696dafb3328 ;
-            prov:wasInformedBy [ dct:identifier "ff6b99fb-fe40-4437-9188-33c8a355cbe0" ] ] .
+                    dct:format "text/turtle" ;
+                    dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/procedures.ttl> ] ;
+            prov:wasAssociatedWith _:N377e0f32c48645ea906df8f84632da06 ;
+            prov:wasInformedBy [ dct:identifier "7274fe30-5eb3-4e97-b8bf-addba5305233" ] ] .
 
 <https://w3id.org/ad4gd/air-quality/procedures/pm-humidity-correction> a skos:Concept,
         sosa:Procedure ;
@@ -44,23 +44,23 @@
     skos:prefLabel "AD4GD air quality observation procedures" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-09T10:01:14.346338"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-09T10:01:14.292917"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-21T12:00:20.394367"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-21T12:00:20.339314"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:b179d7ef9e4fdc812747694cefa34b78a0481011" ;
+            dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/procedures.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.4" ;
+            dct:hasVersion "0.5.dev3+g1871e64" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "a7d93859-2455-482d-bc90-e11a6f873272" ] .
+    prov:wasInformedBy [ dct:identifier "3433e09c-d89e-449f-8676-cf6f0d05b647" ] .
 
-_:N682033b29af94b4ea7b88696dafb3328 a prov:Agent,
+_:N377e0f32c48645ea906df8f84632da06 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.4" ;
-    rdfs:comment "ogc.na.update_vocabs version 0.4" ;
+    dct:hasVersion "0.5.dev3+g1871e64" ;
+    rdfs:comment "ogc.na.update_vocabs version 0.5.dev3+g1871e64" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 
