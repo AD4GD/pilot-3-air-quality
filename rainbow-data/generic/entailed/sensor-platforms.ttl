@@ -1,4 +1,4 @@
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix manuf: <https://w3id.org/ad4gd/air-quality/sensor-manufacturers/> .
 @prefix ns1: <foaf:> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -10,33 +10,33 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/entailed/sensor-platforms.ttl> a prov:Entity ;
-    dct:format "text/turtle" ;
-    dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
-    prov:wasAttributedTo _:N168b6e4c88eb43fab5f15735eb77d538 ;
+    dcterms:format "text/turtle" ;
+    dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
+    prov:wasAttributedTo _:N3e7cfbe59f0047638473a7ce02825677 ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w ./rainbow-data rainbow-data/catalog.ttl --use-git-status --update --graph-store https://defs-hosted.opengis.net/fuseki-hosted/data" ;
-            prov:endedAtTime "2025-07-21T12:00:34.446389"^^xsd:dateTime ;
-            prov:startedAtTime "2025-07-21T12:00:34.315790"^^xsd:dateTime ;
+            prov:endedAtTime "2025-07-21T12:23:10.030991"^^xsd:dateTime ;
+            prov:startedAtTime "2025-07-21T12:23:09.904956"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
+                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ],
                 [ a prov:Entity ;
-                    dct:format "text/turtle" ;
-                    dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
-                [ a prov:Entity ;
-                    dct:format "text/turtle" ;
-                    dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
                     rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/sensor-platforms.ttl> ],
                 [ a prov:Entity ;
-                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ] ;
-            prov:wasAssociatedWith _:N168b6e4c88eb43fab5f15735eb77d538 ;
-            prov:wasInformedBy [ dct:identifier "7274fe30-5eb3-4e97-b8bf-addba5305233" ] ] .
+                    rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
+                [ a prov:Entity ;
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ] ;
+            prov:wasAssociatedWith _:N3e7cfbe59f0047638473a7ce02825677 ;
+            prov:wasInformedBy [ dcterms:identifier "bd4ab495-9552-4959-83f2-505a96c8a3f6" ] ] .
 
 <https://w3id.org/ad4gd/air-quality/sensor-platforms/AirRohr> a skos:Concept ;
-    dct:description """Build your DIY sensor and become part of the worldwide, opendata & civictech network. With airRohr you can measure air pollution yourself.
+    dcterms:description """Build your DIY sensor and become part of the worldwide, opendata & civictech network. With airRohr you can measure air pollution yourself.
 """ ;
-    dct:source [ ns1:homepage <https://sensor.community/en/sensors/airrohr/> ;
+    dcterms:source [ ns1:homepage <https://sensor.community/en/sensors/airrohr/> ;
             skos:prefLabel "Sensor.Community" ] ;
     rdfs:seeAlso <https://nettigo.eu/products/sensor-community-kit-sds011-bme280-english-language-harness-cable-edition>,
         <https://sensor.community/en/sensors/airrohr/> ;
@@ -48,10 +48,10 @@
     schema:manufacturer manuf:SensorCommunity .
 
 <https://w3id.org/ad4gd/air-quality/sensor-platforms/PlumeFlow2> a skos:Concept ;
-    dct:description """The Plume Labs Flow 2 is a wearable air quality sensor that provides real-time measurements of particulate matter (PM1.0, PM2.5 and PM­10) mass concentrations, VOC and NO2 concentrations. Data can be visualized and exported using the phone application for Android and iPhone via Bluetooth.
+    dcterms:description """The Plume Labs Flow 2 is a wearable air quality sensor that provides real-time measurements of particulate matter (PM1.0, PM2.5 and PM­10) mass concentrations, VOC and NO2 concentrations. Data can be visualized and exported using the phone application for Android and iPhone via Bluetooth.
 We created Flow to answer a question: “what is in the air I breathe.” In the spring of 2023 we made the tough decision to dedicate this knowledge, system, and tech to advancing research, raising awareness, and fostering action. As a result Flow and Flow 2 are no longer for sale.    
 """ ;
-    dct:source [ ns1:homepage <https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2> ;
+    dcterms:source [ ns1:homepage <https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2> ;
             skos:prefLabel "AQMD" ] ;
     rdfs:seeAlso <https://plumelabs.com/en/flow/>,
         <https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2> ;
@@ -65,10 +65,10 @@ We created Flow to answer a question: “what is in the air I breathe.” In the
     schema:manufacturer manuf:plume-labs .
 
 <https://w3id.org/ad4gd/air-quality/sensor-platforms/Zephyr> a skos:Concept ;
-    dct:description """The Zephyr® is an award-winning, certified, indicative ambient air quality monitor that accurately measures harmful gases and particle matter. 
+    dcterms:description """The Zephyr® is an award-winning, certified, indicative ambient air quality monitor that accurately measures harmful gases and particle matter. 
 Zephyr® monitors provide detailed air quality measurements in real-time to help identify pollution hotspots at a localised level such as busy road junctions. Extensive networks can be easily deployed for city-wide pollution data used to aid the development of smarter and cleaner towns and cities.
 """ ;
-    dct:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
+    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
             skos:prefLabel "Earthsense" ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
@@ -87,27 +87,27 @@ Zephyr® monitors provide detailed air quality measurements in real-time to help
     schema:manufacturer manuf:earthsense .
 
 <https://w3id.org/ad4gd/air-quality/sensor-platforms> a skos:ConceptScheme ;
-    dct:source <https://ad4gd.eu/> ;
+    dcterms:source <https://ad4gd.eu/> ;
     skos:prefLabel "AD4GD air quality sensor platforms" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-21T12:00:20.335764"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-21T12:00:20.255548"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-21T12:23:00.451537"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-21T12:23:00.395204"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
+            dcterms:format "application/json" ;
+            dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/sensor-platforms.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.5.dev3+g1871e64" ;
+            dcterms:hasVersion "0.5.dev3+g1871e64" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "3433e09c-d89e-449f-8676-cf6f0d05b647" ] .
+    prov:wasInformedBy [ dcterms:identifier "fe12d958-0636-4254-a6aa-70ce26f16767" ] .
 
-_:N168b6e4c88eb43fab5f15735eb77d538 a prov:Agent,
+_:N3e7cfbe59f0047638473a7ce02825677 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.5.dev3+g1871e64" ;
+    dcterms:hasVersion "0.5.dev3+g1871e64" ;
     rdfs:comment "ogc.na.update_vocabs version 0.5.dev3+g1871e64" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

@@ -27,12 +27,12 @@ and the pressure measurements are so good, you can also use it as an altimeter w
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "BME280" ;
-    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
+    sosa:observes [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ],
+        [ qudt:hasUnit unit:PERCENT_RH ;
             skos:broader ad4gd-prop:relative-humidity ],
         [ qudt:hasUnit unit:PA ;
-            skos:broader ad4gd-prop:pressure ],
-        [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ] ;
+            skos:broader ad4gd-prop:pressure ] ;
     sdo:manufacturer manuf:bosch .
 
 <https://w3id.org/ad4gd/air-quality/sensors/BMP180> a owl:Class,
@@ -45,10 +45,10 @@ and the pressure measurements are so good, you can also use it as an altimeter w
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "BMP180" ;
-    sosa:observes [ qudt:hasUnit unit:PA ;
-            skos:broader ad4gd-prop:pressure ],
-        [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ] ;
+    sosa:observes [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ],
+        [ qudt:hasUnit unit:PA ;
+            skos:broader ad4gd-prop:pressure ] ;
     sdo:manufacturer manuf:bosch .
 
 <https://w3id.org/ad4gd/air-quality/sensors/BMP280> a owl:Class,
@@ -123,11 +123,11 @@ RoHS and REACH compliant
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "HPM" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm10 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm4 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm1 ] ;
     sdo:manufacturer manuf:honeywell .
@@ -160,9 +160,9 @@ With its patented air flow control technology, NextPM provides up to 10 years of
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "NextPM" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ] ;
     sdo:manufacturer manuf:TERA-Sensor .
@@ -187,9 +187,9 @@ Response time: ≤10 seconds (s)
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
+            skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ] ;
+            skos:broader ad4gd-prop:pm1 ] ;
     sdo:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS3003> a owl:Class,
@@ -214,9 +214,9 @@ Size :65 × 42 × 23  mm
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS3003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ] ;
     sdo:manufacturer manuf:plantower .
@@ -238,9 +238,9 @@ Standard Volume: 0.1L
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS5003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm1 ] ;
     sdo:manufacturer manuf:plantower .
@@ -264,11 +264,11 @@ Physical Size 50mm×38mm×21mm mm
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS6003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
+            skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ] ;
+            skos:broader ad4gd-prop:pm1 ] ;
     sdo:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS7003> a owl:Class,
@@ -290,9 +290,9 @@ Standard Volume: 0.1L
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ],
+            skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ] ;
+            skos:broader ad4gd-prop:pm10 ] ;
     sdo:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PPD42NS> a owl:Class,
@@ -346,10 +346,10 @@ Weight: 24g (Approx.)
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "Plume Flow 2 Air Temperature and Air Humidity sensor sensor" ;
-    sosa:observes [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ],
-        [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ] ;
     sdo:manufacturer manuf:plume-labs .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PlumeFlow2VOC> a owl:Class,
@@ -380,10 +380,10 @@ The SCD30 is a highly accurate CO2 sensor module based on our patented CMOSens®
     skos:prefLabel "SCD30" ;
     sosa:observes [ qudt:hasUnit unit:DEG_C ;
             skos:broader ad4gd-prop:temperature ],
-        [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ],
         [ qudt:hasUnit unit:PPM ;
-            skos:broader ad4gd-prop:CO2 ] ;
+            skos:broader ad4gd-prop:CO2 ],
+        [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ] ;
     sdo:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/SDS011> a owl:Class,
@@ -427,9 +427,9 @@ Note that the SDS011 humidity working range is 0-70%. Above 70% humidity the rea
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SDS021" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
+            skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm2.5 ] ;
     sdo:manufacturer manuf:nova-fitness .
 
 <https://w3id.org/ad4gd/air-quality/sensors/SHT11> a owl:Class,
@@ -444,10 +444,10 @@ As with every other Sensirion sensor type from the SHTxx humidity sensor family,
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SHT11" ;
-    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ],
-        [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ] ;
+    sosa:observes [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ],
+        [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ] ;
     sdo:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/SHT30> a owl:Class,
@@ -460,10 +460,10 @@ As with every other Sensirion sensor type from the SHTxx humidity sensor family,
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SHT30" ;
-    sosa:observes [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ],
-        [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ] ;
     sdo:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/SHT31> a owl:Class,
@@ -476,10 +476,10 @@ As with every other Sensirion sensor type from the SHTxx humidity sensor family,
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SHT31" ;
-    sosa:observes [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ],
-        [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ] ;
     sdo:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/SHT35> a owl:Class,
@@ -597,9 +597,9 @@ Nitric Oxide and Nitrogen Dioxide sensor, measures Nitrogen Oxides with 10 µg/m
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "Zephyr Nitric Oxide (NO) and Nitrogen Dioxide (NO2) sensor" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:NO2 ],
+            skos:broader false ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader false ] ;
+            skos:broader ad4gd-prop:NO2 ] ;
     sdo:manufacturer manuf:earthsense .
 
 <https://w3id.org/ad4gd/air-quality/sensors/ZephyrO3> a owl:Class,
@@ -647,11 +647,11 @@ Particulate sensor (laser), measures PM1, PM2.5, PM10 with 5 µg/m3 estimated ac
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "Zephyr particulate matter (PM) sensor" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
+            skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ] ;
+            skos:broader ad4gd-prop:pm2.5 ] ;
     sdo:manufacturer manuf:earthsense .
 
 <https://w3id.org/ad4gd/air-quality/sensors/ZephyrSO2> a owl:Class,
@@ -709,16 +709,16 @@ Volatile organic compounds (VOCs) sensor, measures VOC with a range of 0 - 15,00
     skos:prefLabel "AD4GD air quality sensors" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-21T12:00:20.172139"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-21T12:00:20.086267"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-21T12:23:00.165527"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-21T12:23:00.048496"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
+            dct:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/sensors.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 sdo:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.5.dev3+g1871e64" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "3433e09c-d89e-449f-8676-cf6f0d05b647" ] .
+    prov:wasInformedBy [ dct:identifier "fe12d958-0636-4254-a6aa-70ce26f16767" ] .
 

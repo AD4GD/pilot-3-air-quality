@@ -1,4 +1,4 @@
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -9,32 +9,32 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/entailed/properties.ttl> a prov:Entity ;
-    dct:format "text/turtle" ;
-    dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
-    prov:wasAttributedTo _:N204d3a22c14847a6addd1f0809b60cf3 ;
+    dcterms:format "text/turtle" ;
+    dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
+    prov:wasAttributedTo _:Ncd6f17ffdbd040e7b73ce0c5b03279ba ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w ./rainbow-data rainbow-data/catalog.ttl --use-git-status --update --graph-store https://defs-hosted.opengis.net/fuseki-hosted/data" ;
-            prov:endedAtTime "2025-07-21T12:00:32.708114"^^xsd:dateTime ;
-            prov:startedAtTime "2025-07-21T12:00:32.477486"^^xsd:dateTime ;
+            prov:endedAtTime "2025-07-21T12:23:08.802897"^^xsd:dateTime ;
+            prov:startedAtTime "2025-07-21T12:23:08.575631"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
+                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ],
                 [ a prov:Entity ;
-                    dct:format "text/turtle" ;
-                    dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
                     rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
                 [ a prov:Entity ;
-                    dct:format "text/turtle" ;
-                    dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
                     rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/properties.ttl> ],
                 [ a prov:Entity ;
-                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ] ;
-            prov:wasAssociatedWith _:N204d3a22c14847a6addd1f0809b60cf3 ;
-            prov:wasInformedBy [ dct:identifier "7274fe30-5eb3-4e97-b8bf-addba5305233" ] ] .
+                    rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ] ;
+            prov:wasAssociatedWith _:Ncd6f17ffdbd040e7b73ce0c5b03279ba ;
+            prov:wasInformedBy [ dcterms:identifier "bd4ab495-9552-4959-83f2-505a96c8a3f6" ] ] .
 
 <https://w3id.org/ad4gd/air-quality/properties/CO> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "GEMET" ;
+    dcterms:source [ skos:prefLabel "GEMET" ;
             foaf:homepage <https://www.eionet.europa.eu/gemet/en/concept/1173> ] ;
     owl:sameAs <http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationCO>,
         <http://vocabs.lter-europe.net/EnvThes/20809>,
@@ -47,7 +47,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/CO2> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "GEMET" ;
+    dcterms:source [ skos:prefLabel "GEMET" ;
             foaf:homepage <https://www.eionet.europa.eu/gemet/en/concept/1168> ] ;
     owl:sameAs <http://purl.org/iot/vocab/iot-taxonomy-lite#CO2>,
         <http://vocabs.lter-europe.net/EnvThes/20808>,
@@ -59,7 +59,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/H2S> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "SLB" ;
+    dcterms:source [ skos:prefLabel "SLB" ;
             foaf:homepage <https://glossary.slb.com/en/terms/h/h2s> ] ;
     owl:sameAs <https://glossary.slb.com/en/terms/h/h2s> ;
     skos:definition """An extraordinarily poisonous gas with a molecular formula of H2S. At low concentrations, H2S has the odor of rotten eggs, but at higher, lethal concentrations, it is odorless.
@@ -69,7 +69,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/NO2> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "AD4GD" ;
+    dcterms:source [ skos:prefLabel "AD4GD" ;
             foaf:homepage <https://ad4gd.eu/> ] ;
     owl:sameAs <http://dd.eionet.europa.eu/vocabulary/IEDAnnexIIModule3/EQSAirPollutantsGlassCode/072>,
         <http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8>,
@@ -82,7 +82,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/NOx> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "DEFRA" ;
+    dcterms:source [ skos:prefLabel "DEFRA" ;
             foaf:homepage <https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=40#40> ] ;
     owl:sameAs <https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=40#40> ;
     skos:definition """Combustion processes emit a mixture of nitrogen oxides (NOX), primarily nitric oxide (NO) which is quickly oxidised in the atmosphere to nitrogen dioxide (NO2). Nitrogen dioxide has a variety of environmental and health impacts. It is a respiratory irritant which may exacerbate asthma and possibly increase susceptibility to infections. In the presence of sunlight, it reacts with hydrocarbons to produce photochemical pollutants such as ozone. NO2 can be further oxidised in air to acidic gases, which contribute towards the generation of acid rain.
@@ -92,7 +92,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/O3> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "AD4GD" ;
+    dcterms:source [ skos:prefLabel "AD4GD" ;
             foaf:homepage <https://ad4gd.eu/> ] ;
     owl:sameAs <http://dd.eionet.europa.eu/vocabulary/IEDAnnexIIModule3/EQSAirPollutantsGlassCode/078>,
         <http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationO3>,
@@ -106,7 +106,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/SO2> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "DEFRA" ;
+    dcterms:source [ skos:prefLabel "DEFRA" ;
             foaf:homepage <https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=49#49> ] ;
     owl:sameAs <http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1>,
         <http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationSO2>,
@@ -118,7 +118,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/VOCs> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "GEMET" ;
+    dcterms:source [ skos:prefLabel "GEMET" ;
             foaf:homepage <https://www.eionet.europa.eu/gemet/en/concept/8993> ] ;
     owl:sameAs <http://purl.org/iot/vocab/iot-taxonomy-lite#ChemicalAgentAtmosphericConcentrationVOC>,
         <https://uk-air.defra.gov.uk/air-pollution/glossary.php?glossary_id=53#53>,
@@ -130,7 +130,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/false> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "Wikipedia" ;
+    dcterms:source [ skos:prefLabel "Wikipedia" ;
             foaf:homepage <https://en.wikipedia.org/wiki/Nitric_oxide> ] ;
     owl:sameAs <https://space.oscar.wmo.int/variables/view/no> ;
     skos:definition "Nitric oxide (nitrogen oxide or nitrogen monoxide) is a colorless gas with the formula NO. It is one of the principal oxides of nitrogen." ;
@@ -139,7 +139,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/humidity> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "GEMET" ;
+    dcterms:source [ skos:prefLabel "GEMET" ;
             foaf:homepage <https://www.eionet.europa.eu/gemet/en/concept/626> ] ;
     owl:sameAs <http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/55>,
         <http://purl.oclc.org/NET/ssnx/cf/cf-feature#Humidity>,
@@ -153,7 +153,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/pm1.0> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "AD4GD" ;
+    dcterms:source [ skos:prefLabel "AD4GD" ;
             foaf:homepage <https://ad4gd.eu/> ] ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Particulates> ;
     owl:sameAs <http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6002>,
@@ -165,7 +165,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/pm10> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "AD4GD" ;
+    dcterms:source [ skos:prefLabel "AD4GD" ;
             foaf:homepage <https://ad4gd.eu/> ] ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Particulates> ;
     owl:sameAs <http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5>,
@@ -178,7 +178,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/pm2.5> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "AD4GD" ;
+    dcterms:source [ skos:prefLabel "AD4GD" ;
             foaf:homepage <https://ad4gd.eu/> ] ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Particulates> ;
     owl:sameAs <http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001>,
@@ -191,7 +191,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/pressure> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "Wikipedia" ;
+    dcterms:source [ skos:prefLabel "Wikipedia" ;
             foaf:homepage <https://en.wikipedia.org/wiki/Atmospheric_pressure> ] ;
     owl:sameAs <http://purl.oclc.org/NET/ssnx/cf/cf-property#air_pressure>,
         <http://purl.oclc.org/NET/ssnx/qu/quantity#pressure>,
@@ -203,7 +203,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/relative-humidity> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "OSCAR" ;
+    dcterms:source [ skos:prefLabel "OSCAR" ;
             foaf:homepage <https://space.oscar.wmo.int/variables/view/relative_humidity> ] ;
     owl:sameAs <http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/58>,
         <http://purl.org/iot/vocab/iot-taxonomy-lite#RelativeHumidity>,
@@ -216,7 +216,7 @@
 
 <https://w3id.org/ad4gd/air-quality/properties/temperature> a skos:Concept,
         sosa:ObservableProperty ;
-    dct:source [ skos:prefLabel "GEMET" ;
+    dcterms:source [ skos:prefLabel "GEMET" ;
             foaf:homepage <https://www.eionet.europa.eu/gemet/en/concept/281> ] ;
     owl:sameAs <http://dd.eionet.europa.eu/vocabulary/aq/meteoparameter/54>,
         <http://purl.org/iot/vocab/iot-taxonomy-lite#Temperature>,
@@ -229,27 +229,27 @@
     skos:prefLabel "Air Temperature" .
 
 <https://w3id.org/ad4gd/air-quality/properties> a skos:ConceptScheme ;
-    dct:source <https://ad4gd.eu/> ;
+    dcterms:source <https://ad4gd.eu/> ;
     skos:prefLabel "AD4GD air quality observable properties" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-21T12:00:20.077451"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-21T12:00:19.971280"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-21T12:23:00.255820"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-21T12:23:00.186522"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:568cf02e6929f8c6c9b53121e297ef10da9ba800" ;
+            dcterms:format "application/json" ;
+            dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/properties.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.5.dev3+g1871e64" ;
+            dcterms:hasVersion "0.5.dev3+g1871e64" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "3433e09c-d89e-449f-8676-cf6f0d05b647" ] .
+    prov:wasInformedBy [ dcterms:identifier "fe12d958-0636-4254-a6aa-70ce26f16767" ] .
 
-_:N204d3a22c14847a6addd1f0809b60cf3 a prov:Agent,
+_:Ncd6f17ffdbd040e7b73ce0c5b03279ba a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.5.dev3+g1871e64" ;
+    dcterms:hasVersion "0.5.dev3+g1871e64" ;
     rdfs:comment "ogc.na.update_vocabs version 0.5.dev3+g1871e64" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 
