@@ -10,27 +10,27 @@
 
 <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/entailed/properties.ttl> a prov:Entity ;
     dcterms:format "text/turtle" ;
-    dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
-    prov:wasAttributedTo _:Ncd6f17ffdbd040e7b73ce0c5b03279ba ;
+    dcterms:hasVersion "git:89d39b0c0d133a55d6075f726699b2e5a7a88faf" ;
+    prov:wasAttributedTo _:N93bb4b514b6d45518476732a990dcc16 ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w ./rainbow-data rainbow-data/catalog.ttl --use-git-status --update --graph-store https://defs-hosted.opengis.net/fuseki-hosted/data" ;
-            prov:endedAtTime "2025-07-21T12:23:08.802897"^^xsd:dateTime ;
-            prov:startedAtTime "2025-07-21T12:23:08.575631"^^xsd:dateTime ;
+            prov:endedAtTime "2025-07-21T12:28:16.871308"^^xsd:dateTime ;
+            prov:startedAtTime "2025-07-21T12:28:16.643268"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ],
-                [ a prov:Entity ;
                     dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
-                [ a prov:Entity ;
-                    dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
+                    dcterms:hasVersion "git:89d39b0c0d133a55d6075f726699b2e5a7a88faf" ;
                     rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/properties.ttl> ],
                 [ a prov:Entity ;
-                    rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ] ;
-            prov:wasAssociatedWith _:Ncd6f17ffdbd040e7b73ce0c5b03279ba ;
-            prov:wasInformedBy [ dcterms:identifier "bd4ab495-9552-4959-83f2-505a96c8a3f6" ] ] .
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:89d39b0c0d133a55d6075f726699b2e5a7a88faf" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
+                [ a prov:Entity ;
+                    rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
+                [ a prov:Entity ;
+                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ] ;
+            prov:wasAssociatedWith _:N93bb4b514b6d45518476732a990dcc16 ;
+            prov:wasInformedBy [ dcterms:identifier "139d8bbf-aee2-4b15-8fb6-dcfbf0d7cfe9" ] ] .
 
 <https://w3id.org/ad4gd/air-quality/properties/CO> a skos:Concept,
         sosa:ObservableProperty ;
@@ -233,20 +233,20 @@
     skos:prefLabel "AD4GD air quality observable properties" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-21T12:23:00.255820"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-21T12:23:00.186522"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-21T12:28:05.399806"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-21T12:28:05.339910"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dcterms:format "application/json" ;
-            dcterms:hasVersion "git:fce75029072241da153e3dca9b0e7a899b2eac6e" ;
+            dcterms:hasVersion "git:89d39b0c0d133a55d6075f726699b2e5a7a88faf" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/properties.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dcterms:hasVersion "0.5.dev3+g1871e64" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dcterms:identifier "fe12d958-0636-4254-a6aa-70ce26f16767" ] .
+    prov:wasInformedBy [ dcterms:identifier "db27fbd5-838e-43e2-b2c7-e8bbeecc9ec9" ] .
 
-_:Ncd6f17ffdbd040e7b73ce0c5b03279ba a prov:Agent,
+_:N93bb4b514b6d45518476732a990dcc16 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dcterms:hasVersion "0.5.dev3+g1871e64" ;
