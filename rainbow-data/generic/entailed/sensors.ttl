@@ -1,8 +1,8 @@
 @prefix ad4gd-procedure: <https://w3id.org/ad4gd/air-quality/procedures/> .
 @prefix ad4gd-prop: <https://w3id.org/ad4gd/air-quality/properties/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix manuf: <https://w3id.org/ad4gd/air-quality/sensor-manufacturers/> .
-@prefix ns1: <foaf:> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
@@ -17,27 +17,27 @@
 
 <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/entailed/sensors.ttl> a prov:Entity ;
     dcterms:format "text/turtle" ;
-    dcterms:hasVersion "git:89d39b0c0d133a55d6075f726699b2e5a7a88faf" ;
-    prov:wasAttributedTo _:N9512a6616af74f4f90d584b47a0088e1 ;
+    dcterms:hasVersion "git:65f5096d5807b276cb3e921aabf852e2c543fd8f" ;
+    prov:wasAttributedTo _:N7a368633bc5b4cd597e4ae0bfd59d400 ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w ./rainbow-data rainbow-data/catalog.ttl --use-git-status --update --graph-store https://defs-hosted.opengis.net/fuseki-hosted/data" ;
-            prov:endedAtTime "2025-07-21T12:28:19.655178"^^xsd:dateTime ;
-            prov:startedAtTime "2025-07-21T12:28:19.095920"^^xsd:dateTime ;
+            prov:endedAtTime "2025-07-22T14:49:44.655675"^^xsd:dateTime ;
+            prov:startedAtTime "2025-07-22T14:49:44.105774"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
-                [ a prov:Entity ;
                     dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:89d39b0c0d133a55d6075f726699b2e5a7a88faf" ;
+                    dcterms:hasVersion "git:65f5096d5807b276cb3e921aabf852e2c543fd8f" ;
                     rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/generic/sensors.ttl> ],
                 [ a prov:Entity ;
-                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ],
-                [ a prov:Entity ;
                     dcterms:format "text/turtle" ;
-                    dcterms:hasVersion "git:89d39b0c0d133a55d6075f726699b2e5a7a88faf" ;
-                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ] ;
-            prov:wasAssociatedWith _:N9512a6616af74f4f90d584b47a0088e1 ;
-            prov:wasInformedBy [ dcterms:identifier "139d8bbf-aee2-4b15-8fb6-dcfbf0d7cfe9" ] ] .
+                    dcterms:hasVersion "git:65f5096d5807b276cb3e921aabf852e2c543fd8f" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/opengeospatial/NamingAuthority/master/catalog.ttl> ],
+                [ a prov:Entity ;
+                    rdfs:seeAlso <http://www.opengis.net/def/metamodel/profiles/skos_shared> ],
+                [ a prov:Entity ;
+                    rdfs:seeAlso <https://datashapes.org/dash.ttl> ] ;
+            prov:wasAssociatedWith _:N7a368633bc5b4cd597e4ae0bfd59d400 ;
+            prov:wasInformedBy [ dcterms:identifier "877f8f73-51df-41a3-9c74-bd0b422d3214" ] ] .
 
 <https://w3id.org/ad4gd/air-quality/sensors/BME280> a owl:Class,
         skos:Concept ;
@@ -45,26 +45,26 @@
 barometric pressure with ±1 hPa absolute accuraccy, and temperature with ±1.0°C accuracy. Because pressure changes with altitude,
 and the pressure measurements are so good, you can also use it as an altimeter with  ±1 meter or better accuracy! 
 """ ;
-    dcterms:source [ ns1:homepage <https://www.adafruit.com/product/2652> ;
-            skos:prefLabel "Adafruit" ] ;
+    dcterms:source [ skos:prefLabel "Adafruit" ;
+            foaf:homepage <https://www.adafruit.com/product/2652> ] ;
     rdfs:seeAlso <https://www.adafruit.com/product/2652> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "BME280" ;
-    sosa:observes [ qudt:hasUnit unit:DEG_C ;
+    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
             skos:broader ad4gd-prop:temperature ],
         [ qudt:hasUnit unit:PA ;
-            skos:broader ad4gd-prop:pressure ],
-        [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+            skos:broader ad4gd-prop:pressure ] ;
     schema:manufacturer manuf:bosch .
 
 <https://w3id.org/ad4gd/air-quality/sensors/BMP180> a owl:Class,
         skos:Concept ;
     dcterms:description """The BMP180 is the function compatible successor of the BMP085, a new generation of high precision digital pressure sensors for consumer applications. 
 """ ;
-    dcterms:source [ ns1:homepage <https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf> ;
-            skos:prefLabel "Adafruit" ] ;
+    dcterms:source [ skos:prefLabel "Adafruit" ;
+            foaf:homepage <https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf> ] ;
     rdfs:seeAlso <https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -79,8 +79,8 @@ and the pressure measurements are so good, you can also use it as an altimeter w
         skos:Concept ;
     dcterms:description """The BMP280 is an absolute barometric pressure sensor, which is especially feasible for mobile applications. Its small dimensions and its low power consumption allow for the implementation in battery-powered devices such as mobile phones, GPS modules or watches. The BMP280 is based on Bosch’s proven piezo-resistive pressure sensor technology featuring high accuracy and linearity as well as long-term stability and high EMC robustness. Numerous device operation options guarantee for highest flexibility. The device is optimized in terms of power consumption, resolution and filter performance.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/> ;
-            skos:prefLabel "Bosch" ] ;
+    dcterms:source [ skos:prefLabel "Bosch" ;
+            foaf:homepage <https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/> ] ;
     rdfs:seeAlso <https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp280/> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -101,8 +101,8 @@ Good for 0-100% humidity readings with 2-5% accuracy
 Good for -40 to 80°C temperature readings ±0.5°C accuracy
 No more than 0.5 Hz sampling rate (once every 2 seconds)
 """ ;
-    dcterms:source [ ns1:homepage <https://www.adafruit.com/product/385> ;
-            skos:prefLabel "Adafruit" ] ;
+    dcterms:source [ skos:prefLabel "Adafruit" ;
+            foaf:homepage <https://www.adafruit.com/product/385> ] ;
     rdfs:seeAlso <https://www.adafruit.com/product/385> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -117,8 +117,8 @@ No more than 0.5 Hz sampling rate (once every 2 seconds)
         skos:Concept ;
     dcterms:description """The DS18B20 digital thermometer provides 9-bit to 12-bit Celsius temperature measurements and has an alarm function with nonvolatile user-programmable upper and lower trigger points. The DS18B20 communicates over a 1-Wire bus that by definition requires only one data line (and ground) for communication with a central microprocessor. In addition, the DS18B20 can derive power directly from the data line (“parasite power”), eliminating the need for an external power supply.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.analog.com/media/en/technical-documentation/data-sheets/ds18b20.pdf> ;
-            skos:prefLabel "Analog" ] ;
+    dcterms:source [ skos:prefLabel "Analog" ;
+            foaf:homepage <https://www.analog.com/media/en/technical-documentation/data-sheets/ds18b20.pdf> ] ;
     rdfs:seeAlso <https://www.analog.com/media/en/technical-documentation/data-sheets/ds18b20.pdf> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -140,28 +140,28 @@ Output signal: universal asynchronous receiver / transmitter (UART)
 PM2.5, PM10 output (standard); PM1.0, PM2.5, PM4.0, PM10 output (compact)
 RoHS and REACH compliant
 """ ;
-    dcterms:source [ ns1:homepage <https://www.mouser.co.uk/new/honeywell/honeywell-hpm-particulate-matter-sensors/> ;
-            skos:prefLabel "Mouser" ] ;
+    dcterms:source [ skos:prefLabel "Mouser" ;
+            foaf:homepage <https://www.mouser.co.uk/new/honeywell/honeywell-hpm-particulate-matter-sensors/> ] ;
     rdfs:seeAlso <https://www.mouser.co.uk/new/honeywell/honeywell-hpm-particulate-matter-sensors/> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "HPM" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm4 ],
+            skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
+            skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm4 ] ;
     schema:manufacturer manuf:honeywell .
 
 <https://w3id.org/ad4gd/air-quality/sensors/HTU21D> a owl:Class,
         skos:Concept ;
     dcterms:description """The HTU21D(F) is a new digital humidity sensor with temperature output by MEAS. Setting new standards in terms of size and intelligence, it is embedded in a reflow solderable Dual Flat No leads (DFN) package with a small 3 x 3 x 0.9 mm footprint. This sensor provides calibrated, linearized signals in digital, I²C format.
 """ ;
-    dcterms:source [ ns1:homepage <https://cdn-shop.adafruit.com/datasheets/1899_HTU21D.pdf> ;
-            skos:prefLabel "Adafruit" ] ;
+    dcterms:source [ skos:prefLabel "Adafruit" ;
+            foaf:homepage <https://cdn-shop.adafruit.com/datasheets/1899_HTU21D.pdf> ] ;
     rdfs:seeAlso <https://cdn-shop.adafruit.com/datasheets/1899_HTU21D.pdf> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -177,8 +177,8 @@ RoHS and REACH compliant
     dcterms:description """Designed for environmental monitoring and smart cities application, NextPM provides real time PM1, PM2.5 and PM10 measurements in µg/m3 and pcs/L.
 With its patented air flow control technology, NextPM provides up to 10 years of monitoring without maintenance, even in an atmosphere with high pollution and humidity levels.
 """ ;
-    dcterms:source [ ns1:homepage <https://tera-sensor.com/product/nextpm/> ;
-            skos:prefLabel "TERA-Sensor" ] ;
+    dcterms:source [ skos:prefLabel "TERA-Sensor" ;
+            foaf:homepage <https://tera-sensor.com/product/nextpm/> ] ;
     rdfs:seeAlso <https://tera-sensor.com/product/nextpm/> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -186,9 +186,9 @@ With its patented air flow control technology, NextPM provides up to 10 years of
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ],
+            skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ] ;
+            skos:broader ad4gd-prop:pm10 ] ;
     schema:manufacturer manuf:TERA-Sensor .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS1003> a owl:Class,
@@ -202,18 +202,18 @@ Range: 0 ~ 500 ug / m3
 Counting accuracy of 50% @ 0.3um, 98% @ ≥0.5 um said the quasi-volume : 0.1 liters (L)
 Response time: ≤10 seconds (s)
 """ ;
-    dcterms:source [ ns1:homepage <https://aqicn.org/sensor/pms1003/> ;
-            skos:prefLabel "AQICN" ] ;
+    dcterms:source [ skos:prefLabel "AQICN" ;
+            foaf:homepage <https://aqicn.org/sensor/pms1003/> ] ;
     rdfs:seeAlso <https://aqicn.org/sensor/pms1003/> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS1003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm1 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ] ;
+            skos:broader ad4gd-prop:pm10 ] ;
     schema:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS3003> a owl:Class,
@@ -231,18 +231,18 @@ Operating humidity range :0 to 99%
 MTBF :≥ 3  Year
 Size :65 × 42 × 23  mm
 """ ;
-    dcterms:source [ ns1:homepage <https://aqicn.org/sensor/pms3003/> ;
-            skos:prefLabel "AQICN" ] ;
+    dcterms:source [ skos:prefLabel "AQICN" ;
+            foaf:homepage <https://aqicn.org/sensor/pms3003/> ] ;
     rdfs:seeAlso <https://aqicn.org/sensor/pms3003/> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS3003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
+            skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm1 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm2.5 ] ;
     schema:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS5003> a owl:Class,
@@ -254,19 +254,19 @@ Maximum Range: * ≥1000 μ g/m³
 Resolution: 1 μ g/m³
 Standard Volume: 0.1L
 """ ;
-    dcterms:source [ ns1:homepage <https://aqicn.org/sensor/pms5003-7003/> ;
-            skos:prefLabel "AQICN" ] ;
+    dcterms:source [ skos:prefLabel "AQICN" ;
+            foaf:homepage <https://aqicn.org/sensor/pms5003-7003/> ] ;
     rdfs:seeAlso <https://aqicn.org/sensor/pms5003-7003/>,
         <https://www.adafruit.com/product/3686> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS5003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm1 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ] ;
+            skos:broader ad4gd-prop:pm10 ] ;
     schema:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS6003> a owl:Class,
@@ -281,18 +281,18 @@ Storage Temperature Range -40~+85 ℃
 MTTF ≥10 Year
 Physical Size 50mm×38mm×21mm mm
 """ ;
-    dcterms:source [ ns1:homepage <https://www.plantower.com/en/products_33/75.html> ;
-            skos:prefLabel "Plantower" ] ;
+    dcterms:source [ skos:prefLabel "Plantower" ;
+            foaf:homepage <https://www.plantower.com/en/products_33/75.html> ] ;
     rdfs:seeAlso <https://www.plantower.com/en/products_33/75.html> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS6003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm10 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm1 ] ;
     schema:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PMS7003> a owl:Class,
@@ -304,19 +304,19 @@ Maximum Range: * ≥1000 μ g/m³
 Resolution: 1 μ g/m³
 Standard Volume: 0.1L
 """ ;
-    dcterms:source [ ns1:homepage <https://aqicn.org/sensor/pms5003-7003/> ;
-            skos:prefLabel "AQICN" ] ;
+    dcterms:source [ skos:prefLabel "AQICN" ;
+            foaf:homepage <https://aqicn.org/sensor/pms5003-7003/> ] ;
     rdfs:seeAlso <https://aqicn.org/sensor/pms5003-7003/>,
         <https://www.adafruit.com/product/3686> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PMS7003" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
+            skos:broader ad4gd-prop:pm10 ],
+        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
-        [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm1 ] ;
     schema:manufacturer manuf:plantower .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PPD42NS> a owl:Class,
@@ -331,25 +331,25 @@ Output Method: Digital (Pulse) - PWM
 Dimensions: 59(W) x 45(H) x 22(D) mm
 Weight: 24g (Approx.)
 """ ;
-    dcterms:source [ ns1:homepage <https://aqicn.org/sensor/shinyei/> ;
-            skos:prefLabel "AQICN" ] ;
+    dcterms:source [ skos:prefLabel "AQICN" ;
+            foaf:homepage <https://aqicn.org/sensor/shinyei/> ] ;
     rdfs:seeAlso <https://aqicn.org/sensor/shinyei/>,
         <https://nettigo.eu/products/shinyei-ppd42-air-quality-sensor> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "PPD42NS" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ],
+            skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ] ;
+            skos:broader ad4gd-prop:pm10 ] ;
     schema:manufacturer manuf:shinyei .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PlumeFlow2CO2> a owl:Class,
         skos:Concept ;
     dcterms:description """This is a placeholder for PlumeFlow2 carbon dioxide (CO2) sensor. The type of sensor used is unknown.
 """ ;
-    dcterms:source [ ns1:homepage <https://ad4gd.eu/> ;
-            skos:prefLabel "AD4GD" ] ;
+    dcterms:source [ skos:prefLabel "AD4GD" ;
+            foaf:homepage <https://ad4gd.eu/> ] ;
     rdfs:seeAlso <https://plumelabs.com/en/flow/>,
         <https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -363,25 +363,25 @@ Weight: 24g (Approx.)
         skos:Concept ;
     dcterms:description """This is a placeholder for PlumeFlow2 temperature and humidity sensor. The type of sensor used is unknown.
 """ ;
-    dcterms:source [ ns1:homepage <https://ad4gd.eu/> ;
-            skos:prefLabel "AD4GD" ] ;
+    dcterms:source [ skos:prefLabel "AD4GD" ;
+            foaf:homepage <https://ad4gd.eu/> ] ;
     rdfs:seeAlso <https://plumelabs.com/en/flow/>,
         <https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "Plume Flow 2 Air Temperature and Air Humidity sensor sensor" ;
-    sosa:observes [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ],
-        [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ] ;
     schema:manufacturer manuf:plume-labs .
 
 <https://w3id.org/ad4gd/air-quality/sensors/PlumeFlow2VOC> a owl:Class,
         skos:Concept ;
     dcterms:description """This is a placeholder for PlumeFlow2 Volatile Organic Compounds (VOCs) sensor. The type of sensor used is unknown.
 """ ;
-    dcterms:source [ ns1:homepage <https://ad4gd.eu/> ;
-            skos:prefLabel "AD4GD" ] ;
+    dcterms:source [ skos:prefLabel "AD4GD" ;
+            foaf:homepage <https://ad4gd.eu/> ] ;
     rdfs:seeAlso <https://plumelabs.com/en/flow/>,
         <https://www.aqmd.gov/aq-spec/sensordetail/plume-labs---flow-2> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -396,18 +396,18 @@ Weight: 24g (Approx.)
     dcterms:description """CO₂ accuracy of ±(30 ppm + 3% MV) @400-10000 ppm
 The SCD30 is a highly accurate CO2 sensor module based on our patented CMOSens® Technology for IR detection that includes a best-in-class humidity and temperature sensor. This allows ambient humidity and temperature to be outputted through modeling and compensating of external heat sources without the requirement for any additional components. The module’s dual-channel principle enables excellent long-term stability by design, and its ultra-thin package size allows easy integration into even the most demanding applications. 
 """ ;
-    dcterms:source [ ns1:homepage <https://sensirion.com/products/catalog/SCD30> ;
-            skos:prefLabel "Sensirion" ] ;
+    dcterms:source [ skos:prefLabel "Sensirion" ;
+            foaf:homepage <https://sensirion.com/products/catalog/SCD30> ] ;
     rdfs:seeAlso <https://sensirion.com/products/catalog/SCD30> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SCD30" ;
     sosa:observes [ qudt:hasUnit unit:PPM ;
             skos:broader ad4gd-prop:CO2 ],
-        [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ],
         [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ] ;
+            skos:broader ad4gd-prop:relative-humidity ],
+        [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ] ;
     schema:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/SDS011> a owl:Class,
@@ -423,8 +423,8 @@ The SCD30 is a highly accurate CO2 sensor module based on our patented CMOSens®
   Temperature Range:-20~50°C
 Note that the SDS011 humidity working range is 0-70%. Above 70% humidity the readings become unreliable.
 """ ;
-    dcterms:source [ ns1:homepage <https://aqicn.org/sensor/sds011/> ;
-            skos:prefLabel "AQICN" ] ;
+    dcterms:source [ skos:prefLabel "AQICN" ;
+            foaf:homepage <https://aqicn.org/sensor/sds011/> ] ;
     rdfs:seeAlso <https://aqicn.org/sensor/sds011/> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -443,8 +443,8 @@ Note that the SDS011 humidity working range is 0-70%. Above 70% humidity the rea
         skos:Concept ;
     dcterms:description """The SDS021 using principle of laser scattering,can get theparticleconcentration between 0.3 to 10μm in the air. It with digital outputandbuilt-in fan is stable and reliable.Product has passed the CE, FCCandRoHS certification.
 """ ;
-    dcterms:source [ ns1:homepage <https://cdn.sparkfun.com/assets/parts/1/2/2/7/5/SDS021_laser_PM2.5_sensor_specification-V1.0.pdf> ;
-            skos:prefLabel "Sparkfun" ] ;
+    dcterms:source [ skos:prefLabel "Sparkfun" ;
+            foaf:homepage <https://cdn.sparkfun.com/assets/parts/1/2/2/7/5/SDS021_laser_PM2.5_sensor_specification-V1.0.pdf> ] ;
     rdfs:seeAlso <https://aqicn.org/sensor/sds021/>,
         <https://cdn.sparkfun.com/assets/parts/1/2/2/7/5/SDS021_laser_PM2.5_sensor_specification-V1.0.pdf> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -462,8 +462,8 @@ Note that the SDS011 humidity working range is 0-70%. Above 70% humidity the rea
 The SHT1x digital humidity sensor is a reflow solderable sensor. The SHT1x series consists of a low-cost version with the SHT10 humidity sensor, a standard version with the SHT11 humidity sensor, and a high-end version with the SHT15 humidity sensor. 
 As with every other Sensirion sensor type from the SHTxx humidity sensor family, they are fully calibrated and provide a digital output.
 """ ;
-    dcterms:source [ ns1:homepage <https://sensirion.com/products/catalog/SHT11> ;
-            skos:prefLabel "Sensirion" ] ;
+    dcterms:source [ skos:prefLabel "Sensirion" ;
+            foaf:homepage <https://sensirion.com/products/catalog/SHT11> ] ;
     rdfs:seeAlso <https://sensirion.com/products/catalog/SHT11> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -478,24 +478,24 @@ As with every other Sensirion sensor type from the SHTxx humidity sensor family,
         skos:Concept ;
     dcterms:description """SHT3x-DIS is the next generation of Sensirion’s temperature and humidity sensors. It builds on a new CMOSens® sensor chip that is at the heart of Sensirion’s new humidity and temperature platform. The SHT3x-DIS has increased intelligence, reliability and improved accuracy specifications compared to its predecessor. Its functionality includes enhanced signal processing, two distinctive and user selectable I2C addresses and communication speeds of up to 1 MHz. 
 """ ;
-    dcterms:source [ ns1:homepage <https://www.farnell.com/datasheets/2901984.pdf> ;
-            skos:prefLabel "Farnell" ] ;
+    dcterms:source [ skos:prefLabel "Farnell" ;
+            foaf:homepage <https://www.farnell.com/datasheets/2901984.pdf> ] ;
     rdfs:seeAlso <https://www.farnell.com/datasheets/2901984.pdf> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SHT30" ;
-    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ],
-        [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ] ;
+    sosa:observes [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ],
+        [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ] ;
     schema:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/SHT31> a owl:Class,
         skos:Concept ;
     dcterms:description """The SHT31-D sensor has an excellent ±2% relative humidity and ±0.3°C accuracy for most uses.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.adafruit.com/product/2857> ;
-            skos:prefLabel "Adafruit" ] ;
+    dcterms:source [ skos:prefLabel "Adafruit" ;
+            foaf:homepage <https://www.adafruit.com/product/2857> ] ;
     rdfs:seeAlso <https://www.adafruit.com/product/2857> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -521,8 +521,8 @@ Typ. temperature accuracy 0.1 °C
 Operating temperature range -40 - 125 °C	
 Response time (τ63%) > 2 s	
 """ ;
-    dcterms:source [ ns1:homepage <https://sensirion.com/products/catalog/SHT35-DIS-F> ;
-            skos:prefLabel "Sensirion" ] ;
+    dcterms:source [ skos:prefLabel "Sensirion" ;
+            foaf:homepage <https://sensirion.com/products/catalog/SHT35-DIS-F> ] ;
     rdfs:seeAlso <https://sensirion.com/products/catalog/SHT35-DIS-F> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -537,8 +537,8 @@ Response time (τ63%) > 2 s
         skos:Concept ;
     dcterms:description """SHT85 is Sensirion’s best-in-class humidity sensor with pin-type connector for easy integration and replacement. It builds on a highly accurate and long-term stable SHT3x sensor that is at the heart of Sensirion’s new humidity and temperature platform. The unique package design allows for the best possible thermal coupling to the environment and decoupling from potential heat sources on the main board. The SHT85 features a PTFE membrane dedicated to protect the sensor opening from liquids and dust according to IP67, without affecting the response time of the RH signal. It thus allows for sensor use under harsh environmental conditions,(such as spray water and high exposure to dust). Final accuracy testing on product level ensures best performance, making the SHT85 the ultimate choice for even the most demanding applications. 
 """ ;
-    dcterms:source [ ns1:homepage <https://www.mouser.com/catalog/specsheets/Sensirion_10022018_HT_DS_SHT85_V0.9_D1.pdf> ;
-            skos:prefLabel "Mouser" ] ;
+    dcterms:source [ skos:prefLabel "Mouser" ;
+            foaf:homepage <https://www.mouser.com/catalog/specsheets/Sensirion_10022018_HT_DS_SHT85_V0.9_D1.pdf> ] ;
     rdfs:seeAlso <https://www.mouser.com/catalog/specsheets/Sensirion_10022018_HT_DS_SHT85_V0.9_D1.pdf> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
@@ -558,20 +558,20 @@ Mass concentration range 0 - 1000 μg/m³
 Lifetime > 10 years	
 Particle size range PM1.0, PM2.5, PM4 and PM10
 """ ;
-    dcterms:source [ ns1:homepage <https://sensirion.com/products/catalog/SPS30> ;
-            skos:prefLabel "Sensirion" ] ;
+    dcterms:source [ skos:prefLabel "Sensirion" ;
+            foaf:homepage <https://sensirion.com/products/catalog/SPS30> ] ;
     rdfs:seeAlso <https://sensirion.com/products/catalog/SPS30> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "SPS30" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
+            skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm4 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm2.5 ],
+            skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm1 ] ;
     schema:manufacturer manuf:sensirion-AG .
 
 <https://w3id.org/ad4gd/air-quality/sensors/ZephyrCO> a owl:Class,
@@ -579,8 +579,8 @@ Particle size range PM1.0, PM2.5, PM4 and PM10
     dcterms:description """This is a placeholder for Zephyr Carbon Monoxide (CO) and Carbon Dioxide (CO2) sensor. The type of sensor used is unknown.
 Carbon Monoxide and Carbon Dioxide sensor, measures CO and CO2 with 0.3 mg/m3 and 30 ppmV estimated accuracy respectively.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
-            skos:prefLabel "Earthsense" ] ;
+    dcterms:source [ skos:prefLabel "Earthsense" ;
+            foaf:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -597,8 +597,8 @@ Carbon Monoxide and Carbon Dioxide sensor, measures CO and CO2 with 0.3 mg/m3 an
     dcterms:description """This is a placeholder for Zephyr Hydrogen Sulfide (H2S) sensor. The type of sensor used is unknown.
 Hydrogen Sulfide (H2S) sensor, measures Hydrogen Sulfide with 5 µg/m3 estimated accuracy.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
-            skos:prefLabel "Earthsense" ] ;
+    dcterms:source [ skos:prefLabel "Earthsense" ;
+            foaf:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -613,8 +613,8 @@ Hydrogen Sulfide (H2S) sensor, measures Hydrogen Sulfide with 5 µg/m3 estimated
     dcterms:description """This is a placeholder for Zephyr Nitric Oxide (NO) and Nitrogen Dioxide (NO2) sensor. The type of sensor used is unknown.
 Nitric Oxide and Nitrogen Dioxide sensor, measures Nitrogen Oxides with 10 µg/m3 estimated accuracy
 """ ;
-    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
-            skos:prefLabel "Earthsense" ] ;
+    dcterms:source [ skos:prefLabel "Earthsense" ;
+            foaf:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -631,8 +631,8 @@ Nitric Oxide and Nitrogen Dioxide sensor, measures Nitrogen Oxides with 10 µg/m
     dcterms:description """This is a placeholder for Zephyr Ozone (O3) sensor. The type of sensor used is unknown.
 Ozone (O3) sensor, measures Ozone with 15 µg/m3 estimated accuracy.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
-            skos:prefLabel "Earthsense" ] ;
+    dcterms:source [ skos:prefLabel "Earthsense" ;
+            foaf:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -647,8 +647,8 @@ Ozone (O3) sensor, measures Ozone with 15 µg/m3 estimated accuracy.
     dcterms:description """This is a placeholder for Zephyr pressure sensor. The type of sensor used is unknown.
 Pressure sensor, measures pressure with 1.2 hPa esitmated accuracy.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
-            skos:prefLabel "Earthsense" ] ;
+    dcterms:source [ skos:prefLabel "Earthsense" ;
+            foaf:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -663,19 +663,19 @@ Pressure sensor, measures pressure with 1.2 hPa esitmated accuracy.
     dcterms:description """This is a placeholder for Zephyr particulate matter (PM) sensor. The type of sensor used is unknown.
 Particulate sensor (laser), measures PM1, PM2.5, PM10 with 5 µg/m3 estimated accuracy.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
-            skos:prefLabel "Earthsense" ] ;
+    dcterms:source [ skos:prefLabel "Earthsense" ;
+            foaf:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "Zephyr particulate matter (PM) sensor" ;
     sosa:observes [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm1 ],
+            skos:broader ad4gd-prop:pm10 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
             skos:broader ad4gd-prop:pm2.5 ],
         [ qudt:hasUnit unit:MicroGM-PER-M3 ;
-            skos:broader ad4gd-prop:pm10 ] ;
+            skos:broader ad4gd-prop:pm1 ] ;
     schema:manufacturer manuf:earthsense .
 
 <https://w3id.org/ad4gd/air-quality/sensors/ZephyrSO2> a owl:Class,
@@ -683,8 +683,8 @@ Particulate sensor (laser), measures PM1, PM2.5, PM10 with 5 µg/m3 estimated ac
     dcterms:description """This is a placeholder for Zephyr Sulphur Dioxide (SO2) sensor. The type of sensor used is unknown.
 Sulphur Dioxide (SO2) sensor, measures Sulphur Dioxide with 20 µg/m3 estimated accuracy.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
-            skos:prefLabel "Earthsense" ] ;
+    dcterms:source [ skos:prefLabel "Earthsense" ;
+            foaf:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -699,17 +699,17 @@ Sulphur Dioxide (SO2) sensor, measures Sulphur Dioxide with 20 µg/m3 estimated 
     dcterms:description """This is a placeholder for Zephyr temperature and humidity sensor. The type of sensor used is unknown.
 Temperature and humidity sensor, measures ambient temperature and humidity with 5ºC and 5% esitmated accuracy respectively.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
-            skos:prefLabel "Earthsense" ] ;
+    dcterms:source [ skos:prefLabel "Earthsense" ;
+            foaf:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
     rdfs:subClassOf sosa:Sensor ;
     skos:inScheme <https://w3id.org/ad4gd/air-quality/sensors> ;
     skos:prefLabel "Zephyr Air Temperature and Air Humidity sensor" ;
-    sosa:observes [ qudt:hasUnit unit:PERCENT_RH ;
-            skos:broader ad4gd-prop:relative-humidity ],
-        [ qudt:hasUnit unit:DEG_C ;
-            skos:broader ad4gd-prop:temperature ] ;
+    sosa:observes [ qudt:hasUnit unit:DEG_C ;
+            skos:broader ad4gd-prop:temperature ],
+        [ qudt:hasUnit unit:PERCENT_RH ;
+            skos:broader ad4gd-prop:relative-humidity ] ;
     schema:manufacturer manuf:earthsense .
 
 <https://w3id.org/ad4gd/air-quality/sensors/ZephyrVOC> a owl:Class,
@@ -717,8 +717,8 @@ Temperature and humidity sensor, measures ambient temperature and humidity with 
     dcterms:description """This is a placeholder for Zephyr Volatile Organic Compounds (VOCs) sensor. The type of sensor used is unknown.
 Volatile organic compounds (VOCs) sensor, measures VOC with a range of 0 - 15,000 ppbV c.
 """ ;
-    dcterms:source [ ns1:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ;
-            skos:prefLabel "Earthsense" ] ;
+    dcterms:source [ skos:prefLabel "Earthsense" ;
+            foaf:homepage <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf> ] ;
     rdfs:seeAlso <https://www.earthsense.co.uk/_files/ugd/847642_d42371301be448bab9ee526499e1e0bb.pdf>,
         <https://www.earthsense.co.uk/zephyr> ;
     rdfs:subClassOf sosa:Sensor ;
@@ -733,20 +733,20 @@ Volatile organic compounds (VOCs) sensor, measures VOC with a range of 0 - 15,00
     skos:prefLabel "AD4GD air quality sensors" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-07-21T12:28:05.566794"^^xsd:dateTime ;
-    prov:startedAtTime "2025-07-21T12:28:05.462838"^^xsd:dateTime ;
+    prov:endedAtTime "2025-07-22T14:49:33.684946"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-22T14:49:33.601345"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dcterms:format "application/json" ;
-            dcterms:hasVersion "git:89d39b0c0d133a55d6075f726699b2e5a7a88faf" ;
+            dcterms:hasVersion "git:65f5096d5807b276cb3e921aabf852e2c543fd8f" ;
             rdfs:seeAlso <file:///home/runner/work/pilot-3-air-quality/pilot-3-air-quality/rainbow-data/generic/sensors.yml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dcterms:hasVersion "0.5.dev3+g1871e64" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dcterms:identifier "db27fbd5-838e-43e2-b2c7-e8bbeecc9ec9" ] .
+    prov:wasInformedBy [ dcterms:identifier "32f014ef-f5f3-4da2-821d-bfa627e44d86" ] .
 
-_:N9512a6616af74f4f90d584b47a0088e1 a prov:Agent,
+_:N7a368633bc5b4cd597e4ae0bfd59d400 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dcterms:hasVersion "0.5.dev3+g1871e64" ;
