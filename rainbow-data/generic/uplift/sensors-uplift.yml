@@ -48,6 +48,7 @@ context:
     unit: http://qudt.org/vocab/unit/
     qb: http://purl.org/linked-data/cube#
     sdo: https://schema.org/
+    foaf: http://xmlns.com/foaf/0.1/
     ad4gd-prop: https://w3id.org/ad4gd/air-quality/properties/
     ad4gd-procedure: https://w3id.org/ad4gd/air-quality/procedures/
     ad4gd: 'urn:ad4gd:'
