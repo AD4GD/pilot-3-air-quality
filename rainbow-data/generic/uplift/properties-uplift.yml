@@ -1,7 +1,7 @@
 transform:
   - |
     (.base | sub("/+$"; "")) as $BASE
-    | { "@id": $BASE, "@base": "\($BASE)/" } + .
+    | { "@context": { "@base": "\($BASE)/" }, "@id": $BASE } + .
     | .properties |= [ to_entries | .[] | {"@id": "\($BASE)/\(.key)" } + .value ]
     | ."dct:source" = { "@id": "https://ad4gd.eu/" }
 
